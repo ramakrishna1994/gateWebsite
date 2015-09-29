@@ -6,18 +6,9 @@ $db_password="gate";
 $db_name="gate";
 $questionNo=$_GET["questionNo"];
 
-
-
-
-
 $con=mysqli_connect($db_host,$db_user,$db_password);
 
 mysqli_select_db($con,$db_name) or die(mysqli_error());
-
-
-
-
-
 
 $selectquery="select * from gatequestions where questionNo = ".$questionNo.";";
 

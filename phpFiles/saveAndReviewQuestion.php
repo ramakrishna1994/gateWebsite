@@ -7,7 +7,7 @@ $db_name="gate";
 $questionNo=$_GET["questionNo"];
 
 $answer=$_GET["answer"];
-
+$marked=$_GET["marked"];
 
 
 $con=mysqli_connect($db_host,$db_user,$db_password);
@@ -17,10 +17,11 @@ mysqli_select_db($con,$db_name) or die(mysqli_error());
 if($answer!=-1)
 {
 	
-$updatequery="update gatequestions set answered ='".$answer."' where questionNo=".$questionNo.";";
+$updatequery="update gatequestions set answered ='".$answer."',marked='".$marked."' where questionNo=".$questionNo.";";
 
 mysqli_query($con,$updatequery);
 }
+
 $questionNo=$questionNo+1;
 
 if($questionNo==31)

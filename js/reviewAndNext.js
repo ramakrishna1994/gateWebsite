@@ -40,7 +40,7 @@
 	 
   $(document).ready(function(){
 	  
-	  $.getJSON( "phpFiles/saveAndReviewQuestion.php", { questionNo : current ,answer : value}, function( data ) {
+	  $.getJSON( "phpFiles/saveAndReviewQuestion.php", { questionNo : current ,answer : value,marked:2}, function( data ) {
     	 // alert( data.question ); 
     	  //alert( data.optionA ); 
 

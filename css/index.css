@@ -109,7 +109,7 @@ body,html{
     overflow:auto;
 }
 
-.optionBox{
+.notAnswered{
 	
 	cursor:pointer;
 	border:1px solid;

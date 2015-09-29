@@ -6,7 +6,7 @@ $(document).ready(function(){
 		for(i=0;i<data.length;i++)
 			{
 			 
-			  if(data[i].marked==0)
+			  if(data[i].marked=='0')
 			   innerHtml +='<div class="notAnswered" id="question'+data[i].questionNo+'" onclick="getQuestion('+data[i].questionNo+')">'+data[i].questionNo+'</div>';
 			  else if(data[i].marked=='1')
 				   innerHtml +='<div class="saved" id="question'+data[i].questionNo+'" onclick="getQuestion('+data[i].questionNo+')">'+data[i].questionNo+'</div>';

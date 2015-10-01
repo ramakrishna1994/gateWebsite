@@ -1,4 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['gateusername'])){
+ header('location:login.html');
+}
+$_SESSION['examname']=$_GET['test'];
 
+echo $_SESSION['examname'];
+echo $_SESSION['gateusername'];
+?>
 
 <!DOCTYPE html>
 <html>

@@ -15,7 +15,7 @@ $selectquery="select * from ".$tableName." where questionNo = ".$questionNo.";";
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error());
 
-$str = file_get_contents('http://localhost/gate/questions.json');
+$str = file_get_contents('../questions.json');
 $jsonData = json_decode($str, true);
 
 $json="";

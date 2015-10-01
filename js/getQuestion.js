@@ -6,18 +6,24 @@ getQuestion(1);
 	 
 	  $(document).ready(function(){
 		  
+		 	 
+		  $("#questionNo").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+		  $("#question").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	      $("#optionA").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	      $("#optionB").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	      $("#optionC").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	      $("#optionD").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	
+		  
 		  $.getJSON( "phpFiles/getQuestion.php", { questionNo: current}, function( data ) {
-	    	 // alert( data.question ); 
-	    	  //alert( data.optionA ); 
-
 		
-	    	  document.getElementById("questionNo").innerHTML=data.questionNo;
-	    	  document.getElementById("question").innerHTML=data.question;
-	    	  document.getElementById("optionA").innerHTML=data.optionA;
-	    	  document.getElementById("optionB").innerHTML=data.optionB;
-	    	  document.getElementById("optionC").innerHTML=data.optionC;
-	    	  document.getElementById("optionD").innerHTML=data.optionD;
-	    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
+			  $("#questionNo").html(data.questionNo);
+	          $("#question").html(data.question);
+		      $("#optionA").html(data.optionA);
+		      $("#optionB").html(data.optionB);
+		      $("#optionC").html(data.optionC);
+		      $("#optionD").html(data.optionD);
+	    	    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
 	    	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+")");
 	    	  
 	    	  if(data.answered!=0)

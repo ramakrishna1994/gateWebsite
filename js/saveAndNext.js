@@ -34,14 +34,24 @@
 			 //document.getElementById(questionNo).className="notAnswered";	 
 			 }
 		 
-		 
+		 $("#questionNo").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+		  $("#question").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	      $("#optionA").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	      $("#optionB").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	      $("#optionC").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	      $("#optionD").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+	 
   $(document).ready(function(){
 	 
 	  $.getJSON( "phpFiles/saveAndReviewQuestion.php", { questionNo : current, answer:value ,marked:1 }, function( data ) {
-    	 // alert( data.question ); 
-    	  //alert( data.optionA ); 
-		 
-    	  document.getElementById("questionNo").innerHTML=data.questionNo;
+	
+		  $("#questionNo").html(data.questionNo);
+          $("#question").html(data.question);
+	      $("#optionA").html(data.optionA);
+	      $("#optionB").html(data.optionB);
+	      $("#optionC").html(data.optionC);
+	      $("#optionD").html(data.optionD);
+        	  document.getElementById("questionNo").innerHTML=data.questionNo;
     	  document.getElementById("question").innerHTML=data.question;
     	  document.getElementById("optionA").innerHTML=data.optionA;
     	  document.getElementById("optionB").innerHTML=data.optionB;

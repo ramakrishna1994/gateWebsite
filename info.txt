@@ -9,7 +9,11 @@ answered varchar(255) not null default '0',
 marked varchar(2) not null default '0'
 );
 
-
+create table users(
+id int not null auto_increment primary key(id),
+username varchar(200),
+password varchar(200)
+);
 
 insert into gateQuestions values
 (2,'q2','a2','b2','c2','d2'),

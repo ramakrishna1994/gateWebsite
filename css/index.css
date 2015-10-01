@@ -109,6 +109,17 @@ body,html{
     overflow:auto;
 }
 
+.loaderDivision{
+	
+	border:1px solid;
+	border-color:green;
+	 margin: 0;
+     padding: 5px;
+     text-align: center;
+	float:left;
+	width: 288px;
+	height:88px;
+}
 .notAnswered{
 	
 	cursor:pointer;

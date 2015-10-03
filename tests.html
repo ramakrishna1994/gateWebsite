@@ -8,8 +8,22 @@
 <input type="button" value="COMPUTER NETWORKS TEST" onclick="openPopUp()">
 </body>
 <script type="text/javascript">
-function openPopUp(){
-window.open('index.php?test=cn01','testWindow','height:1000px,widht:1200px');
+
+var intervalID, childWindow;
+
+function openPopUp()
+{
+	childWindow = window.open('index.php?test=cn01','testWindow','height:1000px,widht:1200px');
 }
+
+function checkWindow() 
+{
+    if (childWindow && childWindow.closed) 
+    {
+        window.clearInterval(intervalID);
+        alert('closed');
+    }
+}
+var intervalID = window.setInterval(checkWindow, 500);
 </script>
 </html>

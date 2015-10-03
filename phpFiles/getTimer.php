@@ -4,36 +4,29 @@ if(!isset($_SESSION['gateusername']) || !isset($_SESSION['examname']))
 	header('location:../login.html');
 
 
-
-header('Content-type: application/json');
 $db_host="localhost";
 $db_user="gate";
 $db_password="gate";
 $db_name="gate";
-$tableName="gatequestions";
-
-
+$username=$_SESSION['gateusername'];
+$tableName=$username."tests";
+$subjectName=$_SESSION['examname'];
 $con=mysqli_connect($db_host,$db_user,$db_password);
 
 mysqli_select_db($con,$db_name) or die(mysqli_error());
 
-$selectquery="select * from ".$tableName.";";
+$selectQuery="select timer from ".$tableName." where testname='".$subjectName."';";
 
-$result=mysqli_query($con,$selectquery) or die(mysqli_error());
+$result=mysqli_query($con,$selectQuery) or die(mysqli_error($con));
 
-$json="[";
+$json="";
 
 while($row = mysqli_fetch_array($result)){
 	$json .='{';
-	$json .= '"questionNo":'.'"'.$row["questionNo"].'",';
-	$json .= '"marked":'.'"'.$row["marked"].'"';
+	$json .= '"timer":'.'"'.$row["timer"].'"';
 	$json .='}';
-   
-	if($row['questionNo']!='30')
-		$json .=',';
 }
-$json .="]";
-echo $json;
 
+echo $json;
 mysqli_close($con);
 ?>

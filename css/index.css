@@ -20,11 +20,25 @@ body,html{
 	margin:0;
 	border:1px solid;
 	border-color:green;
-	padding:5px;
+	padding:0px;
 	float:right;
 	width:788px;
 	height:38px;
 	text-align: right;
+}
+
+#hoursDivision,#minutesDivision,#secondsDivision,#columnDivision{
+	
+	margin:0;
+	border:1px solid;
+	border-color:green;
+	padding:5px;
+	float:right;
+	width:18px;
+	height:28px;
+	text-align: center;
+	font-size: larger;
+	
 }
 #questionDivision{
 

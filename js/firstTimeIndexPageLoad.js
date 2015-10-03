@@ -15,7 +15,7 @@ $(document).ready(function(){
 				
 			
 			}
-		alert(i);
+		//alert(i);
 		$("#questionsDivision").html("");
 		$("#questionsDivision").html(innerHtml);
 	

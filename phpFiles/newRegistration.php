@@ -20,5 +20,9 @@ $insertQuery="insert into ".$table."(username,password) values ('".$username."',
 
 mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 
+$createQuery="create table ".$username."tests(id int not null auto_increment,testName varchar(100),timer varchar(20),marks int,primary key(id));";
 
+mysqli_query($con,$createQuery) or die(mysqli_error($con));
+
+mysqli_close($con);
 ?>

@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(!isset($_SESSION['gateusername']) || !isset($_SESSION['examname']))
+	header('location:../login.html');
+
+
+
 header('Content-type: application/json');
 $db_host="localhost";
 $db_user="gate";
@@ -9,11 +15,11 @@ $tableName="gateQuestions";
 
 $con=mysqli_connect($db_host,$db_user,$db_password);
 
-mysqli_select_db($con,$db_name) or die(mysqli_error());
+mysqli_select_db($con,$db_name) or die(mysqli_error($con));
 
 $selectquery="select * from ".$tableName." where questionNo = ".$questionNo.";";
 
-$result=mysqli_query($con,$selectquery) or die(mysqli_error());
+$result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 
 $str = file_get_contents('../questions.json');
 $jsonData = json_decode($str, true);
@@ -36,4 +42,5 @@ while($row = mysqli_fetch_array($result)){
 
 echo $json;
 
+mysqli_close($con);
 ?>

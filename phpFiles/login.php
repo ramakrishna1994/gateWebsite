@@ -20,11 +20,13 @@ if(mysqli_num_rows($result)>0)
 {
 	echo 'login successful';
 	$_SESSION['gateusername']=$username;
-	header('location:../tests.html');
+	header('location:../tests.php');
 }
 else 
 {
 	
 	echo 'login unsuccessful';
 }
+
+mysqli_close($con);
 ?>

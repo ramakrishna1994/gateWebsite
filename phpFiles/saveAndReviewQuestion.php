@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(!isset($_SESSION['gateusername']) || !isset($_SESSION['examname']))
+	header('location:../login.html');
+
+
+
 header('Content-type: application/json');
 $db_host="localhost";
 $db_user="gate";
@@ -52,5 +58,7 @@ while($row = mysqli_fetch_array($result)){
 
 
 echo $json;
+
+mysqli_close($con);
 
 ?>

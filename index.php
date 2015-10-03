@@ -1,6 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['gateusername'])){
+if(!isset($_SESSION['gateusername']))
+{
  header('location:login.html');
 }
 $_SESSION['examname']=$_GET['test'];
@@ -17,11 +18,19 @@ echo $_SESSION['gateusername'];
 </head>
 <body>
 <script src = "js/firstTimeIndexPageLoad.js"></script>
+<script src = "js/getAndUpdateTimer.js"></script>
  <script src = "js/getQuestion.js"></script>
  <script src = "js/saveAndNext.js"></script>
  <script src = "js/reviewAndNext.js"></script>
 <div id="mainDivision">
-  <div id="timerDivision">11:21:54</div>
+  <div id="timerDivision">
+    <div id="secondsDivision"></div>
+    <div id="columnDivision">:</div>
+    <div id="minutesDivision"></div>
+    <div id="columnDivision">:</div>
+    <div id="hoursDivision"></div>
+    
+  </div>
   <div id="questionDivision">
       <div id="questionNo">
         1

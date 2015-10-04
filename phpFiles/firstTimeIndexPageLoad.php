@@ -19,7 +19,7 @@ mysqli_select_db($con,$db_name) or die(mysqli_error());
 
 $selectquery="select * from ".$tableName.";";
 
-$result=mysqli_query($con,$selectquery) or die(mysqli_error());
+$result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 
 $json="[";
 

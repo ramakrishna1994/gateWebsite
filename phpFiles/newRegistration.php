@@ -12,7 +12,11 @@ $con=mysqli_connect($db_host,$db_user,$db_password);
 
 mysqli_select_db($con,$db_name) or die(mysqli_error($con));
 
-$createQuery="create table if not exists ".$table."(id int not null auto_increment,username varchar(100),password varchar(100),primary key(id));";
+$createQuery="create table if not exists ".$table."("
+              ."id int not null auto_increment,"
+              ."username varchar(100),"
+              ."password varchar(100),"
+              ."primary key(id));";
 
 mysqli_query($con,$createQuery) or die(mysqli_error($con));
 
@@ -20,7 +24,13 @@ $insertQuery="insert into ".$table."(username,password) values ('".$username."',
 
 mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 
-$createQuery="create table ".$username."tests(id int not null auto_increment,testName varchar(100),timer varchar(20),marks int,primary key(id));";
+$createQuery="create table ".$username."tests("
+             ."id int not null auto_increment,"
+             ."testName varchar(100),"
+             ."timer varchar(20),"
+             ."marks int not null default 0,"
+             ."endOfExam int not null default 0,"
+             ."primary key(id));";
 
 mysqli_query($con,$createQuery) or die(mysqli_error($con));
 

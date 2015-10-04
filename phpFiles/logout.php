@@ -1,6 +1,11 @@
 <?php 
 session_start();
-if(isset($_SESSION['gateusername']))
-	 session_destroy();
-header('location:../login.html');
+if(!isset($_SESSION['gateusername']))
+{
+	
+   header('location:../login.html');
+}
+
+session_destroy();
+
 ?>

@@ -1,5 +1,6 @@
 function logout()
 {
+	window.open('login.html','_self');
 	
 	$.ajax({
         url: 'phpFiles/logout.php',
@@ -11,9 +12,23 @@ function logout()
 }
 var intervalID, childWindow;
 
-function openPopUp(subjectName)
+function openExamWindow(subjectName)
 {
-	childWindow = window.open('index.php?test='+subjectName+'','testWindow','toolbar=no, location=no, directories=no, status=no, menubar=no,height = 1000px,widht = 1200px');
+	var request = $.ajax({
+        url: 'phpFiles/createTest.php',
+        type: 'POST',
+       data:
+       {
+        	test : subjectName
+        }
+    });
+	
+	$.when(request).done(function(){
+    	
+    	childWindow = window.open('index.php','testWindow','toolbar=no, location=no, directories=no, status=no, menubar=no,height = 1000px,widht = 1200px');
+    });
+	
+	
 }
 
 function checkWindow() 
@@ -22,7 +37,7 @@ function checkWindow()
     if (childWindow && childWindow.closed) 
     {
         window.clearInterval(intervalID);
-        window.open('tests.php','_self');
+    	window.open('tests.php','_self');
         $.ajax({
 	        url: 'phpFiles/examSessionDestroy.php',
 	        

@@ -14,7 +14,8 @@ $questionNo=$_GET["questionNo"];
 $tableName="gatequestions";
 $answer=$_GET["answer"];
 $marked=$_GET["marked"];
-
+$examname = $_SESSION['examname'];
+$filename=$examname."questions";
 
 $con=mysqli_connect($db_host,$db_user,$db_password);
 
@@ -37,7 +38,7 @@ $selectquery="select * from ".$tableName." where questionNo = ".$questionNo.";";
 
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error());
-$str = file_get_contents('http://localhost/gate/questions.json');
+$str = file_get_contents('../questions/'.$filename.'.json');
 $jsonData = json_decode($str, true);
 
 $json="";

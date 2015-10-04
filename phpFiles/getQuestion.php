@@ -6,17 +6,13 @@ if(!isset($_SESSION['gateusername']) || !isset($_SESSION['examname']))
 
 
 header('Content-type: application/json');
-$db_host="localhost";
-$db_user="gate";
-$db_password="gate";
-$db_name="gate";
+require_once 'connection.php';
+
 $questionNo=$_GET["questionNo"];
 $tableName="gateQuestions";
 $examname = $_SESSION['examname'];
 $filename=$examname."questions"; 
-$con=mysqli_connect($db_host,$db_user,$db_password);
 
-mysqli_select_db($con,$db_name) or die(mysqli_error($con));
 
 $selectquery="select * from ".$tableName." where questionNo = ".$questionNo.";";
 

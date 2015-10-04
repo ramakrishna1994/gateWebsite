@@ -4,16 +4,12 @@ if(!isset($_SESSION['gateusername']) || !isset($_SESSION['examname']))
 	header('location:../login.html');
 
 
-$db_host="localhost";
-$db_user="gate";
-$db_password="gate";
-$db_name="gate";
+require_once 'connection.php';
+
 $username=$_SESSION['gateusername'];
 $tableName=$username."tests";
 $subjectName=$_SESSION['examname'];
-$con=mysqli_connect($db_host,$db_user,$db_password);
 
-mysqli_select_db($con,$db_name) or die(mysqli_error());
 
 $selectQuery="select timer from ".$tableName." where testname='".$subjectName."';";
 

@@ -1,9 +1,7 @@
 create table gateQuestions(
 questionNo int,
 answered varchar(255) not null default '0',
-marked varchar(2) not null default '0',
-
- 
+marked varchar(2) not null default '0'
 );
 
 create table users(

@@ -37,7 +37,7 @@ function checkWindow()
     if (childWindow && childWindow.closed) 
     {
         window.clearInterval(intervalID);
-    	window.open('tests.php','_self');
+    	
         $.ajax({
 	        url: 'phpFiles/examSessionDestroy.php',
 	        

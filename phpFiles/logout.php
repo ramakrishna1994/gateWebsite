@@ -1,10 +1,5 @@
 <?php 
-session_start();
-if(!isset($_SESSION['gateusername']))
-{
-	
-   header('location:../login.html');
-}
+require_once 'isSessionSet.php';
 
 session_destroy();
 

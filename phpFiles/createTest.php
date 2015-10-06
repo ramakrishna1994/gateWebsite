@@ -1,8 +1,6 @@
 <?php 
-session_start();
-if(!isset($_SESSION['gateusername']))
-	header('location:../login.html');
 
+require_once 'isSessionSet.php';
 require_once 'connection.php';
 
 $_SESSION['examname']=$_POST['test'];
@@ -13,14 +11,25 @@ $tableName=$username."tests";
 $checkQuery = "select * from ".$tableName." where testname = '".$_SESSION['examname']."';";
 
 $result = mysqli_query($con,$checkQuery) or die(mysqli_error($con));
+$answerstring="";
+for ($i=1;$i<=30;$i++)
+{
+	$answerstring.='0';
 
-$insertQuery = "insert into ".$tableName."(testname,timer,marks,endOfExam) values"
-		     ."('".$_SESSION['examname']."',"
-			 ."'00:29:60',"
-			 ."0,0)";
+}
+//echo $answerstring;
 
 if(mysqli_num_rows($result)==0)
 {
+	$insertQuery = "insert into ".$tableName."(testname,timer,marks,endOfExam,answers,marked) values("
+	."'".$_SESSION['examname']."',"
+	."'00:29:60',"
+	."0,"
+	."0,"
+	."'".$answerstring."',"
+	."'".$answerstring."'"
+	.");";
+	
 	mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 }
 

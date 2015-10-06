@@ -23,6 +23,8 @@ $createQuery="create table ".$username."tests("
              ."timer varchar(20),"
              ."marks int not null default 0,"
              ."endOfExam int not null default 0,"
+             ."answers varchar(255),"
+             ."marked varchar(255),"
              ."primary key(id));";
 
 mysqli_query($con,$createQuery) or die(mysqli_error($con));

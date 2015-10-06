@@ -23,7 +23,7 @@ echo "WELCOME ".$_SESSION['gateusername'];
  <div id="testsContainer">
  <div>
   <div class="subjectContainer">CN</div>
-  <div class="statusContainer" onclick="openExamWindow('cn01')">START TEST</div>
+  <div class="statusContainer" onclick="openExamWindow('cn01')" id="cn01">START TEST</div>
  </div>
  <div>
   <div class="subjectContainer">CO</div>

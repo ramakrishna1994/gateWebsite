@@ -43,3 +43,32 @@ body,html{
 	height:40px;
 	float:left;
 }
+
+.testInComplete
+{
+	background-color: red;
+	cursor: pointer;
+	border:1px solid;
+	border-color:green;
+	margin:auto;
+	padding:5 px;
+    text-align: center;
+	width:210px;
+	height:40px;
+	float:left;
+}
+
+.testComplete
+{
+	background-color: red;
+	cursor: pointer;
+	border:1px solid;
+	border-color:green;
+	margin:auto;
+	padding:5 px;
+    text-align: center;
+	width:210px;
+	height:40px;
+	float:left;
+	
+}

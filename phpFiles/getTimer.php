@@ -1,8 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION['gateusername']) || !isset($_SESSION['examname']))
-	header('location:../login.html');
-
+require_once 'isSessionSet.php';
 
 require_once 'connection.php';
 

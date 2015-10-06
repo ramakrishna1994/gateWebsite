@@ -1,20 +1,15 @@
 <?php
-session_start();
-if(!isset($_SESSION['gateusername']) || !isset($_SESSION['examname']))
-	header('location:../login.html');
-
-
-
+require_once 'isSessionSet.php';
 header('Content-type: application/json');
 require_once 'connection.php';
 
 $questionNo=$_GET["questionNo"];
-$tableName="gateQuestions";
+$tableName=$_SESSION['gateusername']."tests";
 $examname = $_SESSION['examname'];
 $filename=$examname."questions"; 
 
 
-$selectquery="select * from ".$tableName." where questionNo = ".$questionNo.";";
+$selectquery="select * from ".$tableName." where testName = '".$examname."';";
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 
@@ -31,7 +26,7 @@ while($row = mysqli_fetch_array($result)){
 	$json .= '"optionB":'.'"'.$jsonData["questions"][$questionNo]["optionB"].'",';
 	$json .= '"optionC":'.'"'.$jsonData["questions"][$questionNo]["optionC"].'",';
 	$json .= '"optionD":'.'"'.$jsonData["questions"][$questionNo]["optionD"].'",';
-	$json .= '"answered":'.'"'.$row["answered"].'",';
+	$json .= '"answers":'.'"'.$row["answers"].'",';
 	$json .= '"current":'.'"'.$questionNo.'"';
     $json .='}';
 }

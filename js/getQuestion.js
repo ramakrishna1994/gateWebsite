@@ -23,10 +23,13 @@ getQuestion(1);
 		      $("#optionB").html(data.optionB);
 		      $("#optionC").html(data.optionC);
 		      $("#optionD").html(data.optionD);
-	    	    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
+	    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
 	    	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+")");
 	    	  
-	    	  if(data.answered!=0)
+	    	  var answerarray = data.answers;
+	    	  answerarray = answerarray.split(',');
+	    	  
+	    	  if(answerarray[questionNo]!=0)
     		  {
     		    
     		    var radioButton="option"+data.answered+"Radio";

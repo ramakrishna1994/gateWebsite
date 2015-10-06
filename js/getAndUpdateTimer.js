@@ -11,7 +11,7 @@ $(document).ready(function(){
 		      subjectName = data.subjectname;
               time=data.timer;
               var timeArray = time.split(":");
-              alert(timeArray);
+              //alert(timeArray);
 			  hours=timeArray[0];
               minutes=timeArray[1];
               seconds=timeArray[2];

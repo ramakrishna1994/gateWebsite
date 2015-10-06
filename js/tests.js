@@ -25,7 +25,7 @@ function openExamWindow(subjectName)
 	
 	$.when(request).done(function(){
     	
-    	childWindow = window.open('index.php','testWindow','toolbar=no, location=no, directories=no, status=no, menubar=no,height = 1000px,widht = 1200px');
+    	childWindow = window.open('index.php','testWindow','toolbar=no, location=no, directories=no, status=no, menubar=no,height = 800px,width = 1000px');
     });
 	
 	
@@ -44,7 +44,7 @@ function checkWindow()
 	       
 	    });
         window.opener.location.reload();
-        alert('closed');
+        //alert('closed');
         
     }
 }

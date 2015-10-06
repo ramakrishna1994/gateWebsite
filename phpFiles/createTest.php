@@ -4,34 +4,13 @@ require_once 'isSessionSet.php';
 require_once 'connection.php';
 
 $_SESSION['examname']=$_POST['test'];
-
 $username=$_SESSION['gateusername'];
 $tableName=$username."tests";
 
-$checkQuery = "select * from ".$tableName." where testname = '".$_SESSION['examname']."';";
 
-$result = mysqli_query($con,$checkQuery) or die(mysqli_error($con));
-$answerstring="";
-for ($i=1;$i<=30;$i++)
-{
-	$answerstring.='0';
+$updateQuery = "update ".$tableName." set statusOfExam = 1 where testName = '".$_SESSION['examname']."';";
+mysqli_query($con,$updateQuery) or die(mysqli_error($con));
 
-}
-//echo $answerstring;
-
-if(mysqli_num_rows($result)==0)
-{
-	$insertQuery = "insert into ".$tableName."(testname,timer,marks,endOfExam,answers,marked) values("
-	."'".$_SESSION['examname']."',"
-	."'00:29:60',"
-	."0,"
-	."0,"
-	."'".$answerstring."',"
-	."'".$answerstring."'"
-	.");";
-	
-	mysqli_query($con,$insertQuery) or die(mysqli_error($con));
-}
 
 
 mysqli_close($con);

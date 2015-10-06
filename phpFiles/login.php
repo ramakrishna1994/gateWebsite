@@ -1,5 +1,6 @@
 <?php 
 session_start();
+session_unset();
 $username=$_POST['username'];
 $password=$_POST['password'];
 $table="users";

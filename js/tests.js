@@ -43,9 +43,10 @@ function checkWindow()
 	        
 	       
 	    });
+        window.opener.location.reload();
         alert('closed');
         
     }
 }
 
-intervalID  = setInterval(function(){ checkWindow() }, 1000);
+intervalID  = setInterval(function(){ checkWindow(); }, 1000);

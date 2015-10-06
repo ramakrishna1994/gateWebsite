@@ -13,30 +13,17 @@ echo "WELCOME ".$_SESSION['gateusername'];
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>tests</title>
+<link rel="stylesheet" type="text/css" href="css/tests.css">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/tests.js"></script>
-<link rel="stylesheet" type="text/css" href="css/tests.css">
+<script type="text/javascript" src="js/getTests.js"></script>
+
 </head>
 <body>
 
 <input type="button" value="log out" onclick="logout()">
  <div id="testsContainer">
- <div>
-  <div class="subjectContainer">CN</div>
-  <div class="statusContainer" onclick="openExamWindow('cn01')" id="cn01">START TEST</div>
- </div>
- <div>
-  <div class="subjectContainer">CO</div>
-  <div class="statusContainer" onclick="openExamWindow('co01')">START TEST</div>
- </div>
- <div>
-  <div class="subjectContainer">TOC</div>
-  <div class="statusContainer" onclick="openExamWindow('toc01')">START TEST</div>
- </div>
- <div>
-  <div class="subjectContainer">CD</div>
-  <div class="statusContainer" onclick="openExamWindow('cd01')">START TEST</div>
- </div>
+ 
  </div>
 </body>
 </html>

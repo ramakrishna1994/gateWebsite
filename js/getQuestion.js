@@ -27,12 +27,16 @@ getQuestion(1);
 	    	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+")");
 	    	  
 	    	  var answerarray = data.answers;
-	    	  answerarray = answerarray.split(',');
-	    	  
-	    	  if(answerarray[questionNo]!=0)
+	    	 // alert(answerarray);
+	    	  var val = parseInt(current) - 1;
+	    	  answerarray= answerarray.split('');
+	    	  //alert(answerarray[val]);
+	    	  if(answerarray[val]!= '0')
     		  {
     		    
-    		    var radioButton="option"+data.answered+"Radio";
+    		    var radioButton="option"+answerarray[val]+"Radio";
+    		    
+    		    //alert(radioButton);
     		    document.getElementById(radioButton).checked=true;
     		    
     		  }

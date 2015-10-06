@@ -16,7 +16,8 @@ $json="";
 
 while($row = mysqli_fetch_array($result)){
 	$json .='{';
-	$json .= '"timer":'.'"'.$row["timer"].'"';
+	$json .= '"timer":'.'"'.$row["timer"].'",';
+	$json .= '"subjectname":'.'"'.$_SESSION['examname'].'"';
 	$json .='}';
 }
 

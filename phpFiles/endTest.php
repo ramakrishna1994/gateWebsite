@@ -36,8 +36,9 @@ for($i=0;$i<30;$i++)
 	}
 }
 
-$updateQuery = "update ".$tableName." set marks = ".$total.",endOfExam = 1 where testName = '".$examname."';";
+$updateQuery = "update ".$tableName." set marks = ".$total.",statusOfExam = 2,timer = '00:00:00' where testName = '".$examname."';";
 mysqli_query($con,$updateQuery) or die(mysqli_error($con));
+
 echo $total;
 
 mysqli_close($con);

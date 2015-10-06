@@ -1,8 +1,4 @@
-create table gateQuestions(
-questionNo int,
-answered varchar(255) not null default '0',
-marked varchar(2) not null default '0'
-);
+
 
 create table users(
 id int not null auto_increment primary key(id),
@@ -10,35 +6,17 @@ username varchar(200),
 password varchar(200)
 );
 
-insert into gateQuestions values
-(1,'0','0'),
-(2,'0','0'),
-(3,'0','0'),
-(4,'0','0'),
-(5,'0','0'),
-(6,'0','0'),
-(7,'0','0'),
-(8,'0','0'),
-(9,'0','0'),
-(10,'0','0'),
-(11,'0','0'),
-(12,'0','0'),
-(13,'0','0'),
-(14,'0','0'),
-(15,'0','0'),
-(16,'0','0'),
-(17,'0','0'),
-(18,'0','0'),
-(19,'0','0'),
-(20,'0','0'),
-(21,'0','0'),
-(22,'0','0'),
-(23,'0','0'),
-(24,'0','0'),
-(25,'0','0'),
-(26,'0','0'),
-(27,'0','0'),
-(28,'0','0'),
-(29,'0','0'),
-(30,'0','0');
-
+create table $username.tests(
+             id int not null auto_increment,
+             testName varchar(100),
+             timer varchar(20),
+             marks int not null default 0,
+             statusOfExam int not null default 0,
+             answers varchar(255),
+             marked varchar(255),
+             primary key(id));
+             
+            
+ statusOfExam = 0 means not started
+              = 1 means test started
+              = 2 means test completed

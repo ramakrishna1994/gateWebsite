@@ -2,13 +2,56 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration</title>
+<title>LOGIN</title>
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
 </head>
 <body>
-<form method="post" action="phpFiles/login.php">
-Username:<input type="text" id="username" name="username"><br>
-Password:<input type="password" id="password" name="password"><br>
-<input type="submit">
-</form>
+
+
+<div id="mainDivision">
+  <div id="errorOrSuccessDivision"></div>
+  <div id="loginDivision">
+    <div id="userNameDivision">EMAIL ID</div>
+    <div id="userNameInputDivision"><input type="text" id="loginusername" name="username"></div>
+    
+    <div id="passwordDivision">PASSWORD</div>
+    <div id="passwordInputDivision"><input type="password" id="loginpassword" name="password"></div>
+    
+     <div id="LValueOne"></div>
+     <div id="LOperator"></div>
+     <div id="LValueTwo"></div>
+     <div id="Lequal">=</div>
+     <div id="LanswerDiv"><input type="text" id="Lanswer" value=""></div>
+    
+    <div id="submitDivision" onClick="checkParameters(1)">SUBMIT</div>
+    
+    <div id="registerDivision" onClick="showRegistration()">NEW USER?</div>
+  </div>
+  <div id="registrationDivision">
+    <div id="userNameDivision">EMAIL</div>
+    <div id="userNameInputDivision"><input type="text" id="registrationusername" name="username"></div>
+    
+    <div id="passwordDivision">PASSWORD</div>
+    <div id="passwordInputDivision"><input type="password" id="registrationpassword" name="password"></div>
+    
+    
+    <div id="confirmPasswordDivision">CONFIRM PASSWORD</div>
+    <div id="confirmPasswordInputDivision"><input type="password" id="confirmregistrationpassword" ></div>
+    
+    
+     <div id="RValueOne"></div>
+     <div id="ROperator"></div>
+     <div id="RValueTwo"></div>
+     <div id="Requal">=</div>
+     <div id="RanswerDiv"><input type="text" id="Ranswer" value=""></div>
+    
+    <div id="submitDivision" onClick="checkParameters(2)">SUBMIT</div>
+    
+  </div>
+</div>
+
 </body>
 </html>

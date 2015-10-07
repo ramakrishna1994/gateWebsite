@@ -14,11 +14,17 @@ $createQuery="create table if not exists ".$table."("
 
 mysqli_query($con,$createQuery) or die(mysqli_error($con));
 
-$insertQuery="insert into ".$table."(username,password) values ('".$username."','".$password."');";
+$checkQuery = "select * from users where username = '".$username."'";
+$result = mysqli_query($con,$checkQuery) or die(mysqli_error($con));
+//echo "no of rows:".mysqli_num_rows($result);
+if(mysqli_num_rows($result) == 0)
+{
 
-mysqli_query($con,$insertQuery) or die(mysqli_error($con));
+   $insertQuery="insert into ".$table."(username,password) values ('".$username."','".$password."');";
 
-$createQuery="create table ".$username."tests("
+   mysqli_query($con,$insertQuery) or die(mysqli_error($con));
+
+   $createQuery="create table ".$username."tests("
              ."id int not null auto_increment,"
              ."testName varchar(100),"
              ."timer varchar(20),"
@@ -28,22 +34,22 @@ $createQuery="create table ".$username."tests("
              ."marked varchar(255),"
              ."primary key(id));";
 
-mysqli_query($con,$createQuery) or die(mysqli_error($con));
+    mysqli_query($con,$createQuery) or die(mysqli_error($con));
 
-$str = file_get_contents('../questions/tests.json');
-$jsonData = json_decode($str, true);
-//echo $jsonData;
-$answerstring="";
-for ($i=1;$i<=30;$i++)
-{
-	$answerstring.='0';
+    $str = file_get_contents('../questions/tests.json');
+    $jsonData = json_decode($str, true);
 
-}
-echo $jsonData["tests"][1]["subjectname"]."1";
-$insertQuery;
-for($i = 0;$i<4;$i++)
-{
-    $insertQuery = "insert into ".$username."tests (testname,timer,marks,statusOfExam,answers,marked) values("
+    $answerstring="";
+    for ($i=1;$i<=30;$i++)
+    {
+	   $answerstring.='0';
+
+     }
+    // echo $jsonData["tests"][1]["subjectname"]."1";
+     $insertQuery;
+     for($i = 0;$i<4;$i++)
+     {
+        $insertQuery = "insert into ".$username."tests (testname,timer,marks,statusOfExam,answers,marked) values("
                   ."'".$jsonData["tests"][$i]["subjectname"]."',"
                   ."'00:29:60',"
                   ."0,"
@@ -52,7 +58,13 @@ for($i = 0;$i<4;$i++)
                   ."'".$answerstring."'"
                   .");";
 
-mysqli_query($con,$insertQuery) or die(mysqli_error($con));
+        mysqli_query($con,$insertQuery) or die(mysqli_error($con));
+      }
+      echo '{"error":"0"}';
+}
+
+else {
+	echo '{"error":"1"}';
 }
 mysqli_close($con);
 ?>

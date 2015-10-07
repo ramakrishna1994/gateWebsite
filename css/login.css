@@ -1,0 +1,149 @@
+body,html{
+	 margin:auto;
+     padding: 0;
+     text-align: center;
+	
+}
+
+#mainDivision{
+	
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+	margin:auto;
+	margin-top:100px;
+    text-align:center;
+	width:400px;
+	height:400px;
+	
+}
+
+.dummy{
+	background-color:white;
+	color: black;
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:390px;
+	height:50px;
+	float:left;
+}
+
+.successStatus{
+	background-color:green;
+	color: black;
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:390px;
+	height:50px;
+	float:left;
+}
+
+.failureStatus{
+	background-color:red;
+	color: black;
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:390px;
+	height:50px;
+	float:left;
+}
+#loginDivision{
+	
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:390px;
+	height:200px;
+	float:left;
+	
+}
+#registrationDivision{
+	
+	
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:390px;
+	height:200px;
+	float:left;
+}
+
+#userNameDivision,#passwordDivision{
+	
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:180px;
+	height:50px;
+	float:left;	
+	
+}
+
+#userNameInputDivision,#passwordInputDivision{
+	
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:180px;
+	height:50px;	
+	float : right;
+	
+}
+
+#LValueOne,#LValueTwo,#LOperator,#Lequal,#LanswerDiv{
+	
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:50px;
+	height:50px;	
+	float : left;
+}
+
+#RValueOne,#RValueTwo,#ROperator,#Requal,#RanswerDiv{
+	
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:50px;
+	height:50px;	
+	float : left;
+}
+
+#submitDivision{
+	
+	cursor:pointer;
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:180px;
+	height:50px;	
+	float : right;
+	
+}
+
+#registerDivision{
+	
+	cursor:pointer;
+	border:1px solid;
+	border-color:#ff0000;
+	padding:0;
+    text-align: center;
+	width:250px;
+	height:50px;	
+	float : right;
+	
+}

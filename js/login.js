@@ -4,13 +4,19 @@ $(document).ready(function(){
 	 $("#errorOrSuccessDivision").hide();
 });
 
-var valueOne,valueTwo,answer,operator;
+var valueOne,valueTwo,operator;
+var answer;
 security(1);
 
 function security(val)
 {
  valueOne = Math.floor((Math.random() * 10) + 1);
- valueTwo = Math.floor((Math.random() * 10) + 1);
+ 
+ 
+ do{
+	 valueTwo = Math.floor((Math.random() * 10) + 1);
+	 
+ }while(valueOne==valueTwo);
  
  //alert(valueOne+","+valueTwo);
  
@@ -27,7 +33,7 @@ function security(val)
 	 }
  else{
 	  answer = valueOne * valueTwo;
-	  operator = '*';
+	  operator = 'X';
      }
  
  //alert(operator+","+answer);
@@ -59,13 +65,13 @@ function checkParameters(id)
 		{
 	       if(answer != val2)
 	       {
-	    	   $('#errorOrSuccessDivision').slideUp(1000,function(){
+	    	   $('#errorOrSuccessDivision').slideUp(250,function(){
 	    		   
 	    		   $('#errorOrSuccessDivision').html("");   
 	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
 	    	   });
 	    	   
-		        $('#errorOrSuccessDivision').slideDown(1000,function(){
+		        $('#errorOrSuccessDivision').slideDown(250,function(){
 		        	
 		        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
 		        	
@@ -83,12 +89,12 @@ function checkParameters(id)
 	else{
 		if(answer != val1)
 	       {
-			$('#errorOrSuccessDivision').slideUp(1000,function(){
+			$('#errorOrSuccessDivision').slideUp(250,function(){
 	    		   
 	    		   $('#errorOrSuccessDivision').html("");   
 	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';   
 			});
-			$('#errorOrSuccessDivision').slideDown(1000,function(){
+			$('#errorOrSuccessDivision').slideDown(250,function(){
 	        	
 	        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
 	        	
@@ -120,12 +126,12 @@ function doRegistration()
 		//alert(data.error);
 		 if(data.error == 1)
 			 {
-			 $('#errorOrSuccessDivision').slideUp(1000,function(){
+			 $('#errorOrSuccessDivision').slideUp(250,function(){
 	    		   
 	    		   $('#errorOrSuccessDivision').html("");   
 	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
 	    	   });
-			    $('#errorOrSuccessDivision').slideDown(1000,function(){
+			    $('#errorOrSuccessDivision').slideDown(250,function(){
 			       	
 		        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
 		        	
@@ -136,12 +142,12 @@ function doRegistration()
 			 }
 		 else
 		 {
-			 $('#errorOrSuccessDivision').slideUp(1000,function(){
+			 $('#errorOrSuccessDivision').slideUp(250,function(){
 	    		   
 	    		   $('#errorOrSuccessDivision').html("");   
 	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
 	    	   });
-			 $('#errorOrSuccessDivision').slideDown(1000,function(){
+			 $('#errorOrSuccessDivision').slideDown(250,function(){
 		        	
 		        	document.getElementById("errorOrSuccessDivision").className = 'successStatus';
 		        	
@@ -158,24 +164,27 @@ function doRegistration()
 function showRegistration(){
 	
 	$(document).ready(function(){
-		$('#loginDivision').slideUp(1000,function(){
-			
-			
-			
-			$("#errorOrSuccessDivision").slideUp(500,function(){
-				
-				$('#errorOrSuccessDivision').html("");	
-				document.getElementById("errorOrSuccessDivision").className = 'dummy';
-			});
-			
-			$('#registrationDivision').slideDown(1000,function(){
-				
+		
 
-				document.title="REGISTRATION";
-				security(2);
-				
+		$("#errorOrSuccessDivision").slideUp(250,function(){
+			
+			$('#errorOrSuccessDivision').html("");	
+			document.getElementById("errorOrSuccessDivision").className = 'dummy';
+			
+		   $('#loginDivision').slideUp(1000,function(){
+			
+			
+			   $('#registrationDivision').slideDown(1000,function(){
+					
+
+					document.title="REGISTRATION";
+					security(2);
+					
+				});
+			
 			});
-		});
+			
+					});
 		
 	});
 }
@@ -184,18 +193,25 @@ function showRegistration(){
 function showLogin(){
 	
 	$(document).ready(function(){
-		$('#registrationDivision').slideUp(1000,function(){
-		
+$("#errorOrSuccessDivision").slideUp(250,function(){
 			
-			$('#loginDivision').slideDown(1000,function(){
-				
+			$('#errorOrSuccessDivision').html("");	
+			document.getElementById("errorOrSuccessDivision").className = 'dummy';
+			
+		   $('#registrationDivision').slideUp(1000,function(){
+			
+			
+			   $('#loginDivision').slideDown(1000,function(){
+					
 
-				document.title="LOGIN";
-				security(1);
-				
-				
+					document.title="LOGIN";
+					security(1);
+					
+				});
+			
 			});
-		});
+			
+					});
 		
 	});
 }
@@ -217,12 +233,12 @@ function doLogin()
 		  //alert(data.error);
 		 if(data.error == 1)
 			 {
-			 $('#errorOrSuccessDivision').slideUp(1000,function(){
+			 $('#errorOrSuccessDivision').slideUp(250,function(){
 	    		   
 	    		   $('#errorOrSuccessDivision').html("");   
 	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
 	    	   });
-			 $('#errorOrSuccessDivision').slideDown(1000,function(){
+			 $('#errorOrSuccessDivision').slideDown(250,function(){
 		        	
 		        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
 		        	
@@ -233,17 +249,18 @@ function doLogin()
 			 }
 		 else
 		 {
-			 $('#errorOrSuccessDivision').slideUp(1000,function(){
+			 $('#errorOrSuccessDivision').slideUp(250,function(){
 	    		   
 	    		   $('#errorOrSuccessDivision').html("");   
 	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
 	    	   });
-			 $('#errorOrSuccessDivision').slideDown(1000,function(){
+			 $('#errorOrSuccessDivision').slideDown(250,function(){
 		        	
 		        	document.getElementById("errorOrSuccessDivision").className = 'successStatus';
 		        	
 		        	$('#errorOrSuccessDivision').html("Success login");
-		        });	 
+		        });
+			 window.open('tests.php','_self');
 		 }
 		
 	 },"json");

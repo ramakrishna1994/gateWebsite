@@ -1,12 +1,14 @@
 <?php 
 
+require_once 'connection.php';
+
 $firstname=mysqli_real_escape_string($con,$_POST['registrationfirstname']);
 $lastname=mysqli_real_escape_string($con,$_POST['registrationlastname']);
 $emailid=mysqli_real_escape_string($con,$_POST['registrationemailid']);
 $password=mysqli_real_escape_string($con,$_POST['password']);
 $table="users";
 
-require_once 'connection.php';
+
 
 $createQuery="create table if not exists ".$table."("
               ."id int not null auto_increment,"

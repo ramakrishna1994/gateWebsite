@@ -2,15 +2,15 @@
 require_once 'isSessionSet.php';
 header('Content-type: application/json');
 require_once 'connection.php';
-$questionNo=$_GET["questionNo"];
-$tableName=$_SESSION['gateusername']."tests";
-$answer=$_GET["answer"];
-$marked=$_GET["marked"];
+$questionNo=mysqli_real_escape_string($con,$_GET["questionNo"]);
+$tableName=$_SESSION['gateusername'].".tests";
+$answer=mysqli_real_escape_string($con,$_GET["answer"]);
+$marked=mysqli_real_escape_string($con,$_GET["marked"]);
 $examname = $_SESSION['examname'];
 $filename=$examname."questions";
 
 
-$selectquery="select * from ".$tableName." where testName = '".$examname."';";
+$selectquery="select * from `".$tableName."` where testName = '".$examname."';";
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 $answerarray;
 $markedarray;
@@ -28,7 +28,7 @@ $markedarray[$questionNo-1] = $marked;
 if($answer!=-1)
 {
 	
-$updatequery="update ".$tableName." set answers ='".$answerarray."',marked='".$markedarray."' where testName='".$examname."';";
+$updatequery="update `".$tableName."` set answers ='".$answerarray."',marked='".$markedarray."' where testName='".$examname."';";
 
 mysqli_query($con,$updatequery);
 }

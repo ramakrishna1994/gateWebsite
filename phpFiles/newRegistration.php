@@ -1,30 +1,34 @@
 <?php 
 
-$username=$_POST['username'];
-$password=$_POST['password'];
+$firstname=mysqli_real_escape_string($con,$_POST['registrationfirstname']);
+$lastname=mysqli_real_escape_string($con,$_POST['registrationlastname']);
+$emailid=mysqli_real_escape_string($con,$_POST['registrationemailid']);
+$password=mysqli_real_escape_string($con,$_POST['password']);
 $table="users";
 
 require_once 'connection.php';
 
 $createQuery="create table if not exists ".$table."("
               ."id int not null auto_increment,"
-              ."username varchar(100),"
+              ."emailid varchar(100),"
+              ."firstname varchar(100),"
+              ."lastname varchar(100),"
               ."password varchar(100),"
               ."primary key(id));";
 
 mysqli_query($con,$createQuery) or die(mysqli_error($con));
 
-$checkQuery = "select * from users where username = '".$username."'";
+$checkQuery = "select * from users where emailid = '".$emailid."'";
 $result = mysqli_query($con,$checkQuery) or die(mysqli_error($con));
 //echo "no of rows:".mysqli_num_rows($result);
 if(mysqli_num_rows($result) == 0)
 {
 
-   $insertQuery="insert into ".$table."(username,password) values ('".$username."','".$password."');";
+   $insertQuery="insert into ".$table."(emailid,firstname,lastname,password) values ('".$emailid."','".$firstname."','".$lastname."','".$password."');";
 
    mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 
-   $createQuery="create table ".$username."tests("
+   $createQuery="create table `".$emailid.".tests`("
              ."id int not null auto_increment,"
              ."testName varchar(100),"
              ."timer varchar(20),"
@@ -49,7 +53,7 @@ if(mysqli_num_rows($result) == 0)
      $insertQuery;
      for($i = 0;$i<4;$i++)
      {
-        $insertQuery = "insert into ".$username."tests (testname,timer,marks,statusOfExam,answers,marked) values("
+        $insertQuery = "insert into `".$emailid.".tests` (testname,timer,marks,statusOfExam,answers,marked) values("
                   ."'".$jsonData["tests"][$i]["subjectname"]."',"
                   ."'00:29:60',"
                   ."0,"

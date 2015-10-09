@@ -4,11 +4,11 @@ require_once 'isSessionSet.php';
 require_once 'connection.php';
 
 $username=$_SESSION['gateusername'];
-$tableName=$username."tests";
+$tableName=$username.".tests";
 $subjectName=$_SESSION['examname'];
 
 
-$selectQuery="select timer from ".$tableName." where testname='".$subjectName."';";
+$selectQuery="select timer from `".$tableName."` where testname='".$subjectName."';";
 
 $result=mysqli_query($con,$selectQuery) or die(mysqli_error($con));
 

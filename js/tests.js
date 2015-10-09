@@ -28,6 +28,7 @@ function openExamWindow(subjectName)
 	
 	$.when(request).done(function(){
     	
+		intervalID  = setInterval(function(){ checkWindow(); }, 100);
     	childWindow = window.open('index.php','testWindow','toolbar=no, location=no, directories=no, status=no, menubar=no,height = 800px,width = 1000px');
     });
 	
@@ -52,7 +53,7 @@ function checkWindow()
     }
 }
 
-intervalID  = setInterval(function(){ checkWindow(); }, 1000);
+
 
 
 getTests();

@@ -105,7 +105,9 @@ function checkParameters(id)
 
 function doRegistration()
 {
- var username = document.getElementById("registrationusername").value;
+ var registrationemailid = document.getElementById("registrationemailid").value;
+ var registrationfirstname = document.getElementById("registrationfirstname").value;
+ var registrationlastname = document.getElementById("registrationlastname").value;
  var password = document.getElementById("registrationpassword").value;
  $('#errorOrSuccessDivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
 // alert(username);
@@ -114,7 +116,7 @@ function doRegistration()
  $(document).ready(function(){
 	 
 
-		 $.post( "phpFiles/newRegistration.php", {username : username , password : password},function( data ) {
+		 $.post( "phpFiles/newRegistration.php", {registrationfirstname : registrationfirstname ,registrationlastname : registrationlastname, registrationemailid : registrationemailid,password : password},function( data ) {
 		//alert(data.error);
 		 if(data.error == 1)
 			 {
@@ -198,7 +200,7 @@ function showLogin(id){
 
 function doLogin()
 {
- var username = document.getElementById("loginusername").value;
+ var loginemailid = document.getElementById("loginemailid").value;
  var password = document.getElementById("loginpassword").value;
  $('#errorOrSuccessDivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
 // alert(username);
@@ -208,12 +210,13 @@ function doLogin()
 	 
 	 
 		
-		 $.post( "phpFiles/login.php", {username : username , password : password},function( data ) {
+		 $.post( "phpFiles/login.php", {loginemailid : loginemailid , password : password},function( data ) {
 		   
 		  //alert(data.error);
 		 if(data.error == 1)
 			 {	
-		        	$('#errorOrSuccessDivision').html("Username or Password Entered is wrong");
+			 document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+		        	$('#errorOrSuccessDivision').html("Username or Password is wrong");
 		        	security(1); 
 			
 			 

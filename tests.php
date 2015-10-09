@@ -21,7 +21,7 @@ if(!isset($_SESSION['gateusername']))
    <div class="logOutDivision"><div class="logOutButtonDivision" onclick="logout()">LOG OUT</div></div>
    <div class="Division1">
    <?php 
-   echo $_SESSION['gateusername'];
+   echo $_SESSION['gatefirstname'].' '.$_SESSION['gatelastname'];
    ?>
    </div>
    <div class="division2">TEST SERIES</div>

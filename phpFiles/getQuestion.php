@@ -3,13 +3,13 @@ require_once 'isSessionSet.php';
 header('Content-type: application/json');
 require_once 'connection.php';
 
-$questionNo=$_GET["questionNo"];
-$tableName=$_SESSION['gateusername']."tests";
+$questionNo=mysqli_real_escape_string($con,$_GET["questionNo"]);
+$tableName=$_SESSION['gateusername'].".tests";
 $examname = $_SESSION['examname'];
 $filename=$examname."questions"; 
 
 
-$selectquery="select * from ".$tableName." where testName = '".$examname."';";
+$selectquery="select * from `".$tableName."` where testName = '".$examname."';";
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 

@@ -3,7 +3,7 @@ require_once 'isSessionSet.php';
 require_once 'connection.php';
 
 
-$tableName=$_SESSION['gateusername']."tests";
+$tableName=$_SESSION['gateusername'].".tests";
 $examname = $_SESSION['examname'];
 $filename=$examname."questions";
 $total = 0;
@@ -11,7 +11,7 @@ $total = 0;
 $str = file_get_contents('../questions/'.$filename.'.json');
 $jsonData = json_decode($str, true);
 
-$selectQuery = "select * from ".$tableName." where testName = '".$examname."' ;";
+$selectQuery = "select * from `".$tableName."` where testName = '".$examname."' ;";
 $result = mysqli_query($con,$selectQuery) or die(mysqli_error($con));
 $answerarray;
 
@@ -36,7 +36,7 @@ for($i=0;$i<30;$i++)
 	}
 }
 
-$updateQuery = "update ".$tableName." set marks = ".$total.",statusOfExam = 2,timer = '00:00:00' where testName = '".$examname."';";
+$updateQuery = "update `".$tableName."` set marks = ".$total.",statusOfExam = 2,timer = '00:00:00' where testName = '".$examname."';";
 mysqli_query($con,$updateQuery) or die(mysqli_error($con));
 
 echo $total;

@@ -2,10 +2,10 @@
 require_once 'isSessionSet.php';
 require_once 'connection.php';
 
-$tablename = $_SESSION['gateusername']."tests";
+$tablename = $_SESSION['gateusername'].".tests";
 $subjectname = $_SESSION['examname'];
 
-$updatequery ="update ".$tablename." set "
+$updatequery ="update `".$tablename."` set "
 		     ."statusOfExam = 1 "
 		     ."where testname = '".$subjectname."';";
 

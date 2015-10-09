@@ -2,9 +2,9 @@
 require_once 'isSessionSet.php';
 require_once 'connection.php';
 
-$tablename = $_SESSION['gateusername']."tests";
+$tablename = $_SESSION['gateusername'].".tests";
 
-$selectQuery = "select * from ".$tablename.";";
+$selectQuery = "select * from `".$tablename."`;";
 $result = mysqli_query($con,$selectQuery) or die(mysqli_error($con));
 
 $testsArray;

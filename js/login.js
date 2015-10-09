@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	 $("#loginDivision").show();
 	 $("#registrationDivision").hide();
-	 $("#errorOrSuccessDivision").hide();
+	 
 });
 
 var valueOne,valueTwo,operator;
@@ -59,25 +59,22 @@ function security(val)
 
 function checkParameters(id)
 {
+	 $('#errorOrSuccessDivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
 	var val1 = document.getElementById("Lanswer").value;
 	var val2 = document.getElementById("Ranswer").value;
 	if(id == 2)
 		{
 	       if(answer != val2)
 	       {
-	    	   $('#errorOrSuccessDivision').slideUp(250,function(){
-	    		   
-	    		   $('#errorOrSuccessDivision').html("");   
-	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
-	    	   });
 	    	   
-		        $('#errorOrSuccessDivision').slideDown(250,function(){
+	    	  
+		       
 		        	
 		        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
 		        	
 		        	$('#errorOrSuccessDivision').html("security is wrong");
 		        	
-		        });
+		        
 		        security(2);
 	       } 
 	       else
@@ -89,19 +86,14 @@ function checkParameters(id)
 	else{
 		if(answer != val1)
 	       {
-			$('#errorOrSuccessDivision').slideUp(250,function(){
-	    		   
-	    		   $('#errorOrSuccessDivision').html("");   
-	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';   
-			});
-			$('#errorOrSuccessDivision').slideDown(250,function(){
+	    	   
+		       
 	        	
 	        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
 	        	
 	        	$('#errorOrSuccessDivision').html("security is wrong");
 	        	
-	        });
-			security(1);
+	       security(1);
 	       } 
 	       else
 		  {
@@ -115,7 +107,7 @@ function doRegistration()
 {
  var username = document.getElementById("registrationusername").value;
  var password = document.getElementById("registrationpassword").value;
- 
+ $('#errorOrSuccessDivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
 // alert(username);
  //alert(password);
  
@@ -126,34 +118,27 @@ function doRegistration()
 		//alert(data.error);
 		 if(data.error == 1)
 			 {
-			 $('#errorOrSuccessDivision').slideUp(250,function(){
-	    		   
-	    		   $('#errorOrSuccessDivision').html("");   
-	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
-	    	   });
-			    $('#errorOrSuccessDivision').slideDown(250,function(){
-			       	
+
+	    	  
+		       
+		        	
 		        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
 		        	
-		        	$('#errorOrSuccessDivision').html("Username Already Exists");
-		        	security(2);
-			    });
+		        	$('#errorOrSuccessDivision').html("User Name already exists");
+		        	
+		           	security(2);
+			    
 			 
 			 }
 		 else
 		 {
-			 $('#errorOrSuccessDivision').slideUp(250,function(){
-	    		   
-	    		   $('#errorOrSuccessDivision').html("");   
-	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
-	    	   });
-			 $('#errorOrSuccessDivision').slideDown(250,function(){
+			
 		        	
 		        	document.getElementById("errorOrSuccessDivision").className = 'successStatus';
 		        	
 		        	$('#errorOrSuccessDivision').html("Successfully registered!! Please login");
-		        	showLogin();
-			 });
+		        	showLogin(1);
+			 
 			 
 		 }
 	 },"json");
@@ -165,13 +150,9 @@ function showRegistration(){
 	
 	$(document).ready(function(){
 		
-
-		$("#errorOrSuccessDivision").slideUp(250,function(){
-			
-			$('#errorOrSuccessDivision').html("");	
-			document.getElementById("errorOrSuccessDivision").className = 'dummy';
-			
-		   $('#loginDivision').slideUp(1000,function(){
+	
+    	 $('#errorOrSuccessDivision').html('');
+       $('#loginDivision').slideUp(1000,function(){
 			
 			
 			   $('#registrationDivision').slideDown(1000,function(){
@@ -184,21 +165,20 @@ function showRegistration(){
 			
 			});
 			
-					});
+				
 		
 	});
 }
 
 
-function showLogin(){
+function showLogin(id){
 	
-	$(document).ready(function(){
-$("#errorOrSuccessDivision").slideUp(250,function(){
-			
-			$('#errorOrSuccessDivision').html("");	
-			document.getElementById("errorOrSuccessDivision").className = 'dummy';
-			
-		   $('#registrationDivision').slideUp(1000,function(){
+	$(document).ready(function(){ 
+		
+		if(id==2)
+			$('#errorOrSuccessDivision').html('');
+		
+		$('#registrationDivision').slideUp(1000,function(){
 			
 			
 			   $('#loginDivision').slideDown(1000,function(){
@@ -211,7 +191,7 @@ $("#errorOrSuccessDivision").slideUp(250,function(){
 			
 			});
 			
-					});
+				
 		
 	});
 }
@@ -220,7 +200,7 @@ function doLogin()
 {
  var username = document.getElementById("loginusername").value;
  var password = document.getElementById("loginpassword").value;
- 
+ $('#errorOrSuccessDivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
 // alert(username);
  //alert(password);
  
@@ -232,35 +212,15 @@ function doLogin()
 		   
 		  //alert(data.error);
 		 if(data.error == 1)
-			 {
-			 $('#errorOrSuccessDivision').slideUp(250,function(){
-	    		   
-	    		   $('#errorOrSuccessDivision').html("");   
-	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
-	    	   });
-			 $('#errorOrSuccessDivision').slideDown(250,function(){
-		        	
-		        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
-		        	
+			 {	
 		        	$('#errorOrSuccessDivision').html("Username or Password Entered is wrong");
 		        	security(1); 
-			 });
+			
 			 
 			 }
 		 else
 		 {
-			 $('#errorOrSuccessDivision').slideUp(250,function(){
-	    		   
-	    		   $('#errorOrSuccessDivision').html("");   
-	    		   document.getElementById("errorOrSuccessDivision").className = 'dummy';
-	    	   });
-			 $('#errorOrSuccessDivision').slideDown(250,function(){
-		        	
-		        	document.getElementById("errorOrSuccessDivision").className = 'successStatus';
-		        	
-		        	$('#errorOrSuccessDivision').html("Success login");
-		        });
-			 window.open('tests.php','_self');
+			  window.open('tests.php','_self');
 		 }
 		
 	 },"json");

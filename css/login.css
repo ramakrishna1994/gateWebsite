@@ -85,6 +85,17 @@ body,html{
 	float:right;
 	text-align:center;
 }
+
+.loginButtonDivision:hover
+{
+	cursor:pointer;
+	padding:5px;
+	width:185px;
+	height:25px;
+	background-color:#808080;
+    color:white;
+}
+
 .registerButtonDivision
 {
 	cursor:pointer;
@@ -95,6 +106,18 @@ body,html{
 	float:right;
 	text-align:center;
 }
+
+
+.registerButtonDivision:hover
+{
+	cursor:pointer;
+	padding:5px;
+	width:185px;
+	height:25px;
+	background-color:#808080;
+    color:white;
+}
+
 .buttonDivision:hover
 {
 	cursor:pointer;
@@ -132,26 +155,14 @@ input[type="text"]:hover,input[type="password"]:hover {
 }
 
 
+
 .dummy{
 	
-	color: black;
+	color: yellow;
 	padding:5px;
     text-align: center;
 	width:350px;
-	height:20px;
-	float:left;
-		position:fixed;
-	font-family: fantasy;
-	
-}
-
-.dummy1{
-	
-	color: black;
-	padding:5px;
-    text-align: center;
-	width:350px;
-	height:20px;
+	height:40px;
 	float:left;
 	
 	font-family: fantasy;
@@ -160,28 +171,29 @@ input[type="text"]:hover,input[type="password"]:hover {
 
 
 .successStatus{
-	font-size:10px;
+	
+	
 	color: green;
-	padding-bottom:10px;
+	padding:5px;
     text-align: center;
 	width:350px;
-	height:20px;
+	height:40px;
 	float:left;
-	font-family: fantasy;
-		position:fixed;
+	font-family: sans-serif;
+	font-size:20px;	
 }
 
 .failureStatus{
 	
-	color: red;
-	padding-bottom:10px;
+	
     text-align: center;
 	width:350px;
-	height:20px;
+	height:40px;
+	padding:5px;
 	float:left;
 	font-size:20px;
 	font-family: sans-serif;
-		position:fixed;
+	color: red;	
 }
 
 #registrationDivision{
@@ -198,11 +210,12 @@ input[type="text"]:hover,input[type="password"]:hover {
 }
 
 .securityDivision{
-	background-color:teal;
+	background-color: #778899;
 	padding:5px;
-	margin:0px;
+	margin-left:50px;
+	
     text-align:center;
-	width:270px;
+	width:180px;
 	height:40px;
 	float:left;
 	
@@ -210,9 +223,9 @@ input[type="text"]:hover,input[type="password"]:hover {
 
 .securityBox{
 	font-family:fantasy;
-   background-color:teal;
-	padding:10px;
-	margin:0px;
+  background-color: #778899;
+	padding:3px;
+	
     text-align:center;
 	width:30px;
 	height:20px;
@@ -224,7 +237,7 @@ input[type="text"]:hover,input[type="password"]:hover {
 .reloadDivision{
 	
 	cursor:pointer;
-   background-color:teal;
+  background-color: #778899;
 	padding:10px;
 	margin:0px;
     text-align:center;

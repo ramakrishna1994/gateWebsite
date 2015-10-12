@@ -23,13 +23,20 @@ getQuestion(1);
 		      $("#optionB").html(data.optionB);
 		      $("#optionC").html(data.optionC);
 		      $("#optionD").html(data.optionD);
-	    	    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
+	    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
 	    	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+")");
 	    	  
-	    	  if(data.answered!=0)
+	    	  var answerarray = data.answers;
+	    	 // alert(answerarray);
+	    	  var val = parseInt(current) - 1;
+	    	  answerarray= answerarray.split('');
+	    	  //alert(answerarray[val]);
+	    	  if(answerarray[val]!= '0')
     		  {
     		    
-    		    var radioButton="option"+data.answered+"Radio";
+    		    var radioButton="option"+answerarray[val]+"Radio";
+    		    
+    		    //alert(radioButton);
     		    document.getElementById(radioButton).checked=true;
     		    
     		  }

@@ -1,5 +1,6 @@
 var hours,minutes,seconds,time,id;
 var pastMinute,pastSecond;
+var subjectName;
 
 $(document).ready(function(){
 	
@@ -7,9 +8,10 @@ $(document).ready(function(){
 	
 	$.getJSON("phpFiles/getTimer.php",function(data){
 		
+		      subjectName = data.subjectname;
               time=data.timer;
-              var timeArray = time.split(":")
-              alert(timeArray);
+              var timeArray = time.split(":");
+              //alert(timeArray);
 			  hours=timeArray[0];
               minutes=timeArray[1];
               seconds=timeArray[2];
@@ -20,7 +22,7 @@ $(document).ready(function(){
 			  $("#minutesDivision").html(minutes);
 			  $("#secondsDivision").html(seconds);
 			
-			  id = setInterval(function(){startTimer()}, 1000);
+			  id = setInterval(function(){startTimer();}, 1000);
 			  
 			  
 		
@@ -61,10 +63,12 @@ function startTimer()
     	}
     if(hours==0 && minutes==0 && seconds==0)
     	{
-    	 updateTimerToDatabase(hours,minutes,seconds);
+    	window.clearInterval(id);
     	 alert("end of test");
-    	 window.clearInterval(id);
-    	 window.close();
+    	 
+    	 endTest();
+    	 
+    	 
     	}
     	
     if(hours < 10)
@@ -105,6 +109,24 @@ function updateTimerToDatabase(hours,minutes,seconds)
 	            timer : timer,
 	         }
 	    });
+	
+}
+
+function endTest()
+{
+	var request = $.ajax({
+        url: 'phpFiles/endTest.php',
+        type: 'POST',
+        data: 
+        {
+            subjectname : subjectName,
+         }
+    });
+	$.when(request).done(function(){
+		alert(1);
+		window.opener.location.reload();
+        window.close();	
+	});
 	
 }
 

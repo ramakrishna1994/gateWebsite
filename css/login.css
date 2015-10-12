@@ -1,0 +1,247 @@
+body,html{
+	 margin:auto;
+     padding: 0;
+     text-align: center;
+     background-image: url('../images/background.png');
+     
+	
+}
+
+
+.mainDivision{
+	
+	
+	padding:0;
+	margin:auto;
+	margin-top:50px;
+    text-align:center;
+	width:400px;
+	height:500px;
+	
+}
+
+
+#loginDivision{
+
+	padding:5px;
+	margin:0px;
+    text-align:center;
+	width:350px;
+	height:300px;
+	float:left;
+	border-color: black;
+	border:1px solid;
+	
+	
+}
+
+.firstBox{
+	padding:0px;
+	margin-top:10px;
+	text-align:center;
+	width:40px;
+	height:50px;
+	float:left;
+		
+}
+.secondBox{
+	padding:0px;
+	margin-top:10px;
+    text-align:center;
+	width:310px;
+	height:50px;
+	float:left;
+		
+}
+
+.submitDivision{  
+	
+    padding:10px;
+	text-align:center;
+	width:250px;
+	height:30px;
+	float:left;
+	
+	
+}
+
+.textDivision{
+	
+	
+	text-align:center;
+	width:380px;
+	height:30px;
+	float:left;
+	font-size: 15px;
+	
+}
+.loginButtonDivision
+{
+	cursor:pointer;
+	padding:5px;
+	width:180px;
+	height:20px;
+	background-color:green;
+	float:right;
+	text-align:center;
+}
+
+.loginButtonDivision:hover
+{
+	cursor:pointer;
+	padding:5px;
+	width:185px;
+	height:25px;
+	background-color:#808080;
+    color:white;
+}
+
+.registerButtonDivision
+{
+	cursor:pointer;
+	padding:5px;
+	width:180px;
+	height:20px;
+	background-color:purple;
+	float:right;
+	text-align:center;
+}
+
+
+.registerButtonDivision:hover
+{
+	cursor:pointer;
+	padding:5px;
+	width:185px;
+	height:25px;
+	background-color:#808080;
+    color:white;
+}
+
+.buttonDivision:hover
+{
+	cursor:pointer;
+	background-color:red;
+	
+}
+
+input[type="button"]
+{
+	width:180px;
+	height:40px;
+	background-color:green;
+	font-family: fantasy;
+}
+input[type="text"]
+ {
+  
+   width: 300px;
+   height:30px;
+   
+   }
+ input[type="password"]
+ {
+  
+   width: 300px;
+   height:30px;
+   
+ }
+ input[type="text"]:focus,input[type="password"]:focus {
+  border-color: maroon;
+}
+input[type="text"]:hover,input[type="password"]:hover {
+    border-color:lime;
+    
+}
+
+
+
+.dummy{
+	
+	color: yellow;
+	padding:5px;
+    text-align: center;
+	width:350px;
+	height:40px;
+	float:left;
+	
+	font-family: fantasy;
+	
+}
+
+
+.successStatus{
+	
+	
+	color: green;
+	padding:5px;
+    text-align: center;
+	width:350px;
+	height:40px;
+	float:left;
+	font-family: sans-serif;
+	font-size:20px;	
+}
+
+.failureStatus{
+	
+	
+    text-align: center;
+	width:350px;
+	height:40px;
+	padding:5px;
+	float:left;
+	font-size:20px;
+	font-family: sans-serif;
+	color: red;	
+}
+
+#registrationDivision{
+
+	padding:5px;
+	margin:0px;
+    text-align:center;
+	width:350px;
+	height:450px;
+	float:left;
+	border-color: black;
+	border:1px solid;
+	
+}
+
+.securityDivision{
+	background-color: #778899;
+	padding:5px;
+	margin-left:50px;
+	
+    text-align:center;
+	width:180px;
+	height:40px;
+	float:left;
+	
+}
+
+.securityBox{
+	font-family:fantasy;
+  background-color: #778899;
+	padding:3px;
+	
+    text-align:center;
+	width:30px;
+	height:20px;
+	float:right;
+	
+	
+}
+
+.reloadDivision{
+	
+	cursor:pointer;
+  background-color: #778899;
+	padding:10px;
+	margin:0px;
+    text-align:center;
+	width:40px;
+	height:30px;
+	float:left;
+}

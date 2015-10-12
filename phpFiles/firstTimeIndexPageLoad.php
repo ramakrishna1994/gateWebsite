@@ -1,35 +1,26 @@
 <?php
-session_start();
-if(!isset($_SESSION['gateusername']) || !isset($_SESSION['examname']))
-	header('location:../login.html');
 
-
-
+require_once 'isSessionSet.php';
+require_once 'connection.php';
 header('Content-type: application/json');
 
-require_once 'connection.php';
+$tableName=$_SESSION['gateusername'].".tests";
+$subjectname=$_SESSION['examname'];
 
 
-$tableName="gateQuestions";
-
-
-
-$selectquery="select * from ".$tableName.";";
+$selectquery="select * from `".$tableName."` where testname = '".$subjectname."' ;";
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 
-$json="[";
+$json="";
 
 while($row = mysqli_fetch_array($result)){
 	$json .='{';
-	$json .= '"questionNo":'.'"'.$row["questionNo"].'",';
-	$json .= '"marked":'.'"'.$row["marked"].'"';
+    $json .= '"marked":'.'"'.$row["marked"].'"';
 	$json .='}';
    
-	if($row['questionNo']!='30')
-		$json .=',';
 }
-$json .="]";
+
 echo $json;
 
 mysqli_close($con);

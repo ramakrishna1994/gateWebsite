@@ -2,13 +2,88 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration</title>
+<title>LOGIN</title>
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<style type="text/css">
+input[id="Lanswer"]{
+width:30px;
+height:25px;
+float:left;
+background-color: rgba(221, 221, 221, 0.6);
+}
+input[id="Ranswer"]{
+width:30px;
+height:25px;
+float:left;
+background-color: rgba(221, 221, 221, 0.6);
+}
+</style>
 </head>
 <body>
-<form method="post" action="phpFiles/login.php">
-Username:<input type="text" id="username" name="username"><br>
-Password:<input type="password" id="password" name="password"><br>
-<input type="submit">
-</form>
+
+<div class="mainDivision">
+  <div id="errorOrSuccessDivision" class="dummy"> </div>
+    
+  
+  <div id="loginDivision">
+   <div class="firstBox"><img src="images/email.jpg" width="35px" height="35px"></div>
+   <div class="secondBox"><input type="text" id="loginemailid" placeholder="EMAIL ID"></div>
+   
+   <div class="firstBox"><img src="images/lock.jpg" width="35px" height="35px"></div>
+   <div class="secondBox"><input type="password" id="loginpassword" placeholder="PASSWORD"></div>
+   
+   <div class="securityDivision">
+   <div class="securityBox" id="LanswerDiv"><input type="text" id="Lanswer" value=""></div>
+    <div class="securityBox" id="Lequal">=</div>
+    <div class="securityBox" id="LValueTwo"></div>
+    <div class="securityBox" id="LOperator"></div>
+    <div class="securityBox" id="LValueOne"></div> 
+     
+   </div>
+   <div class="reloadDivision" onClick="security(1)"><img src="images/reload.jpg" width="30px" height="30px"></div>       
+    <div class="submitDivision" ><div class='loginButtonDivision' onClick="checkParameters(1)">LOGIN</div></div>
+    <div class="textDivision" >NEW USER ? CLICK BELOW TO REGISTER </div>
+    <div class="submitDivision" ><div class='registerButtonDivision' onClick="showRegistration()">REGISTER</div></div> 
+    
+   </div>
+  
+  <div id="registrationDivision">
+ 
+   <div class="firstBox"><img src="images/user.jpg" width="35px" height="35px"></div>
+   <div class="secondBox"><input type="text" id="registrationfirstname" placeholder="FIRST NAME"></div>
+   
+   <div class="firstBox"><img src="images/user.jpg" width="35px" height="35px"></div>
+   <div class="secondBox"><input type="text" id="registrationlastname" placeholder="LAST NAME"></div>
+  
+   <div class="firstBox"><img src="images/email.jpg" width="35px" height="35px"></div>
+   <div class="secondBox"><input type="text" id="registrationemailid" placeholder="EMAIL ID"></div>
+  
+  
+   <div class="firstBox"><img src="images/lock.jpg" width="35px" height="35px"></div>
+   <div class="secondBox"><input type="password" id="registrationpassword" placeholder="PASSWORD"></div>
+  
+   <div class="firstBox"><img src="images/lock.jpg" width="35px" height="35px"></div>
+   <div class="secondBox"><input type="password" id="registrationconfirmpassword" placeholder="CONFIRM PASSWORD"></div>
+   
+   <div class="securityDivision">
+   <div class="securityBox" id="RanswerDiv"><input type="text" id="Ranswer" value=""></div>
+    <div class="securityBox" id="Requal">=</div>
+    <div class="securityBox" id="RValueTwo"></div>
+    <div class="securityBox" id="ROperator"></div>
+    <div class="securityBox" id="RValueOne"></div> 
+     
+   </div>
+   <div class="reloadDivision" onClick="security(2)"><img src="images/reload.jpg" width="30px" height="30px"></div>
+    
+    <div class="submitDivision" ><div class='loginButtonDivision' onClick="checkParameters(2)">REGISTER</div></div>
+    <div class="submitDivision" ><div class='registerButtonDivision' onClick="showLogin(2)">BACK TO LOGIN</div></div>
+   <div>
+           
+  </div>
+
+</div>
+</div>
 </body>
 </html>

@@ -2,41 +2,54 @@
 session_start();
 if(!isset($_SESSION['gateusername']))
   header('location:login.html');
-
-echo "WELCOME ".$_SESSION['gateusername'];
-
+//echo "WELCOME ".$_SESSION['gateusername'];
 ?>
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>tests</title>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="js/tests.js"></script>
 <link rel="stylesheet" type="text/css" href="css/tests.css">
+<script type="text/javascript" src="js/jquery-min.js"></script>
+<script type="text/javascript" src="js/tests.js"></script>
+
+
 </head>
 <body>
+<div class="mainDivision">
+  <div class="headerDivision">
+   <div class="Division1">WELCOME</div>
+   <div class="Division2">GATE ONLINE</div>
+   <div class="logOutDivision"><div class="logOutButtonDivision" onclick="logout()">LOG OUT</div></div>
+   <div class="Division1">
+   <?php 
+   echo $_SESSION['gatefirstname'].' '.$_SESSION['gatelastname'];
+   ?>
+   </div>
+   <div class="division2">TEST SERIES</div>
+  </div>
+  
+  <div class="sideBarDivision">
+    <div class="profilePictureDivision"><img src="images/user.jpg" style="height:90px;width:90px"></div>
+    <div class="sideBarDivision1" onclick="updateProfile()">UPDATE PROFILE</div>
+    <div class="sideBarDivision1" onclick="accountSettings()">ACCOUNT SETTINGS</div>
+    <div class="sideBarDivision1" onclick="buyTestSeries()">BUY TEST SERIES</div>
+  </div>
+  
+  <div class="mainTestsDivision">
+    <div class="testsheaderDivision">
+       <div class="snoDivision1">S.NO</div>
+       <div class="testNameDivision1">TEST NAME</div>
+       <div class="testStatusDivision1">TEST STATUS</div>
+    </div>
+    <div class="testsDivision" id="testsDivision">
+    <!-- ---------this division will be loaded automatically -->
+       <div class="snoDivision">1</div>
+       <div class="testNameDivision">CN</div>
+       <div class="testStatusDivision">Cn</div>
+    <!-- ---------------------------------------------------- -->
+  
+    </div>
+  </div>
+</div>
 
-<input type="button" value="log out" onclick="logout()">
- <div id="testsContainer">
- <div>
-  <div class="subjectContainer">CN</div>
-  <div class="statusContainer" onclick="openExamWindow('cn01')">START TEST</div>
- </div>
- <div>
-  <div class="subjectContainer">CO</div>
-  <div class="statusContainer" onclick="openExamWindow('co01')">START TEST</div>
- </div>
- <div>
-  <div class="subjectContainer">TOC</div>
-  <div class="statusContainer" onclick="openExamWindow('toc01')">START TEST</div>
- </div>
- <div>
-  <div class="subjectContainer">CD</div>
-  <div class="statusContainer" onclick="openExamWindow('cd01')">START TEST</div>
- </div>
- </div>
 </body>
 </html>

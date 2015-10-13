@@ -5,76 +5,84 @@
 
 		
 		 
-		 var value;
-		 if(document.getElementById("optionARadio").checked==true)
+		 var value,marked;
+		 if(document.getElementById("optionADivision").getAttribute("ticked")==1)
 			 {
 			 value="A";
+			 marked="1";
 			 document.getElementById(questionNo).className="saved";	 
 			 }
-		 else if(document.getElementById("optionBRadio").checked==true)
+		 else if(document.getElementById("optionBDivision").getAttribute("ticked")==1)
 		 {
 			 value="B";
+			 marked="1";
 			 document.getElementById(questionNo).className="saved";	 
 			 }
 
-		 else if(document.getElementById("optionCRadio").checked==true)
+		 else if(document.getElementById("optionCDivision").getAttribute("ticked")==1)
 		 {
 			 value="C";
+			 marked="1";
 			 document.getElementById(questionNo).className="saved";	 
 			 }
 
-		 else if(document.getElementById("optionDRadio").checked==true)
+		 else if(document.getElementById("optionDDivision").getAttribute("ticked")==1)
 		 {
 			 value="D";
+			 marked="1";
 			 document.getElementById(questionNo).className="saved";	 
 			 }
 		 else
 		 {
 			 value="0";
+			 marked="0";
 			 //document.getElementById(questionNo).className="notAnswered";	 
 			 }
 		 
-		 $("#questionNo").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
-		  $("#question").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
-	      $("#optionA").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
-	      $("#optionB").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
-	      $("#optionC").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
-	      $("#optionD").html('<img src="images/loader.gif" style="height: 40px;width: 40px">');
+		 $("#questionNo").html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
+		  $("#question").html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
+	      $("#optionA").html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
+	      $("#optionB").html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
+	      $("#optionC").html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
+	      $("#optionD").html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
 	 
   $(document).ready(function(){
 	 
-	  $.getJSON( "phpFiles/saveAndReviewQuestion.php", { questionNo : current, answer:value ,marked:1 }, function( data ) {
+	  $.getJSON( "phpFiles/saveAndReviewQuestion.php", { questionNo : current, answer:value ,marked:marked }, function( data ) {
 	
-		  $("#questionNo").html(data.questionNo);
+		  $("#questionNo").html("QUESTION NO : "+data.questionNo);
           $("#question").html(data.question);
 	      $("#optionA").html(data.optionA);
 	      $("#optionB").html(data.optionB);
 	      $("#optionC").html(data.optionC);
 	      $("#optionD").html(data.optionD);
-        	  document.getElementById("questionNo").innerHTML=data.questionNo;
-    	  document.getElementById("question").innerHTML=data.question;
-    	  document.getElementById("optionA").innerHTML=data.optionA;
-    	  document.getElementById("optionB").innerHTML=data.optionB;
-    	  document.getElementById("optionC").innerHTML=data.optionC;
-    	  document.getElementById("optionD").innerHTML=data.optionD;
     	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+")");
     	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
+    	  
+    	  document.getElementById("optionADivision").setAttribute("ticked", "0");
+		  document.getElementById("optionBDivision").setAttribute("ticked", "0");
+		  document.getElementById("optionCDivision").setAttribute("ticked", "0");
+		  document.getElementById("optionDDivision").setAttribute("ticked", "0");
     	 
     	  if(data.answered!='0')
     		  {
     		    
-    		    var radioButton="option"+data.answered+"Radio";
-    		    document.getElementById(radioButton).checked=true;
-    		    
-    		  }
-    	  else
-    		  {
-    		  document.getElementById("optionARadio").checked=false;
-    		  document.getElementById("optionBRadio").checked=false;
-    		  document.getElementById("optionCRadio").checked=false;
-    		  document.getElementById("optionDRadio").checked=false;
-    		  }
-    	});
+    		  var radioButton="option"+data.answered+"Division";
+  		    
+  		    //alert(radioButton);
+  		    document.getElementById(radioButton).className='answered';
+  		  document.getElementById(radioButton).setAttribute("ticked", "1");
+  		    
+  		  }
+  	  else
+  		  {
+  		  document.getElementById("optionADivision").className='optionDivision';
+  		  document.getElementById("optionBDivision").className='optionDivision';
+  		  document.getElementById("optionCDivision").className='optionDivision';
+  		  document.getElementById("optionDDivision").className='optionDivision';
+  		  }
+    	  
+	  });
   
   });    
  }

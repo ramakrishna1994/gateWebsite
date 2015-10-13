@@ -34,6 +34,7 @@ for($i=0;$i<30;$i++)
 	 {
 	 	$total = $total - ($jsonData["questions"][$i+1]["marks"] / 3);
 	}
+	echo 1;
 }
 
 $updateQuery = "update `".$tableName."` set marks = ".$total.",statusOfExam = 2,timer = '00:00:00' where testName = '".$examname."';";

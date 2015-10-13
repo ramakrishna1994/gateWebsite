@@ -12,7 +12,7 @@ $json="[";
 $out = array();
 while($row = mysqli_fetch_array($result))
  {
-  $out[] = array($row['testName'], $row['statusOfExam']);
+  $out[] = array($row['testName'], $row['statusOfExam'],$row['subjectname']);
  }
 echo json_encode($out);
 mysqli_close($con);

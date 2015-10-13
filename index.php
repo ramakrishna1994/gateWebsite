@@ -1,86 +1,89 @@
-<?php
-session_start();
-if(!isset($_SESSION['gateusername']))
-{
- header('location:login.html');
-}
 
-
-echo $_SESSION['examname'];
-echo $_SESSION['gateusername'];
-?>
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/index.css">
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-</head>
-<body>
+ <script type="text/javascript" src="js/jquery-min.js"></script>
 <script src = "js/firstTimeIndexPageLoad.js"></script>
 <script src = "js/getAndUpdateTimer.js"></script>
  <script src = "js/getQuestion.js"></script>
  <script src = "js/saveAndNext.js"></script>
  <script src = "js/reviewAndNext.js"></script>
-<div id="mainDivision">
-  <div id="timerDivision">
-    <div id="secondsDivision"></div>
-    <div id="columnDivision">:</div>
-    <div id="minutesDivision"></div>
-    <div id="columnDivision">:</div>
-    <div id="hoursDivision"></div>
+ 
+ </head>
+<body>
+<div class="mainDivision">
+
+<div class="headerDivision">
+	<div class="timerDivision">
+		
+		<div id="secondsDivision"></div>
+    	<div id="columnDivision">:</div>
+    	<div id="minutesDivision"></div>
+    	<div id="columnDivision">:</div>
+    	<div id="hoursDivision"></div>
     
-  </div>
-  <div id="questionDivision">
-      <div id="questionNo">
-        1
-      </div>
-      <div id="question">
-      
-        <img src="images/loader.gif" style="height: 40px;width: 40px">
-      </div>
-      <div>
-           <div id="optionABox">
-             <input type="radio" id="optionARadio" name="option" value="A"><p id="optionA">
-                 <img src="images/loader.gif" style="height: 40px;width: 40px;">
-             </p>
-           </div>
-           <div id="optionBBox">
-              <input type="radio" id="optionBRadio" name="option" value="B"><p id="optionB"> 
-                <img src="images/loader.gif" style="height: 40px;width: 40px">
-              </p>
-           </div>
-      </div>
-      <div>
-           <div id="optionCBox">
-             <input type="radio" id="optionCRadio" name="option" value="C"> <p id="optionC">
-               <img src="images/loader.gif" style="height: 40px;width: 40px">
-             </p>
-           </div>
-           <div id="optionDBox">
-              <input type="radio" id="optionDRadio" name="option" value="D"> <p id="optionD">
-                <img src="images/loader.gif" style="height: 40px;width: 40px">
-              </p>
-           </div>
-      </div>
-      <div id="submitDivision">
-        <div id="saveAndNextDivision" onclick="saveAndNext(1)">
-        save and next
-        </div>
-        <div id="reviewAndNextDivision" onclick="reviewAndNext(1)">
-        Mark for Review and Next
-        </div>
-      </div>
-  </div>
-  <div id="questionSelectorDivision">
-      
-      <div id="questionsDivision">
-        
-        <!-- division will be loaded -->
-    <img src="images/loader.gif" style="height: 40px;width: 40px;padding-top: 50%">
-     </div>  
-   </div>
+	</div>
 </div>
 
-</body>
-</html>
+<div class="mainTestDivision">
+
+    	<div class="questionNoDivision" id="questionNo">
+      	QUESTION NO : 01
+  		</div>
+ 		
+ 		<div class="questionDivision" id="question">
+    		asdnlansdlansdlandlasndannnnnnnnnnnnnnnnnnnnnnnnnnnnnnn asdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ 		</div>
+ 		
+ 		<div class="imageDivision" id="imageDivision">
+ 
+ 		</div>
+ 		
+ 		<div class="optionDivision" id="optionADivision" ticked="0" onclick="setAnswer(1)">
+   		<div class="firstDivision">A</div>
+   		<div class="secondDivision" id="optionA">A</div>
+  		</div>
+  
+ 		<div class="optionDivision" id="optionBDivision" ticked="0" onclick="setAnswer(2)">
+   		<div class="firstDivision">B</div>
+   		<div class="secondDivision" id="optionB">B</div>
+  		</div>
+ 
+ 
+ 		<div class="optionDivision" id="optionCDivision" ticked="0" onclick="setAnswer(3)">
+   		<div class="firstDivision">C</div>
+   		<div class="secondDivision" id="optionC">C</div>
+  		</div>
+ 
+
+ 		<div class="optionDivision" id="optionDDivision" ticked="0" onclick="setAnswer(4)">
+   		<div class="firstDivision">D</div>
+   		<div class="secondDivision" id="optionD">D</div>
+  		</div>
+</div>
+
+<div id="numbersDivision">
+ 
+	 <!-- This division will be loaded dynamically -->
+	<img src="images/redloader.gif" style="height: 30px;width: 30px">
+
+</div>
+
+<div class="submitDivision">
+
+ 
+  		<div class="buttonDivision" >
+  		<div id="reviewAndNextDivision">MARK FOR REVIEW AND NEXT</div>
+ 		</div>
+ 		
+  		<div class="buttonDivision">
+  		<div id="saveAndNextDivision"> SAVE AND NEXT</div>
+ 		</div>
+
+</div>
+</div>
+ </body>
+ 
+ </html>

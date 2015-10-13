@@ -114,6 +114,7 @@ function updateTimerToDatabase(hours,minutes,seconds)
 
 function endTest()
 {
+	 window.clearInterval(id);
 	var request = $.ajax({
         url: 'phpFiles/endTest.php',
         type: 'POST',
@@ -123,9 +124,9 @@ function endTest()
          }
     });
 	$.when(request).done(function(){
-		alert(1);
-		window.opener.location.reload();
-        window.close();	
+		//alert(1);
+          window.opener.location.reload();
+         window.close();	
 	});
 	
 }

@@ -20,3 +20,8 @@ create table $username.tests(
  statusOfExam = 0 means not started
               = 1 means test started
               = 2 means test completed
+              
+              
+  marked = 0 means not answered
+         = 1 means saved
+         = 2 means reviewed

@@ -29,7 +29,7 @@ function openExamWindow(subjectName)
 	$.when(request).done(function(){
     	
 		intervalID  = setInterval(function(){ checkWindow(); }, 100);
-    	childWindow = window.open('index.php','testWindow','toolbar=no, location=no, directories=no, status=no, menubar=no,height = 800px,width = 1000px');
+    	childWindow = window.open('index.php','testWindow','toolbar=no, location=no, directories=no, status=no, menubar=no,height = 800px,width = 1100px');
     });
 	
 	
@@ -42,12 +42,18 @@ function checkWindow()
     {
         window.clearInterval(intervalID);
     	
-        $.ajax({
+       var request =  $.ajax({
 	        url: 'phpFiles/examSessionDestroy.php',
 	        
 	       
 	    });
-        getTests();
+       
+       $.when(request).done(function(){
+    	   
+    	   //alert(1);
+    	   window.opener.location.reload();
+    	   getTests();
+       });
         //alert('closed');
         
     }
@@ -78,14 +84,14 @@ $(document).ready(function(){
 				  {
 
 			       innerhtml +='<div class="snoDivision">'+j+'</div>'
-			                 +'<div class="testNameDivision">'+data[i][0]+'</div>'
+			                 +'<div class="testNameDivision">'+data[i][2]+'</div>'
 			    	         +'<div class="testStatusDivision"><div class="testNotStarted" onclick="openExamWindow(\''+data[i][0]+'\')" id="'+data[i][0]+'">START TEST</div></div>';
 			    
 				  }
 			  else if(data[i][1] == 1)
 				  {
 				  innerhtml +='<div class="snoDivision">'+j+'</div>'
-	                 +'<div class="testNameDivision">'+data[i][0]+'</div>'
+	                 +'<div class="testNameDivision">'+data[i][2]+'</div>'
 	    	         +'<div class="testStatusDivision"><div class="testIncomplete" onclick="openExamWindow(\''+data[i][0]+'\')" id="'+data[i][0]+'">CONTINUE TEST</div></div>';
 	    
 
@@ -94,7 +100,7 @@ $(document).ready(function(){
 				  {
                       
 				  innerhtml +='<div class="snoDivision">'+j+'</div>'
-	                 +'<div class="testNameDivision">'+data[i][0]+'</div>'
+	                 +'<div class="testNameDivision">'+data[i][2]+'</div>'
 	    	         +'<div class="testStatusDivision"><div class="testComplete" onclick="openResultsWindow(\''+data[i][0]+'\')" id="'+data[i][0]+'">TEST RESULTS</div></div>';
 	    
 				  }

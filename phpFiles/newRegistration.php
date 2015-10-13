@@ -33,6 +33,7 @@ if(mysqli_num_rows($result) == 0)
    $createQuery="create table `".$emailid.".tests`("
              ."id int not null auto_increment,"
              ."testName varchar(100),"
+             ."subjectname varchar(100),"
              ."timer varchar(20),"
              ."marks int not null default 0,"
              ."statusOfExam int not null default 0,"
@@ -55,7 +56,8 @@ if(mysqli_num_rows($result) == 0)
      $insertQuery;
      for($i = 0;$i<4;$i++)
      {
-        $insertQuery = "insert into `".$emailid.".tests` (testname,timer,marks,statusOfExam,answers,marked) values("
+        $insertQuery = "insert into `".$emailid.".tests` (testname,subjectname,timer,marks,statusOfExam,answers,marked) values("
+                  ."'".$jsonData["tests"][$i]["subjectid"]."',"
                   ."'".$jsonData["tests"][$i]["subjectname"]."',"
                   ."'00:29:60',"
                   ."0,"

@@ -1,5 +1,5 @@
 <?php 
 session_start();
 if(!isset($_SESSION['gateusername']))
-	header('location:../login.html');
+	header('location:/gate/login.html');
 ?>

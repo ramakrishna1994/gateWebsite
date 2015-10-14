@@ -1,9 +1,11 @@
-
+<?php 
+require_once '/phpFiles/isSessionSet.php';
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/exam.css">
  <script type="text/javascript" src="js/jquery-min.js"></script>
 <script src = "js/firstTimeIndexPageLoad.js"></script>
 <script src = "js/getAndUpdateTimer.js"></script>

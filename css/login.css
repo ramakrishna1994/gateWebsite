@@ -2,7 +2,7 @@ body,html{
 	 margin:auto;
      padding: 0;
      text-align: center;
-     background-image: url('../images/background.png');
+     background-color: #B0B0B0 ;
      
 	
 }
@@ -23,15 +23,15 @@ body,html{
 
 #loginDivision{
 
+	margin-top:10px;
 	padding:5px;
-	margin:0px;
     text-align:center;
 	width:350px;
 	height:300px;
 	float:left;
 	border-color: black;
 	border:1px solid;
-	
+	background-image: url('../images/background.png');
 	
 }
 
@@ -67,9 +67,9 @@ body,html{
 
 .textDivision{
 	
-	
+	margin-top:5px;
 	text-align:center;
-	width:380px;
+	width:350px;
 	height:30px;
 	float:left;
 	font-size: 15px;
@@ -98,6 +98,7 @@ body,html{
 
 .registerButtonDivision
 {
+
 	cursor:pointer;
 	padding:5px;
 	width:180px;
@@ -179,7 +180,7 @@ input[type="text"]:hover,input[type="password"]:hover {
 	width:350px;
 	min-height:40px;
 	float:left;
-	font-family: sans-serif;
+	font-family: monospace;
 	font-size:20px;	
 	 display: inline-block;
     word-wrap: break-word;
@@ -188,14 +189,15 @@ input[type="text"]:hover,input[type="password"]:hover {
 .failureStatus{
 	
 	
-    text-align: center;
+	
+	color: red;
+	text-align: center;
 	width:350px;
 	min-height:40px;
 	padding:5px;
 	float:left;
 	font-size:20px;
-	font-family: sans-serif;
-	color: red;
+	font-family: fantasy;
 	 display: inline-block;
    word-wrap: break-word;	
 }
@@ -203,21 +205,21 @@ input[type="text"]:hover,input[type="password"]:hover {
 #registrationDivision{
 
 	padding:5px;
-	margin:0px;
+	margin-top:10px;
     text-align:center;
 	width:350px;
 	height:450px;
 	float:left;
 	border-color: black;
 	border:1px solid;
-	
+	background-image: url('../images/background.png');
 }
 
 .securityDivision{
 	background-color: #778899;
 	padding:5px;
 	margin-left:50px;
-	
+	background-image: url('../images/background.png');
     text-align:center;
 	width:180px;
 	height:40px;
@@ -226,15 +228,16 @@ input[type="text"]:hover,input[type="password"]:hover {
 }
 
 .securityBox{
-	font-family:fantasy;
+	font-family:monospace;
   background-color: #778899;
 	padding:3px;
-	
+	background-image: url('../images/background.png');
+	color:white;
     text-align:center;
 	width:30px;
 	height:20px;
 	float:right;
-	
+	font-size:20px;
 	
 }
 
@@ -248,4 +251,5 @@ input[type="text"]:hover,input[type="password"]:hover {
 	width:40px;
 	height:30px;
 	float:left;
+	background-image: url('../images/background.png');
 }

@@ -29,7 +29,7 @@ function openExamWindow(subjectName)
 	$.when(request).done(function(){
     	
 		intervalID  = setInterval(function(){ checkWindow(); }, 100);
-    	childWindow = window.open('index.php','testWindow','toolbar=no, location=no, directories=no, status=no, menubar=no,height = 800px,width = 1100px');
+    	childWindow = window.open('exam.php','testWindow','toolbar=no, location=no, directories=no, status=no, menubar=no,height = 800px,width = 1100px');
     });
 	
 	

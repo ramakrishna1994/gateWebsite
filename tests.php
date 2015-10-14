@@ -1,8 +1,5 @@
-<?php
-session_start();
-if(!isset($_SESSION['gateusername']))
-  header('location:login.html');
-//echo "WELCOME ".$_SESSION['gateusername'];
+<?php 
+require_once '/phpFiles/isSessionSet.php';
 ?>
 
 <html>

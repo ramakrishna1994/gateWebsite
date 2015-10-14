@@ -56,42 +56,42 @@ function security(val)
  
 }
 
-
-function checkParameters(id)
+function checkLoginParameters()
 {
 	 $('#errorOrSuccessDivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
-	var val1 = document.getElementById("Lanswer").value;
-	var val2 = document.getElementById("Ranswer").value;
-	if(id == 2)
-		{
-	       if(answer != val2)
-	       {
-	    	   
-	    	  
-		       
-		        	
-		        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
-		        	
-		        	$('#errorOrSuccessDivision').html("security is wrong");
-		        	
-		        
-		        security(2);
-	       } 
-	       else
-		  {
-		       doRegistration();
-		       
-		  }
-		}
-	else{
+		var val1 = document.getElementById("Lanswer").value;
+
+		var emailid = document.getElementById("loginemailid").value;
+		var password = document.getElementById("loginpassword").value;
+		
+		if(emailid=='' || emailid==null)
+			{
+			document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+			$('#errorOrSuccessDivision').html("Please Enter Email Id");
+			return;
+			}
+		
+		if(password=='' || password==null)
+			{
+
+			document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+			$('#errorOrSuccessDivision').html("Please Enter Password");
+			return;
+			}
+		if(val1=='' || val1==null)
+			{
+			document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+			$('#errorOrSuccessDivision').html("Please Enter Security");
+			return;
+			}
 		if(answer != val1)
 	       {
 	    	   
-		       
+		       /**********login********/
 	        	
 	        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
 	        	
-	        	$('#errorOrSuccessDivision').html("security is wrong");
+	        	$('#errorOrSuccessDivision').html("Security is Wrong");
 	        	
 	       security(1);
 	       } 
@@ -99,8 +99,112 @@ function checkParameters(id)
 		  {
 		       doLogin();
 		  }
+}
+
+
+function checkRegistrationParameters(){
+	
+	 $('#errorOrSuccessDivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
+	 var val1 = document.getElementById("Ranswer").value;
+	 var firstname = document.getElementById("registrationfirstname").value;
+	 var lastname = document.getElementById("registrationlastname").value;
+	 var emailid = document.getElementById("registrationemailid").value;
+	 var password = document.getElementById("registrationpassword").value;
+	 var confirmPassword = document.getElementById("registrationconfirmpassword").value;
+	
+	 if(firstname == '' || firstname == null)
+		 {
 		
-	}
+		 document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+     	 $('#errorOrSuccessDivision').html("Please Enter First Name");
+     	 return;
+		 }
+	 
+	 if(lastname == '' || lastname == null)
+	 {
+	
+	 document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+ 	 $('#errorOrSuccessDivision').html("Please Enter last Name");
+ 	 return;
+ 	 
+	 }
+	 
+	 if(emailid == '' || emailid == null)
+	 {
+	
+	 document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+ 	 $('#errorOrSuccessDivision').html("Please Enter Email Id");
+ 	 return;
+ 	 
+	 }
+	 
+	  if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailid)))  
+	   {  
+
+	     document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+		 $('#errorOrSuccessDivision').html("Please Enter Valid Email Address");
+		 return;
+		 	  
+	   }  
+	     
+	 
+	 if(password == '' || password == null)
+	 {
+	
+	 document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+ 	 $('#errorOrSuccessDivision').html("Please Enter password");
+ 	 return;
+ 	 
+	 }
+	 
+	 if(confirmPassword == '' || confirmPassword == null)
+	 {
+	
+	 document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+ 	 $('#errorOrSuccessDivision').html("Please confirm password");
+ 	 return;
+ 	 
+	 }
+	 
+	 if(confirmPassword != password )
+	 {
+	
+	 document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+ 	 $('#errorOrSuccessDivision').html("Passwords are not Matching");
+ 	 return;
+ 	 
+	 }
+	 
+	 if(val1 == '' || val1 == null)
+	 {
+	
+	 document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+ 	 $('#errorOrSuccessDivision').html("Please Enter Security");
+ 	 return;
+ 	 
+	 }
+	 
+
+		       if(answer != val1)
+		       {
+		    	   
+		    	  /*********registration*******/
+			       
+			        	
+			        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+			        	
+			        	$('#errorOrSuccessDivision').html("Security is Wrong");
+			        	
+			        
+			        security(2);
+		       } 
+		       else
+			  {
+			       doRegistration();
+			       
+			  }
+			
+	
 }
 
 function doRegistration()
@@ -126,7 +230,7 @@ function doRegistration()
 		        	
 		        	document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
 		        	
-		        	$('#errorOrSuccessDivision').html("User Name already exists");
+		        	$('#errorOrSuccessDivision').html("Email Id Already Exists");
 		        	
 		           	security(2);
 			    
@@ -138,7 +242,7 @@ function doRegistration()
 		        	
 		        	document.getElementById("errorOrSuccessDivision").className = 'successStatus';
 		        	
-		        	$('#errorOrSuccessDivision').html("Successfully registered!! Please login");
+		        	$('#errorOrSuccessDivision').html("Successfully registered!! Please Login");
 		        	showLogin(1);
 			 
 			 

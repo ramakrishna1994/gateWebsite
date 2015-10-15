@@ -28,10 +28,10 @@ background-color: rgba(221, 221, 221, 0.6);
     
   
   <div id="loginDivision">
-   <div class="firstBox"><img src="images/email.jpg" width="35px" height="35px"></div>
+   <div class="firstBox"><img src="images/email.jpg" width="32px" height="32px"></div>
    <div class="secondBox"><input type="text" id="loginemailid" placeholder="EMAIL ID"></div>
    
-   <div class="firstBox"><img src="images/lock.jpg" width="35px" height="35px"></div>
+   <div class="firstBox"><img src="images/lock.jpg" width="38px" height="32px"></div>
    <div class="secondBox"><input type="password" id="loginpassword" placeholder="PASSWORD"></div>
    
    <div class="securityDivision">
@@ -51,20 +51,20 @@ background-color: rgba(221, 221, 221, 0.6);
   
   <div id="registrationDivision">
  
-   <div class="firstBox"><img src="images/user.jpg" width="35px" height="35px"></div>
+   <div class="firstBox"><img src="images/user.jpg" width="32px" height="32px"></div>
    <div class="secondBox"><input type="text" id="registrationfirstname" placeholder="FIRST NAME"></div>
    
-   <div class="firstBox"><img src="images/user.jpg" width="35px" height="35px"></div>
-   <div class="secondBox"><input type="text" id="registrationlastname" placeholder="LAST NAME"></div>
+   <div class="firstBox"><img src="images/user.jpg" width="32px" height="32px"></div>
+   <div class="secondBox"><input type="text" id="registrationlastname" placeholder="LAST NAME (Optional)"></div>
   
-   <div class="firstBox"><img src="images/email.jpg" width="35px" height="35px"></div>
+   <div class="firstBox"><img src="images/email.jpg" width="32px" height="32px"></div>
    <div class="secondBox"><input type="text" id="registrationemailid" placeholder="EMAIL ID"></div>
   
   
-   <div class="firstBox"><img src="images/lock.jpg" width="35px" height="35px"></div>
+   <div class="firstBox"><img src="images/lock.jpg" width="32px" height="32px"></div>
    <div class="secondBox"><input type="password" id="registrationpassword" placeholder="PASSWORD"></div>
   
-   <div class="firstBox"><img src="images/lock.jpg" width="35px" height="35px"></div>
+   <div class="firstBox"><img src="images/lock.jpg" width="32px" height="32px"></div>
    <div class="secondBox"><input type="password" id="registrationconfirmpassword" placeholder="CONFIRM PASSWORD"></div>
    
    <div class="securityDivision">
@@ -79,11 +79,22 @@ background-color: rgba(221, 221, 221, 0.6);
     
     <div class="submitDivision" ><div class='loginButtonDivision' onClick="checkRegistrationParameters()">REGISTER</div></div>
     <div class="submitDivision" ><div class='registerButtonDivision' onClick="showLogin(2)">BACK TO LOGIN</div></div>
-   <div>
-           
-  </div>
-
+   
 </div>
+
+<div id="securityMailDivision">
+
+   <div class="textDivision1" >WE HAVE SENT YOU AN EMAIL WHICH CONTAINS THE VERIFICATION CODE. PLEASE ENTER IT BELOW TO VERIFY YOUR ACCOUNT </div>
+   <div class="firstBox1"><img src="images/lock.jpg" width="40px" height="40px" id="ver"></div>
+   <div class="secondBox1"><input type="text" id="verificationnumber" placeholder="VERIFICATION CODE"></div>
+    
+  <input type="hidden" value="" id="verificationemailid">  
+    <div class="submitDivision" ><div class='loginButtonDivision' onClick="verifyVerificationId()">VERIFY</div></div>
+    <div class="submitDivision1" ><div class='registerButtonDivision1' onClick="showRegistration()">BACK TO REGISTRATION</div></div>
+   
+   
+</div>
+
 </div>
 </body>
 </html>

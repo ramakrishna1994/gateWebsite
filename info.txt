@@ -25,3 +25,8 @@ create table $username.tests(
   marked = 0 means not answered
          = 1 means saved
          = 2 means reviewed
+         
+         
+ login.php error codes = 0 means no error
+                         1 means username not exists
+                         2 means activation status not set to '1'

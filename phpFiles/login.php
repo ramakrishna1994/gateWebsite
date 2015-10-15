@@ -19,13 +19,21 @@ if(mysqli_num_rows($result)>0)
 {
 	while($row=mysqli_fetch_array($result))
 	{
+		if($row['activationstatus'] == 1)
+		{
 		$_SESSION['gateusername']=$emailid;
 		$_SESSION['gatefirstname']=$row['firstname'];
 		$_SESSION['gatelastname']=$row['lastname'];
+		echo json_encode(array("error"=>"0"));
+		}
+		else
+		{
+			echo json_encode(array("error"=>"2"));
+		}
 		
 	}
 	//echo 'login successful';
-	echo json_encode(array("error"=>"0"));
+	
 }
 else 
 {

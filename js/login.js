@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	 $("#loginDivision").show();
 	 $("#registrationDivision").hide();
-	 //$("#securityMailDivision").hide();
+	 $("#securityMailDivision").hide();
 	 
 });
 

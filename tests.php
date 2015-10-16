@@ -5,8 +5,10 @@ require_once '/phpFiles/isSessionSet.php';
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/tests.css">
+<link rel="stylesheet" type="text/css" href="css/profile.css">
 <script type="text/javascript" src="js/jquery-min.js"></script>
 <script type="text/javascript" src="js/tests.js"></script>
+<script type="text/javascript" src="js/getAndUpdateProfile.js"></script>
 
 
 </head>
@@ -26,22 +28,15 @@ require_once '/phpFiles/isSessionSet.php';
   
   <div class="sideBarDivision">
     <div class="profilePictureDivision"><img src="images/user.jpg" style="height:90px;width:90px"></div>
-    <div class="sideBarDivision1" onclick="updateProfile()">UPDATE PROFILE</div>
+    <div class="sideBarDivision1" onclick="getProfile()">UPDATE PROFILE</div>
     <div class="sideBarDivision1" onclick="accountSettings()">ACCOUNT SETTINGS</div>
     <div class="sideBarDivision1" onclick="buyTestSeries()">BUY TEST SERIES</div>
   </div>
   
-  <div class="mainTestsDivision">
-    <div class="testsheaderDivision">
-       <div class="snoDivision1">S.NO</div>
-       <div class="testNameDivision1">TEST NAME</div>
-       <div class="testStatusDivision1">TEST STATUS</div>
-    </div>
-    <div class="testsDivision" id="testsDivision">
+  <div class="mainDivision1" id="mainDivision1">
+    
     <!-- ---------this division will be loaded automatically -->
-       <div class="snoDivision">1</div>
-       <div class="testNameDivision">CN</div>
-       <div class="testStatusDivision">Cn</div>
+      
     <!-- ---------------------------------------------------- -->
   
     </div>

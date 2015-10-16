@@ -70,7 +70,12 @@ function getTests()
 
 
 $(document).ready(function(){
-	var i,innerhtml="";
+	var i,innerhtml='<div class="testsheaderDivision">'
+                    +'<div class="snoDivision1">S.NO</div>'
+                    +'<div class="testNameDivision1">TEST NAME</div>'
+                    +'<div class="testStatusDivision1">TEST STATUS</div>'
+                    +'</div>'
+                    +'<div class="testsDivision" id="testsDivision">"';
 	var j;
 	  $.getJSON( "phpFiles/getTests.php", {}, function( data ) {
 		  
@@ -106,8 +111,8 @@ $(document).ready(function(){
 				  }
 			}
 		
-		$('#testsDivision').html('');
-		$('#testsDivision').html(innerhtml);
+		$('#mainDivision1').html('');
+		$('#mainDivision1').html(innerhtml);
 	});
 	
 });

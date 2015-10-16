@@ -69,7 +69,7 @@ body,html{
 .questionNoDivision{
 	
 	text-align: center;
-	width:700px;
+	width:705px;
 	height:24px;
 	float:left;
 	color:white;
@@ -124,7 +124,7 @@ body,html{
 
 .optionDivision{
 	width:700px;
-	height:60px;
+	min-height:60px;
 	margin-left:5px;
    cursor:pointer;	
 	margin-top:5px;
@@ -133,11 +133,11 @@ body,html{
 	background-image:url("../images/background.png");
    padding-left:5px;
     text-align: left;
-	
+	display: inline-block;
 }
 
 .optionDivision:hover{
-	
+	background-image:none;
 	cursor:pointer;
 	background-color: green;
 	
@@ -148,7 +148,7 @@ body,html{
 	margin-top:5px;
     text-align: center;
 	width:30px;
-	height:30px;
+	min-height:30px;
 	float:left;
 	margin-left:5px;
 	display: inline-block;
@@ -168,7 +168,7 @@ padding-left:5px;
 	border-color:black;
 	margin-top:5px;
 	width:625px;
-	height:50px;
+	min-height:50px;
 	float:left;
 	margin-left:5px;
 	display: inline-block;

@@ -42,6 +42,6 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $headers .= 'From: <Gate2016@example.com>' . "\r\n";
 
 
-mail($to,$subject,$message);
+mail($to,$subject,$message,$headers);
 
 ?>

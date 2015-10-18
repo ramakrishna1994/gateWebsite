@@ -1,5 +1,5 @@
 <?php 
-require_once '/phpFiles/isSessionSet.php';
+require_once 'phpFiles/isSessionSet.php';
 ?>
 
 <html>
@@ -27,8 +27,9 @@ require_once '/phpFiles/isSessionSet.php';
   </div>
   
   <div class="sideBarDivision">
-    <div class="profilePictureDivision"><img src="images/user.jpg" style="height:90px;width:90px"></div>
-    <div class="sideBarDivision1" onclick="getProfile()">UPDATE PROFILE</div>
+    <div class="profilePictureDivision" id="profilePicture" ><img src="profilePictures/<?php echo $_SESSION['gateusername'] ?>.jpg" style="height:90px;width:90px"></div>
+    <div class="sideBarDivision1" onclick="getTests()">MY TESTS</div>
+    <div class="sideBarDivision1" onclick="getProfile(0)">UPDATE PROFILE</div>
     <div class="sideBarDivision1" onclick="accountSettings()">ACCOUNT SETTINGS</div>
     <div class="sideBarDivision1" onclick="buyTestSeries()">BUY TEST SERIES</div>
   </div>
@@ -41,7 +42,7 @@ require_once '/phpFiles/isSessionSet.php';
   
     </div>
   </div>
-</div>
+
 
 </body>
 </html>

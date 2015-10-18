@@ -1,7 +1,7 @@
 <?php 
 
 require_once 'connection.php';
-require_once 'sendMail.php';
+
 
 $firstname=mysqli_real_escape_string($con,$_POST['registrationfirstname']);
 $lastname=mysqli_real_escape_string($con,$_POST['registrationlastname']);
@@ -37,7 +37,7 @@ if(mysqli_num_rows($result) == 0)
 
    mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 
-  sendMail();
+ 
       echo '{"error":"0"}';
 }
 

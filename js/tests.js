@@ -61,13 +61,14 @@ function checkWindow()
 
 
 
-
 getTests();
+
 
 
 function getTests()
 {
 
+	$('#mainDivision1').html('<img src="images/redloader.gif" style="height: 30px;width: 30px;margin-top:50px;">');
 
 $(document).ready(function(){
 	var i,innerhtml='<div class="testsheaderDivision">'

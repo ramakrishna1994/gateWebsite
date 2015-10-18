@@ -1,5 +1,5 @@
 <?php 
-require_once '/phpFiles/isSessionSet.php';
+require_once 'phpFiles/isSessionSet.php';
 ?>
 
 <!DOCTYPE html>

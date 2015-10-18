@@ -31,7 +31,7 @@ require_once 'phpFiles/isSessionSet.php';
     <div class="profilePictureDivision" id="profilePicture" ><img src="profilePictures/<?php echo $_SESSION['gateimage'] ?>" style="height:90px;width:90px"></div>
     <div class="sideBarDivision1" onclick="getTests()">MY TESTS</div>
     <div class="sideBarDivision1" onclick="getProfile(0)">UPDATE PROFILE</div>
-    <div class="sideBarDivision1" onclick="getAccountSettings()">ACCOUNT SETTINGS</div>
+    <div class="sideBarDivision1" onclick="getAccountSettings(0)">ACCOUNT SETTINGS</div>
     <div class="sideBarDivision1" onclick="buyTestSeries()">BUY TEST SERIES</div>
   </div>
   

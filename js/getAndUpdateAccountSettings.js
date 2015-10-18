@@ -1,10 +1,11 @@
-function getAccountSettings()
+function getAccountSettings(id)
 {
 	
  
     
 	 
 	 $('#mainDivision1').html('');
+	
 	 var innerhtml = '<div id="profileBox">';
 		
 			 
@@ -16,6 +17,13 @@ function getAccountSettings()
 		               + '</div>';
 			 
 	$('#mainDivision1').html(innerhtml);
+	if(id==1)
+		{
+		document.getElementById("errorOrSuccessDivision").className = 'successStatus';
+    	
+		     $('#errorOrSuccessDivision').html("YOUR PASSWORD UPDATED SUCCESSFULLY");
+		     	
+		}
  
 
 }
@@ -70,7 +78,38 @@ function changePassword()
 	else
 		{
 		
-		alert('success');
+		 var formData = new FormData();
+	     formData.append("currentpassword", currentpassword);
+	     formData.append("newpassword", newpassword);
+	     
+		 
+		 $(document).ready(function(){
+			 
+
+			 $.ajax({
+			        url: "phpFiles/updatePassword.php",// give your url
+			        type: "POST",
+			        data: formData,
+			        dataType: 'json',
+			        processData: false,
+			        contentType: false,
+			        success: function (response) {
+			            console.log(response.error);
+			            
+			            if(response.error == 1)
+			            	{
+			            	 document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+			            	
+			      		     $('#errorOrSuccessDivision').html("PLEASE ENTER CORRECT PASSWORD");
+			      		     return;	
+			            	}
+			            else
+			            	{
+			            	getAccountSettings(1)
+			            	}
+			        }
+			    });
+	 });
 		}
 
 }

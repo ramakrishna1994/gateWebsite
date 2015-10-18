@@ -25,7 +25,7 @@ function getProfile(id,error)
 	                
 	             innerhtml +='</div><div class="firstBox">CHOOSE A PICTURE</div>'
 	            	       + '<div class="secondBox"><input type="file" name="image" id="image"></div>'
-	                       +'<div class="submitDivision" ><div class="loginButtonDivision" onClick="updateProfile()">UPDATE PROFILE</div></div>'   
+	                       +'<div class="submitDivision" ><div class="loginButtonDivision1" onClick="updateProfile()">UPDATE PROFILE</div></div>'   
 	                       + '</div></div>';
 		 
 

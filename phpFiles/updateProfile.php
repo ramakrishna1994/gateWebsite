@@ -39,8 +39,7 @@ if ($_FILES["image"]["size"] > 1000000) {
 	$error = 2;
 }
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-		&& $imageFileType != "gif" ) {
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
 			//echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 			$uploadOk = 0;
 			$error = 3;
@@ -53,7 +52,9 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 			if (move_uploaded_file($_FILES["image"]["tmp_name"], "../profilePictures/" . $newfilename)) {
 				
 				$error = 0;
-				//echo "The file ". $newfilename. " has been uploaded.";
+				$updateQuery = "update users set imagename = '".$newfilename."' where emailid = '".$_SESSION['gateusername']."';";		
+				mysqli_query($con,$updateQuery);
+				$_SESSION['gateimage'] = $newfilename;
 			} else {
 				//echo "Sorry, there was an error uploading your file.";
 			}

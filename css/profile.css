@@ -4,7 +4,7 @@
 	margin-top:30px;
 	margin-left:200px;
     text-align:center;
-	width:350px;
+	width:400px;
 	height:425px;
 	float:left;
 	
@@ -34,7 +34,7 @@
 	min-height:40px;
 	float:left;
 	font-family: monospace;
-	font-size:20px;	
+	font-size:15px;	
 	 display: inline-block;
     word-wrap: break-word;
 }
@@ -49,7 +49,7 @@
 	min-height:40px;
 	padding:5px;
 	float:left;
-	font-size:20px;
+	font-size:15px;
 	font-family: fantasy;
 	 display: inline-block;
    word-wrap: break-word;	
@@ -135,7 +135,10 @@ input[type="text"]
   
    width: 300px;
    height:30px;
-   padding-left:5px;
+  padding-left:5px;
+   color:purple;
+   font-size:15px;
+   font-family: fantasy;
    
  }
  input[type="text"]:focus,input[type="password"]:focus {
@@ -159,7 +162,29 @@ input[type="text"]:hover,input[type="password"]:hover {
 	text-align:center;
 }
 
+.loginButtonDivision1
+{
+	margin-left:40px;
+	margin-top:10px;
+	cursor:pointer;
+	padding:5px;
+	width:180px;
+	height:20px;
+	background-color:green;
+	float:left;
+	text-align:center;
+}
 .loginButtonDivision:hover
+{
+	cursor:pointer;
+	padding:5px;
+	width:185px;
+	height:25px;
+	background-color:#808080;
+    color:white;
+}
+
+.loginButtonDivision1:hover
 {
 	cursor:pointer;
 	padding:5px;

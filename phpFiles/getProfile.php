@@ -15,7 +15,7 @@ while($row = mysqli_fetch_array($result))
 	
 	$json .='"firstname":"'.$row['firstname'].'",'
 	      .'"lastname":"'.$row['lastname'].'",'
-	      .'"image":"'.$row['emailid'].'"'
+	      .'"image":"'.$row['imagename'].'"'
 	      ."}";
 }
 echo $json;

@@ -1,7 +1,7 @@
 
 
 
-function getProfile(id)
+function getProfile(id,error)
 {
 
 	
@@ -35,18 +35,45 @@ function getProfile(id)
 		 
 		 if(id==1)
 			 {
+			// alert(error);
+			 if(error == 1){
+				 
+				    document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+		        	
+		        	$('#errorOrSuccessDivision').html("FILE IS NOT AN IMAGE");
+		        	
+			     }
 			 
-	        	document.getElementById("errorOrSuccessDivision").className = 'successStatus';
-	        	
-	        	$('#errorOrSuccessDivision').html("PROFILE UPDATED SUCCESSFULLY");
-	        	
-	        	
-	        	$('#profilePicture').html('<img src="images/redloader.gif" style="height: 30px;width: 30px;margin-top:50px;">');
-	        	
-	        	$('#profilePicture').html('<img src="profilePictures/'+data.image+'.jpg?'+new Date().getTime()+'" style="height:90px;width:90px">');
-			 }
+			 else if(error == 2)
+				 {
+				  document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+		        	
+		        	$('#errorOrSuccessDivision').html("IMAGE SIZE IS LARGE");
+		        	
+				 }
+			 
+			 else if(error == 3)
+				 {
+				  document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+		        	
+		        	$('#errorOrSuccessDivision').html("IMAGE FORMAT NOT SUPPORTED");
+		        	
+				 }
+			 
+	          else{
+	        	  
+	  	        	document.getElementById("errorOrSuccessDivision").className = 'successStatus';
+	  	        	
+	  	        	$('#errorOrSuccessDivision').html("PROFILE UPDATED SUCCESSFULLY");
+	  	        	
+	  	        	
+	  	        	$('#profilePicture').html('<img src="images/redloader.gif" style="height: 30px;width: 30px;margin-top:50px;">');
+	  	        	
+	  	        	$('#profilePicture').html('<img src="profilePictures/'+data.image+'?'+new Date().getTime()+'" style="height:90px;width:90px">');
+		
+	              }
 
-	 
+	}
 	  });
 	 
 
@@ -69,11 +96,12 @@ function updateProfile()
 		        url: "phpFiles/updateProfile.php",// give your url
 		        type: "POST",
 		        data: formData,
+		        dataType: 'json',
 		        processData: false,
 		        contentType: false,
 		        success: function (response) {
-		            console.log(response);
-		            getProfile(1);
+		            console.log(response.error);
+		            getProfile(1,response.error);
 		        }
 		    });
  });

@@ -9,6 +9,7 @@ require_once 'phpFiles/isSessionSet.php';
 <script type="text/javascript" src="js/jquery-min.js"></script>
 <script type="text/javascript" src="js/tests.js"></script>
 <script type="text/javascript" src="js/getAndUpdateProfile.js"></script>
+<script type="text/javascript" src="js/getAndUpdateAccountSettings.js"></script>
 
 
 </head>
@@ -27,10 +28,10 @@ require_once 'phpFiles/isSessionSet.php';
   </div>
   
   <div class="sideBarDivision">
-    <div class="profilePictureDivision" id="profilePicture" ><img src="profilePictures/<?php echo $_SESSION['gateusername'] ?>.jpg" style="height:90px;width:90px"></div>
+    <div class="profilePictureDivision" id="profilePicture" ><img src="profilePictures/<?php echo $_SESSION['gateimage'] ?>" style="height:90px;width:90px"></div>
     <div class="sideBarDivision1" onclick="getTests()">MY TESTS</div>
     <div class="sideBarDivision1" onclick="getProfile(0)">UPDATE PROFILE</div>
-    <div class="sideBarDivision1" onclick="accountSettings()">ACCOUNT SETTINGS</div>
+    <div class="sideBarDivision1" onclick="getAccountSettings()">ACCOUNT SETTINGS</div>
     <div class="sideBarDivision1" onclick="buyTestSeries()">BUY TEST SERIES</div>
   </div>
   

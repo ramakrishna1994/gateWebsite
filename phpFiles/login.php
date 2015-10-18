@@ -24,6 +24,7 @@ if(mysqli_num_rows($result)>0)
 		$_SESSION['gateusername']=$emailid;
 		$_SESSION['gatefirstname']=$row['firstname'];
 		$_SESSION['gatelastname']=$row['lastname'];
+		$_SESSION['gateimage']=$row['imagename'];
 		echo json_encode(array("error"=>"0"));
 		}
 		else

@@ -19,6 +19,7 @@ $createQuery="create table if not exists ".$table."("
               ."password varchar(100),"
               ."activationstatus int,"
               ."verificationnumber int,"
+              ."imagename varchar(100),"
               ."primary key(id));";
 
 mysqli_query($con,$createQuery) or die(mysqli_error($con));
@@ -33,7 +34,7 @@ $random = mt_rand(100000,999999);
 
 if(mysqli_num_rows($result) == 0)
 {
-   $insertQuery="insert into ".$table."(emailid,firstname,lastname,password,activationstatus,verificationnumber) values ('".$emailid."','".$firstname."','".$lastname."','".$password."',0,".$random.");";
+   $insertQuery="insert into ".$table."(emailid,firstname,lastname,password,activationstatus,verificationnumber,imagename) values ('".$emailid."','".$firstname."','".$lastname."','".$password."',0,".$random.",'user.jpg');";
 
    mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 

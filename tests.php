@@ -6,6 +6,7 @@ require_once 'phpFiles/isSessionSet.php';
 <head>
 <link rel="stylesheet" type="text/css" href="css/tests.css">
 <link rel="stylesheet" type="text/css" href="css/profile.css">
+<link rel="stylesheet" type="text/css" href="css/accounts.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/tests.js"></script>
 <script type="text/javascript" src="js/getAndUpdateProfile.js"></script>

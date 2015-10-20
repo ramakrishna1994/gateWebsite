@@ -12,20 +12,20 @@ function getProfile(id,error)
 		 
 		 innerhtml += '<div id="errorOrSuccessDivision" class="dummy"> </div>'
 			   
-			     +'<div class="firstBox">FIRST NAME</div>'
-	            + '<div class="secondBox"><input type="text" id="firstname" value="'+data.firstname+'"></div>' 
+			     +'<div class="profilefirstBox">FIRST NAME</div>'
+	            + '<div class="profilesecondBox"><input type="text" id="firstname" value="'+data.firstname+'"></div>' 
 	            
-	            +'<div class="firstBox">LAST NAME</div>'
-	            + '<div class="secondBox">';
+	            +'<div class="profilefirstBox">LAST NAME</div>'
+	            + '<div class="profilesecondBox">';
 	           
 	             if(data.lastname == "")
 	                innerhtml +='<input type="text" id="lastname" placeholder="LAST NAME">';
 	             else
 	               innerhtml  +='<input type="text" id="lastname" value="'+data.lastname+'">';
 	                
-	             innerhtml +='</div><div class="firstBox">CHOOSE A PICTURE</div>'
-	            	       + '<div class="secondBox"><input type="file" name="image" id="image"></div>'
-	                       +'<div class="submitDivision" ><div class="loginButtonDivision1" onClick="updateProfile()">UPDATE PROFILE</div></div>'   
+	             innerhtml +='</div><div class="profilefirstBox">CHOOSE A PICTURE</div>'
+	            	       + '<div class="profilesecondBox"><input type="file" name="image" id="image"></div>'
+	                       +'<div class="submitDivision" ><div class="profileloginButtonDivision" onClick="updateProfile()">UPDATE PROFILE</div></div>'   
 	                       + '</div></div>';
 		 
 

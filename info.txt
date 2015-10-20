@@ -1,0 +1,32 @@
+
+
+create table users(
+id int not null auto_increment primary key(id),
+username varchar(200),
+password varchar(200)
+);
+
+create table $username.tests(
+             id int not null auto_increment,
+             testName varchar(100),
+             timer varchar(20),
+             marks int not null default 0,
+             statusOfExam int not null default 0,
+             answers varchar(255),
+             marked varchar(255),
+             primary key(id));
+             
+            
+ statusOfExam = 0 means not started
+              = 1 means test started
+              = 2 means test completed
+              
+              
+  marked = 0 means not answered
+         = 1 means saved
+         = 2 means reviewed
+         
+         
+ login.php error codes = 0 means no error
+                         1 means username not exists
+                         2 means activation status not set to '1'

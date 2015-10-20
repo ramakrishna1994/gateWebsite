@@ -1,0 +1,26 @@
+{
+"tests":[
+
+{
+"subjectid":"cd01",
+"subjectname":"COMPILER DESIGN CHAPTER 01 TEST 01"
+},
+{
+"subjectid":"toc01",
+"subjectname":"THEORY OF COMPUTATION CHAPTER 01 TEST 01"
+},
+{
+"subjectid":"cn01",
+"subjectname":"COMPUTER NETWORKS CHAPTER 01 TEST 01"
+},
+{
+"subjectid":"ds01",
+"subjectname":"DATA STRUCTURES CHAPTER 01 TEST 01"
+
+}
+
+
+]
+
+
+}

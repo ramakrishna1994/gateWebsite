@@ -2,7 +2,11 @@ function showForgotPasswordDialogueBox()
 {
 	 $("#loginDivision").slideUp(1000,function(){
 		 
-		 $('#forgotPasswordDivision').slideDown(1000);
+		 $('#forgotPasswordDivision').slideDown(1000,function(){
+			 
+			 document.getElementById("forgotemailid").value = "";
+		 });
+		 
 	 });
 
 }

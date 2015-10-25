@@ -5,8 +5,11 @@
 <title>LOGIN</title>
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/security.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/registration.js"></script>
 <script type="text/javascript" src="js/forgotPassword.js"></script>
+<script type="text/javascript" src="js/verification.js"></script>
 <style type="text/css">
 input[id="Lanswer"]{
 width:30px;
@@ -51,7 +54,7 @@ background-color: rgba(221, 221, 221, 0.6);
     
    </div>
   
-  <div id="registrationDivision">
+  <div id="registrationDivision" style="display:none">
  
    <div class="firstBox"><img src="images/user.jpg" width="32px" height="32px"></div>
    <div class="secondBox"><input type="text" id="registrationfirstname" placeholder="FIRST NAME"></div>
@@ -84,7 +87,7 @@ background-color: rgba(221, 221, 221, 0.6);
    
 </div>
 
-<div id="securityMailDivision">
+<div id="securityMailDivision" style="display:none">
 
    <div class="textDivision1" >WE HAVE SENT YOU AN EMAIL WHICH CONTAINS THE VERIFICATION CODE. PLEASE ENTER IT BELOW TO VERIFY YOUR ACCOUNT </div>
    <div class="firstBox1"><img src="images/lock.jpg" width="40px" height="40px" id="ver"></div>
@@ -92,12 +95,13 @@ background-color: rgba(221, 221, 221, 0.6);
     
   <input type="hidden" value="" id="verificationemailid">  
     <div class="submitDivision" ><div class='loginButtonDivision' onClick="verifyVerificationId()">VERIFY</div></div>
+    <div class="submitDivision" ><div class='loginButtonDivision' onClick="resendCode()">RESEND THE CODE</div></div>
     <div class="submitDivision1" ><div class='registerButtonDivision1' onClick="showRegistration()">BACK TO REGISTRATION</div></div>
    
    
 </div>
 
-<div id="forgotPasswordDivision">
+<div id="forgotPasswordDivision" style="display:none">
 
    <div class="textDivision" >PLEASE ENTER YOUR EMAIL ID </div>
    <div class="firstBox"><img src="images/lock.jpg" width="40px" height="40px" id="ver"></div>

@@ -1,13 +1,13 @@
 #profileBox{
 	
 	padding:5px;
-	margin-top:30px;
+	margin-top:50px;
 	margin-left:200px;
     text-align:center;
-	width:400px;
-	height:425px;
+	width:370px;
+	height:310px;
 	float:left;
-	
+	background-image: url('../images/background.png');
 	
 }
 .dummy{
@@ -15,7 +15,7 @@
 	color: yellow;
 	padding:5px;
     text-align: center;
-	width:350px;
+	width:300px;
 	height:40px;
 	float:left;
 	
@@ -70,14 +70,15 @@
 }
 
 
-.firstBox{
+.profilefirstBox{
 	padding:0px;
 	margin-top:5px;
 	margin-right:5px;
 	text-align:center;
 	width:100px;
-	height:55px;
+	height:60px;
 	float:left;
+	color:white;
 		
 }
 
@@ -91,12 +92,13 @@
 	float:left;
 		
 }
-.secondBox{
+.profilesecondBox{
 	padding:0px;
 	margin-top:5px;
+	margin-left:5px;
     text-align:center;
 	width:210px;
-	height:55px;
+	height:60px;
 	float:left;
 		
 }
@@ -126,17 +128,17 @@ input[type="file"]
 {
 	width:180px;
 	height:40px;
-	color:purple;
+	color:white;
 	font-family: fantasy;
 	padding-left:5px;
 }
 input[type="text"]
  {
   
-   width: 300px;
+   width: 250px;
    height:30px;
    padding-left:5px;
-   color:purple;
+   color:black;
    font-size:15px;
    font-family: fantasy;
    
@@ -144,10 +146,10 @@ input[type="text"]
  input[type="password"]
  {
   
-   width: 300px;
+   width: 250px;
    height:30px;
   padding-left:5px;
-   color:purple;
+   color:black;
    font-size:15px;
    font-family: fantasy;
    
@@ -160,47 +162,23 @@ input[type="text"]:hover,input[type="password"]:hover {
     
 }
 
-.loginButtonDivision
+.profileloginButtonDivision
 {
-	margin-left:60px;
+	margin-left:110px;
 	margin-top:10px;
 	cursor:pointer;
 	padding:5px;
-	width:130px;
+	width:150px;
 	height:20px;
 	background-color:green;
 	float:left;
 	text-align:center;
 }
 
-.loginButtonDivision1
-{
-	margin-left:40px;
-	margin-top:10px;
-	cursor:pointer;
-	padding:5px;
-	width:180px;
-	height:20px;
-	background-color:green;
-	float:left;
-	text-align:center;
-}
-.loginButtonDivision:hover
+.profileloginButtonDivision:hover
 {
 	cursor:pointer;
-	padding:5px;
-	width:185px;
-	height:25px;
-	background-color:#808080;
-    color:white;
-}
 
-.loginButtonDivision1:hover
-{
-	cursor:pointer;
-	padding:5px;
-	width:185px;
-	height:25px;
-	background-color:#808080;
+	background-color:purple;
     color:white;
 }

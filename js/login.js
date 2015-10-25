@@ -403,7 +403,14 @@ function verifyVerificationId()
 	
 	var emailid = document.getElementById("verificationemailid").value;
 	var verificationnumber = document.getElementById("verificationnumber").value;
-	
+	 $('#errorOrSuccessDivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
+	 
+	 if(verificationnumber == "")
+		 {
+		  document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+     	  $('#errorOrSuccessDivision').html("Please Enter Verification Code");
+     	  return;
+		 }
 	$(document).ready(function(){
 		 
 		 
@@ -414,7 +421,7 @@ function verifyVerificationId()
 		 if(data.error == 1)
 			 {	
 			        document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
-		        	$('#errorOrSuccessDivision').html("Verification Number is wrong");
+		        	$('#errorOrSuccessDivision').html("Verification Code is wrong");
 		        	security(1); 
 			
 			 

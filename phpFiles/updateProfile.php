@@ -9,7 +9,7 @@ $lastname = mysqli_real_escape_string($con,$_POST['lastname']);
 $updateQuery = "update users set lastname = '".$lastname."' where emailid = '".$_SESSION['gateusername']."';";
 mysqli_query($con,$updateQuery) or die(mysqli_error($con));
 $error = -1;
-if($_FILES["image"]["name"] != null)
+if(isset($_FILES['image']))
 {
 $target_dir = "../profilePictures/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -20,9 +20,9 @@ $temp = explode(".", $_FILES["image"]["name"]);
 $newfilename = $_SESSION['gateusername'] . '.' . end($temp);
 
 // Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
+
 	$check = getimagesize($_FILES["image"]["tmp_name"]);
-	if($check !== false) {
+	if($check != false) {
 		//echo "File is an image - " . $check["mime"] . ".";
 		$uploadOk = 1;
 	} else {
@@ -30,7 +30,7 @@ if(isset($_POST["submit"])) {
 		$error = 1;
 		$uploadOk = 0;
 	}
-}
+
 
 // Check file size
 if ($_FILES["image"]["size"] > 1000000) {
@@ -39,7 +39,7 @@ if ($_FILES["image"]["size"] > 1000000) {
 	$error = 2;
 }
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" ) {
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "JPG" && $imageFileType != "PNG" && $imageFileType != "JPEG") {
 			//echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 			$uploadOk = 0;
 			$error = 3;

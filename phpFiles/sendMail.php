@@ -15,16 +15,15 @@ while($row = mysqli_fetch_array($result))
 }
 
 $to = $emailid;
-$subject = "Verification Code";
+$subject = "Gate Verification Code";
 
 $message = "
 <html>
 <head>
-<title>Verification Code</title>
 </head>
 <body>
-<p>This email contains HTML Tags!</p>
-<table>
+<p>Please enter the below Verification code</p>
+<table style='border:1px solid;border-color:black;'>
 <tr>
 <th>Verifcation Code</th>
 <th>".$val."</th>
@@ -39,7 +38,7 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
-$headers .= 'From: <Gate2016@example.com>' . "\r\n";
+$headers .= 'From: <Gate@thankyou.com>' . "\r\n";
 
 
 mail($to,$subject,$message,$headers);

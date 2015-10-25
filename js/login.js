@@ -2,6 +2,7 @@ $(document).ready(function(){
 	 $("#loginDivision").show();
 	 $("#registrationDivision").hide();
 	 $("#securityMailDivision").hide();
+	// $("#forgotPasswordDivision").hide();
 	 
 });
 

@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/forgotPassword.js"></script>
 <style type="text/css">
 input[id="Lanswer"]{
 width:30px;
@@ -44,6 +45,7 @@ background-color: rgba(221, 221, 221, 0.6);
    </div>
    <div class="reloadDivision" onClick="security(1)"><img src="images/reload.jpg" width="30px" height="30px"></div>       
     <div class="submitDivision" ><div class='loginButtonDivision' onClick="checkLoginParameters()">LOGIN</div></div>
+    <div class="submitDivision" ><div class='loginButtonDivision' onClick="showForgotPasswordDialogueBox()">FORGOT PASSWORD</div></div>
     <div class="textDivision" >NEW USER ? CLICK BELOW TO REGISTER </div>
     <div class="submitDivision" ><div class='registerButtonDivision' onClick="showRegistration()">REGISTER</div></div> 
     
@@ -91,6 +93,19 @@ background-color: rgba(221, 221, 221, 0.6);
   <input type="hidden" value="" id="verificationemailid">  
     <div class="submitDivision" ><div class='loginButtonDivision' onClick="verifyVerificationId()">VERIFY</div></div>
     <div class="submitDivision1" ><div class='registerButtonDivision1' onClick="showRegistration()">BACK TO REGISTRATION</div></div>
+   
+   
+</div>
+
+<div id="forgotPasswordDivision">
+
+   <div class="textDivision" >PLEASE ENTER YOUR EMAIL ID </div>
+   <div class="firstBox"><img src="images/lock.jpg" width="40px" height="40px" id="ver"></div>
+   <div class="secondBox"><input type="text" id="forgotemailid" placeholder="EMAIL ID"></div>
+    
+    
+    <div class="submitDivision" ><div class='loginButtonDivision' onClick="sendPasswordToMail()">SUBMIT</div></div>
+    <div class="submitDivision1" ><div class='registerButtonDivision1' onClick="showLogin(2)">BACK TO LOGIN</div></div>
    
    
 </div>

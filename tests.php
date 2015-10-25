@@ -8,11 +8,13 @@ require_once 'phpFiles/isSessionSet.php';
 <link rel="stylesheet" type="text/css" href="css/profile.css">
 <link rel="stylesheet" type="text/css" href="css/accounts.css">
 <link rel="stylesheet" type="text/css" href="css/syllabus.css">
+<link rel="stylesheet" type="text/css" href="css/aboutUs.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/tests.js"></script>
 <script type="text/javascript" src="js/getAndUpdateProfile.js"></script>
 <script type="text/javascript" src="js/getAndUpdateAccountSettings.js"></script>
 <script type="text/javascript" src="js/getSyllabus.js"></script>
+<script type="text/javascript" src="js/aboutAndContactUs.js"></script>
 
 </head>
 <body>
@@ -36,6 +38,8 @@ require_once 'phpFiles/isSessionSet.php';
     <div class="sideBarDivision1" onclick="getProfile(0)">UPDATE PROFILE</div>
     <div class="sideBarDivision1" onclick="getAccountSettings(0)">ACCOUNT SETTINGS</div>
     <div class="sideBarDivision1" onclick="buyTestSeries()">BUY TEST SERIES</div>
+    <div class="sideBarDivision1" onclick="aboutUs()">ABOUT US</div>
+    <div class="sideBarDivision1" onclick="contactUs()">CONTACT US</div>
   </div>
   
   <div class="mainDivision1" id="mainDivision1" >
@@ -44,10 +48,7 @@ require_once 'phpFiles/isSessionSet.php';
       
     <!-- ---------------------------------------------------- -->
     
-    <!-- ------this is syllabus division -->
-    
    
-    <!-- -------------------------------- -->
   
     </div>
   </div>

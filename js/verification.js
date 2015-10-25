@@ -4,6 +4,11 @@ function verifyVerificationId()
 	
 	var emailid = document.getElementById("verificationemailid").value;
 	var verificationnumber = document.getElementById("verificationnumber").value;
+	var firstname = document.getElementById("verificationfirstname").value;
+	var lastname = document.getElementById("verificationlastname").value;
+	var password = document.getElementById("verificationpassword").value;
+	
+	
 	 $('#errorOrSuccessDivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
 	 
 	 if(verificationnumber == "")
@@ -12,29 +17,41 @@ function verifyVerificationId()
      	  $('#errorOrSuccessDivision').html("Please Enter Verification Code");
      	  return;
 		 }
+	
+	 
 	$(document).ready(function(){
 		 
 		 
 		
-		 $.post( "phpFiles/verifyVerificationNumber.php", {emailid : emailid , verificationnumber : verificationnumber},function( data ) {
-		   
-		  //alert(data.error);
-		 if(data.error == 1)
-			 {	
-			        document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
-		        	$('#errorOrSuccessDivision').html("Verification Code is wrong");
-		        	security(1); 
-			
+		 $.post( "phpFiles/verifyVerificationNumber.php", 
+				 
+		  {
+			 emailid : emailid , 
+			 firstname : firstname,
+			 lastname :lastname ,
+			 password :password ,
+			 verificationnumber : verificationnumber
 			 
-			 }
-		 else
-		 {  
-
+		  },function(data) {
+		   
+		      if(data.error == 1)
+		    	  {
+		    	  
+		    	  document.getElementById("errorOrSuccessDivision").className = 'failureStatus';
+		     	   $('#errorOrSuccessDivision').html("Verification Code is wrong");
+		    	  }
+		 
+		      else
+		    	  {
+		    	  
+		    	  
 			    document.getElementById("errorOrSuccessDivision").className = 'successStatus';
 	        	$('#errorOrSuccessDivision').html("Successfully registered!! Please Login");
 	        	showLogin(1);
+	        	
+		    	  }
 		 
-		 }
+		 
 		
 	 },"json");
 });
@@ -49,11 +66,12 @@ function resendCode()
 	var emailid = document.getElementById("verificationemailid").value;
 	$(document).ready(function(){
 		var request = $.ajax({
-            url: 'phpFiles/sendMail.php',
+            url: 'phpFiles/sendVerificationCode.php',
             type: 'POST',
            data:
            {
-            	registrationemailid : emailid
+            	registrationemailid : emailid ,
+            	
             }
         });
     	
@@ -73,6 +91,26 @@ function resendCode()
 
 
 
+
+
+
+function showSecurityMailDivision(){
+	
+	
+	document.getElementById("verificationnumber").value="";
+	$('#loginDivision').slideUp(1000,function(){
+	$('#registrationDivision').slideUp(1000,function(){
+		
+		
+		   $('#securityMailDivision').slideDown(1000,function(){
+				
+
+				
+			});
+		
+		});
+	});
+}
 
 
 

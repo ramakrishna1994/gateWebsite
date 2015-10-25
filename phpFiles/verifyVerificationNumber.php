@@ -1,22 +1,19 @@
 <?php 
 
 require_once 'connection.php';
+session_start();
 
+
+$firstname=mysqli_real_escape_string($con,$_POST['firstname']);
+$lastname=mysqli_real_escape_string($con,$_POST['lastname']);
 $emailid=mysqli_real_escape_string($con,$_POST['emailid']);
-$verificationnumber=$_POST['verificationnumber'];
-//echo $verificationnumber;
+$password=mysqli_real_escape_string($con,$_POST['password']);
+$verificationnumber=mysqli_real_escape_string($con,$_POST['verificationnumber']);
 $table="users";
-
-$selectQuery = "select verificationnumber from ".$table." where emailid = '".$emailid."';";
-$result = mysqli_query($con,$selectQuery) or die(mysqli_error($con));
-
-while($row = mysqli_fetch_array($result))
+//echo $_SESSION['code'];
+if($_SESSION['code'] == $verificationnumber)
 {
-	
-	if($row['verificationnumber'] == $verificationnumber)
-	{
-		$updateQuery = "update ".$table." set activationstatus = 1 where emailid = '".$emailid."';";
-		mysqli_query($con,$updateQuery) or die(mysqli_query($con));
+
 		
 		$createQuery="create table `".$emailid.".tests`("
 		."id int not null auto_increment,"
@@ -58,13 +55,19 @@ while($row = mysqli_fetch_array($result))
 		}
 		
 		
-		echo '{"error":"0"}';
-	}
 		
-	else
-		echo '{"error":"1"}';
+		
+		$insertQuery="insert into ".$table."(emailid,firstname,lastname,password,imagename) values ('".$emailid."','".$firstname."','".$lastname."','".$password."','user.jpg');";
+		
+		mysqli_query($con,$insertQuery) or die(mysqli_error($con));
+		echo '{"error":"0"}';
+		
+	
 }
-
+else {
+	
+	echo '{"error":"1"}';
+}
 
 
 ?>

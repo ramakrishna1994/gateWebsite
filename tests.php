@@ -8,7 +8,7 @@ require_once 'phpFiles/isSessionSet.php';
 <link rel="stylesheet" type="text/css" href="css/profile.css">
 <link rel="stylesheet" type="text/css" href="css/accounts.css">
 <link rel="stylesheet" type="text/css" href="css/syllabus.css">
-<link rel="stylesheet" type="text/css" href="css/aboutUs.css">
+<link rel="stylesheet" type="text/css" href="css/aboutAndContactUs.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/tests.js"></script>
 <script type="text/javascript" src="js/getAndUpdateProfile.js"></script>
@@ -48,8 +48,6 @@ require_once 'phpFiles/isSessionSet.php';
       
     <!-- ---------------------------------------------------- -->
     
-   
-  
     </div>
   </div>
 

@@ -10,6 +10,7 @@
 <script type="text/javascript" src="js/registration.js"></script>
 <script type="text/javascript" src="js/forgotPassword.js"></script>
 <script type="text/javascript" src="js/verification.js"></script>
+
 <style type="text/css">
 input[id="Lanswer"]{
 width:30px;
@@ -24,11 +25,15 @@ float:left;
 background-color: rgba(221, 221, 221, 0.6);
 }
 </style>
+
 </head>
 <body>
 
 <div class="mainDivision">
   <div id="errorOrSuccessDivision" class="dummy"> </div>
+    
+    
+    
     
   
   <div id="loginDivision">
@@ -53,6 +58,11 @@ background-color: rgba(221, 221, 221, 0.6);
     <div class="submitDivision" ><div class='registerButtonDivision' onClick="showRegistration()">REGISTER</div></div> 
     
    </div>
+   
+   
+   
+   
+   
   
   <div id="registrationDivision" style="display:none">
  
@@ -87,19 +97,32 @@ background-color: rgba(221, 221, 221, 0.6);
    
 </div>
 
+
+
+
+
+
 <div id="securityMailDivision" style="display:none">
 
    <div class="textDivision1" >WE HAVE SENT YOU AN EMAIL WHICH CONTAINS THE VERIFICATION CODE. PLEASE ENTER IT BELOW TO VERIFY YOUR ACCOUNT </div>
    <div class="firstBox1"><img src="images/lock.jpg" width="40px" height="40px" id="ver"></div>
    <div class="secondBox1"><input type="text" id="verificationnumber" placeholder="VERIFICATION CODE"></div>
     
-  <input type="hidden" value="" id="verificationemailid">  
+  <input type="hidden" value="" id="verificationemailid"> 
+  <input type="hidden" value="" id="verificationfirstname">
+  <input type="hidden" value="" id="verificationlastname">
+  <input type="hidden" value="" id="verificationpassword">  
     <div class="submitDivision" ><div class='loginButtonDivision' onClick="verifyVerificationId()">VERIFY</div></div>
     <div class="submitDivision" ><div class='loginButtonDivision' onClick="resendCode()">RESEND THE CODE</div></div>
     <div class="submitDivision1" ><div class='registerButtonDivision1' onClick="showRegistration()">BACK TO REGISTRATION</div></div>
    
    
 </div>
+
+
+
+
+
 
 <div id="forgotPasswordDivision" style="display:none">
 

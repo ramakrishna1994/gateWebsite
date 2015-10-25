@@ -54,20 +54,3 @@ function security(val)
 
 
 
-
-function showSecurityMailDivision(){
-	
-	document.getElementById("verificationnumber").value="";
-	$('#loginDivision').slideUp(1000,function(){
-	$('#registrationDivision').slideUp(1000,function(){
-		
-		
-		   $('#securityMailDivision').slideDown(1000,function(){
-				
-
-				
-			});
-		
-		});
-	});
-}

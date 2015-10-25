@@ -3,10 +3,9 @@
 require_once 'connection.php';
 
 
-$firstname=mysqli_real_escape_string($con,$_POST['registrationfirstname']);
-$lastname=mysqli_real_escape_string($con,$_POST['registrationlastname']);
+
 $emailid=mysqli_real_escape_string($con,$_POST['registrationemailid']);
-$password=mysqli_real_escape_string($con,$_POST['password']);
+
 $table="users";
 
 
@@ -17,8 +16,6 @@ $createQuery="create table if not exists ".$table."("
               ."firstname varchar(100),"
               ."lastname varchar(100),"
               ."password varchar(100),"
-              ."activationstatus int,"
-              ."verificationnumber int,"
               ."imagename varchar(100),"
               ."primary key(id));";
 
@@ -29,15 +26,12 @@ $result = mysqli_query($con,$checkQuery) or die(mysqli_error($con));
 //echo "no of rows:".mysqli_num_rows($result);
 
 
-$random = mt_rand(100000,999999);
+
 //echo $random;
 
 if(mysqli_num_rows($result) == 0)
 {
-   $insertQuery="insert into ".$table."(emailid,firstname,lastname,password,activationstatus,verificationnumber,imagename) values ('".$emailid."','".$firstname."','".$lastname."','".$password."',0,".$random.",'user.jpg');";
-
-   mysqli_query($con,$insertQuery) or die(mysqli_error($con));
-
+  
  
       echo '{"error":"0"}';
 }

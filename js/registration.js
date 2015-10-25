@@ -142,7 +142,9 @@ function doRegistration()
 		                type: 'POST',
 		               data:
 		               {
-		                	registrationemailid : registrationemailid
+		                	registrationemailid : registrationemailid ,
+		                	
+		                	
 		                }
 		            });
 		        	
@@ -150,6 +152,9 @@ function doRegistration()
 		        		document.getElementById("errorOrSuccessDivision").className = 'successStatus';
 			        	$('#errorOrSuccessDivision').html("Just One More Step!!");
 			        	document.getElementById("verificationemailid").value = registrationemailid;
+			        	document.getElementById("verificationfirstname").value = registrationfirstname;
+			        	document.getElementById("verificationlastname").value = registrationlastname;
+			        	document.getElementById("verificationpassword").value = password;
 			        	showSecurityMailDivision();
 		        	});
 		        	

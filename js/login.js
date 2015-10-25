@@ -126,15 +126,7 @@ function doLogin()
 			
 			 
 			 }
-		 else if(data.error == 2)
-			 {
-			   document.getElementById("verificationemailid").value=loginemailid;
-		    	document.getElementById("errorOrSuccessDivision").className = 'successStatus';
-	        	$('#errorOrSuccessDivision').html("Please Verify Your Account");
-	        	showSecurityMailDivision();
-	     
-		  
-			 }
+		 
 		 else
 		 {
 			  window.open('tests.php','_self');

@@ -2,17 +2,17 @@
 //echo phpinfo();
 
 require_once 'connection.php';
-
+session_start();
 $emailid=mysqli_real_escape_string($con,$_POST['registrationemailid']);
-//$emailid ="ramakrishnasaradhi@gmail.com";
-$table = "users";
-$selectQuery = "select verificationnumber from ".$table." where emailid = '".$emailid."';";
-$result = mysqli_query($con,$selectQuery) or die(mysqli_error($con));
-$val = 0;
-while($row = mysqli_fetch_array($result))
-{
-	$val = $row['verificationnumber'];
-}
+
+
+
+$random = mt_rand(100000,999999);
+$_SESSION['code'] = $random;
+
+
+//echo $_SESSION['code'];
+
 
 $to = $emailid;
 $subject = "Gate Verification Code";
@@ -26,7 +26,7 @@ $message = "
 <table style='border:1px solid;border-color:black;'>
 <tr>
 <th>Verifcation Code</th>
-<th>".$val."</th>
+<th>".$random."</th>
 </tr>
 </table>
 </body>

@@ -9,7 +9,7 @@ require_once 'phpFiles/isSessionSet.php';
      <div class="aboutUsTextDivision">
      Hi.I am <b>Ramakrishna Saradhi</b> designer of this website and gate aspirant like you.
      I have completed my B-tech from <b>JNTU college of Engineering ,Hyderabad</b> in CSE in 2015.
-     When i first started to prepare for the gate exam , i found it very difficult to select
+     When i first started  preparing for the gate exam , i found it very difficult to select
      an online test series best suitable for me.There are many online test series available
      out there with big names.Big names comes with big price.Even if we decide to buy the 
      test series by spending the money , they may still lack some of the features like chapter

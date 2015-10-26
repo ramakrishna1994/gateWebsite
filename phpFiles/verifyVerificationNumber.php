@@ -22,7 +22,7 @@ if($_SESSION['code'] == $verificationnumber)
 		."timer varchar(20),"
 		."marks int not null default 0,"
 		."statusOfExam int not null default 0,"
-		."answers varchar(255),"
+		."answers varchar(1000),"
 		."marked varchar(255),"
 		."primary key(id));";
 		
@@ -31,12 +31,29 @@ if($_SESSION['code'] == $verificationnumber)
 		$str = file_get_contents('../questions/tests.json');
 		$jsonData = json_decode($str, true);
 		
-		$answerstring="";
+		$markedstring="";
 		for ($i=1;$i<=30;$i++)
 		{
-		$answerstring.='0';
+		$markedstring.='0';
 		
 		}
+		
+		$answerstring='{"answers":[{"dummy":"0"},';
+		for($i=1;$i<=30;$i++)
+		{
+				
+			$answerstring.='{"answer":"0"}';
+			
+			
+			
+			if($i!=30)
+			{
+				$answerstring.=',';
+			}
+		}
+		
+		$answerstring.=']}';
+		//echo $answerstring;
 		// echo $jsonData["tests"][1]["subjectname"]."1";
 		$insertQuery;
 		for($i = 0;$i<4;$i++)
@@ -48,7 +65,7 @@ if($_SESSION['code'] == $verificationnumber)
 				."0,"
 				."0,"
 				."'".$answerstring."',"
-				."'".$answerstring."'"
+				."'".$markedstring."'"
 				.");";
 		
 				mysqli_query($con,$insertQuery) or die(mysqli_error($con));

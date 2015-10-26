@@ -29,6 +29,22 @@ create table $username.tests(
          
  login.php error codes = 0 means no error
                          1 means username not exists
-                         2 means activation status not set to '1'
+                        
+---------------------------------------------------------------------------------------------------------                        
+                        
+   Expanddivision1 subjectnamedivision1 onclick=showchapters(1,5)
+               chaptersdivision1
+                  expanddivision11 subjectnamechapterdivision11  onclick=showsyllabus(1,1,5)
+                                   subjectnamechaptersyllabusdivision11
+                                   
+                  expanddivision12 subjectnamechapterdivision12  onclick=showsyllabus(1,2,5)
+                                   subjectnamechaptersyllabusdivision12
+                  
+                  expanddivision13 subjectnamechapterdivision13  onclick=showsyllabus(1,3,5)
+                                   subjectnamechaptersyllabusdivision13
+                              
                          
                         
+-----------------------------------------------------------------------------------------------------------
+
+

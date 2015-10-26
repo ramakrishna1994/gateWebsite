@@ -43,6 +43,10 @@ require_once 'phpFiles/isSessionSet.php';
  
  		</div>
  		
+ 		<div class="numericalAnswerDivision" id="numericalAnswerDivision">
+            PLEASE ENTER YOUR ANSWER HERE : <input type="text" id="numericalAnswer">
+ 		</div>
+ 		
  		<div class="optionDivision" id="optionADivision" ticked="0" onclick="setAnswer(1)">
    		<div class="firstDivision">A</div>
    		<div class="secondDivision" id="optionA">A</div>

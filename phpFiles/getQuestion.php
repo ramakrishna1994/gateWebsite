@@ -26,7 +26,11 @@ while($row = mysqli_fetch_array($result)){
 	$json .= '"optionB":'.'"'.$jsonData["questions"][$questionNo]["optionB"].'",';
 	$json .= '"optionC":'.'"'.$jsonData["questions"][$questionNo]["optionC"].'",';
 	$json .= '"optionD":'.'"'.$jsonData["questions"][$questionNo]["optionD"].'",';
-	$json .= '"answers":'.'"'.$row["answers"].'",';
+	$json .= '"isNumerical":'.'"'.$jsonData["questions"][$questionNo]["isNumerical"].'",';
+	
+	$answerjsondata = json_decode($row["answers"],true);
+	
+	$json .= '"answered":'.'"'.$answerjsondata["answers"][$questionNo]["answer"].'",';
 	$json .= '"current":'.'"'.$questionNo.'"';
     $json .='}';
 }

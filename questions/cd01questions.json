@@ -7,7 +7,8 @@
 "optionA":"dummy",
 "optionB":"dummy",
 "optionC":"dummy",
-"optionD":"dummy"
+"optionD":"dummy",
+"isNumerical":"0"
 },
 {
 "questionNo":"01",
@@ -17,7 +18,8 @@
 "optionC":"8",
 "optionD":"9",
 "answer":"A",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"02",
@@ -27,7 +29,8 @@
 "optionC":"23sdl;faaaaaaaaaaaaaaaaaaaaaaaaaaaaasfdsdffffffffsdffffffffffffffffffffsd sdfffffffffffg",
 "optionD":"24oisdjffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffafdkssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssasdfkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
 "answer":"B",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"03",
@@ -37,7 +40,8 @@
 "optionC":"C3",
 "optionD":"D3",
 "answer":"C",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"04",
@@ -47,7 +51,8 @@
 "optionC":"C4",
 "optionD":"D4",
 "answer":"D",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"05",
@@ -57,7 +62,8 @@
 "optionC":"C5",
 "optionD":"D5",
 "answer":"A",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"06",
@@ -67,7 +73,8 @@
 "optionC":"C6",
 "optionD":"D6",
 "answer":"B",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"07",
@@ -77,7 +84,8 @@
 "optionC":"C7",
 "optionD":"D7",
 "answer":"C",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"08",
@@ -87,7 +95,8 @@
 "optionC":"C8",
 "optionD":"D8",
 "answer":"C",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"09",
@@ -97,7 +106,8 @@
 "optionC":"C9",
 "optionD":"D9",
 "answer":"D",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"10",
@@ -107,7 +117,8 @@
 "optionC":"C10",
 "optionD":"D10",
 "answer":"A",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"11",
@@ -117,7 +128,8 @@
 "optionC":"C11",
 "optionD":"D11",
 "answer":"B",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"12",
@@ -127,7 +139,8 @@
 "optionC":"C12",
 "optionD":"D12",
 "answer":"C",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"13",
@@ -137,7 +150,8 @@
 "optionC":"C13",
 "optionD":"D13",
 "answer":"D",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"14",
@@ -147,7 +161,8 @@
 "optionC":"C14",
 "optionD":"D14",
 "answer":"A",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"15",
@@ -157,7 +172,8 @@
 "optionC":"C15",
 "optionD":"D15",
 "answer":"B",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"16",
@@ -167,7 +183,8 @@
 "optionC":"C16",
 "optionD":"D16",
 "answer":"C",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"17",
@@ -177,7 +194,8 @@
 "optionC":"C17",
 "optionD":"D17",
 "answer":"D",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"18",
@@ -187,7 +205,9 @@
 "optionC":"C18",
 "optionD":"D18",
 "answer":"A",
-"marks":"1"},
+"marks":"1",
+"isNumerical":"0"
+},
 {
 "questionNo":"19",
 "question":"q19",
@@ -196,7 +216,8 @@
 "optionC":"C19",
 "optionD":"D19",
 "answer":"B",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"20",
@@ -206,7 +227,8 @@
 "optionC":"C20",
 "optionD":"D20",
 "answer":"C",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"21",
@@ -216,7 +238,8 @@
 "optionC":"C21",
 "optionD":"D21",
 "answer":"D",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"22",
@@ -226,7 +249,8 @@
 "optionC":"C22",
 "optionD":"D22",
 "answer":"A",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"23",
@@ -236,7 +260,8 @@
 "optionC":"C23",
 "optionD":"D23",
 "answer":"B",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"24",
@@ -246,7 +271,8 @@
 "optionC":"C24",
 "optionD":"D24",
 "answer":"C",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"25",
@@ -256,7 +282,8 @@
 "optionC":"C25",
 "optionD":"D25",
 "answer":"D",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"26",
@@ -266,7 +293,8 @@
 "optionC":"C26",
 "optionD":"D26",
 "answer":"A",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"27",
@@ -276,7 +304,8 @@
 "optionC":"C27",
 "optionD":"D27",
 "answer":"B",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"28",
@@ -286,7 +315,8 @@
 "optionC":"C28",
 "optionD":"D28",
 "answer":"C",
-"marks":"1"
+"marks":"1",
+"isNumerical":"0"
 },
 {
 "questionNo":"29",
@@ -296,7 +326,8 @@
 "optionC":"C29",
 "optionD":"D29",
 "answer":"D",
-"marks":"2"
+"marks":"2",
+"isNumerical":"0"
 },
 {
 "questionNo":"30",
@@ -305,8 +336,9 @@
 "optionB":"B30",
 "optionC":"C30",
 "optionD":"D30",
-"answer":"A",
-"marks":1
+"answer":"2.3",
+"marks":1,
+"isNumerical":"1"
 }
 
 ]

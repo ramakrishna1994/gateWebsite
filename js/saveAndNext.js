@@ -34,9 +34,11 @@
 			 }
 		 else
 		 {
-			 value="0";
-			 marked="0";
-			 //document.getElementById(questionNo).className="notAnswered";	 
+			 alert(document.getElementById("numericalAnswer").value);
+			 value=document.getElementById("numericalAnswer").value;
+			 marked="1";
+			 alert(value);
+			 document.getElementById(questionNo).className="saved";	 
 			 }
 		 
 		 $("#questionNo").html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
@@ -52,35 +54,80 @@
 	
 		  $("#questionNo").html("QUESTION NO : "+data.questionNo);
           $("#question").html(data.question);
-	      $("#optionA").html(data.optionA);
-	      $("#optionB").html(data.optionB);
-	      $("#optionC").html(data.optionC);
-	      $("#optionD").html(data.optionD);
-    	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+")");
-    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
+          
+          if(data.isNumerical == '0')
+          {
+
+        	  $("#numericalAnswerDivision").hide();
+        	  $("#optionADivision").show();
+        	  $("#optionBDivision").show();
+        	  $("#optionCDivision").show();
+        	  $("#optionDDivision").show();
+        	  
+        	  $("#optionA").html(data.optionA);
+        	  $("#optionB").html(data.optionB);
+        	  $("#optionC").html(data.optionC);
+        	  $("#optionD").html(data.optionD);
     	  
-    	  document.getElementById("optionADivision").setAttribute("ticked", "0");
-		  document.getElementById("optionBDivision").setAttribute("ticked", "0");
-		  document.getElementById("optionCDivision").setAttribute("ticked", "0");
-		  document.getElementById("optionDDivision").setAttribute("ticked", "0");
-    	 
-    	  if(data.answered!='0')
-    		  {
-    		    
-    		  var radioButton="option"+data.answered+"Division";
-  		    
-  		    //alert(radioButton);
-  		    document.getElementById(radioButton).className='answered';
-  		  document.getElementById(radioButton).setAttribute("ticked", "1");
-  		    
-  		  }
-  	  else
-  		  {
-  		  document.getElementById("optionADivision").className='optionDivision';
-  		  document.getElementById("optionBDivision").className='optionDivision';
-  		  document.getElementById("optionCDivision").className='optionDivision';
-  		  document.getElementById("optionDDivision").className='optionDivision';
-  		  }
+        	  document.getElementById("numericalAnswer").value="";
+        	  document.getElementById("optionADivision").setAttribute("ticked", "0");
+    		  document.getElementById("optionBDivision").setAttribute("ticked", "0");
+    		  document.getElementById("optionCDivision").setAttribute("ticked", "0");
+    		  document.getElementById("optionDDivision").setAttribute("ticked", "0");
+        	 
+    		  document.getElementById("optionADivision").className='optionDivision';
+      		  document.getElementById("optionBDivision").className='optionDivision';
+      		  document.getElementById("optionCDivision").className='optionDivision';
+      		  document.getElementById("optionDDivision").className='optionDivision';
+      		  
+        	  if(data.answered!='0')
+        		  {
+        		    
+        		  var radioButton="option"+data.answered+"Division";
+      		    
+      		    //alert(radioButton);
+      		    document.getElementById(radioButton).className='answered';
+      		  document.getElementById(radioButton).setAttribute("ticked", "1");
+      		    
+      		  }
+      	  
+           
+          }
+          
+          else
+        	  {
+        	  
+        	  $("#optionADivision").hide();
+        	  $("#optionBDivision").hide();
+        	  $("#optionCDivision").hide();
+        	  $("#optionDDivision").hide();
+        	  
+        	  document.getElementById("optionADivision").setAttribute("ticked", "0");
+    		  document.getElementById("optionBDivision").setAttribute("ticked", "0");
+    		  document.getElementById("optionCDivision").setAttribute("ticked", "0");
+    		  document.getElementById("optionDDivision").setAttribute("ticked", "0");
+    		  
+    		  document.getElementById("optionADivision").className='optionDivision';
+      		  document.getElementById("optionBDivision").className='optionDivision';
+      		  document.getElementById("optionCDivision").className='optionDivision';
+      		  document.getElementById("optionDDivision").className='optionDivision';
+      		  
+        	  $("#numericalAnswerDivision").show();
+        	  
+        	  var answer = data.answered;
+	 	    	 
+	 	    	  if(answer!= '0')
+	     		  {
+	     		    
+	     		    document.getElementById("numericalAnswer").value=answer;
+	       		    
+	     		    
+	     		  }
+        	  }
+	     
+          document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+")");
+    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
+    	
     	  
 	  });
   

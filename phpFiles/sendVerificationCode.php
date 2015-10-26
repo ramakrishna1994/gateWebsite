@@ -11,7 +11,7 @@ $random = mt_rand(100000,999999);
 $_SESSION['code'] = $random;
 
 
-//echo $_SESSION['code'];
+echo $_SESSION['code'];
 
 
 $to = $emailid;

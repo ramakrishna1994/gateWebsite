@@ -138,7 +138,7 @@ function doRegistration()
 		        	
 		        	
 		        	var request = $.ajax({
-		                url: 'phpFiles/sendMail.php',
+		                url: 'phpFiles/sendVerificationCode.php',
 		                type: 'POST',
 		               data:
 		               {

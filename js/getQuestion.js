@@ -72,11 +72,11 @@ function setAnswer(val)
 	 	    	 
 	 	    	  if(answer!= '0')
 	     		  {
-	 	    		  alert(data.answered);
+	 	    		 // alert(data.answered);
 	     		    
 	     		    var radioButton="option"+answer+"Division";
 	     		    
-	     		    alert(radioButton);
+	     		    //alert(radioButton);
 	     		    document.getElementById(radioButton).className='answered';
 	       		    document.getElementById(radioButton).setAttribute("ticked", "1");
 	     		    
@@ -108,7 +108,7 @@ function setAnswer(val)
 		 	    	  if(answer!= '0')
 		     		  {
 		     		    
-		     		    document.getElementById("numericalAnswer").value=answerarray[val];
+		     		    document.getElementById("numericalAnswer").value=answer;
 		       		    
 		     		    
 		     		  }

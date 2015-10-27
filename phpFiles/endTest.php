@@ -1,8 +1,9 @@
 <?php 
 require_once 'isSessionSet.php';
+require_once 'isExamSessionSet.php';
 require_once 'connection.php';
 
-
+//echo $_SESSION['examname'];
 $tableName=$_SESSION['gateusername'].".tests";
 $examname = $_SESSION['examname'];
 $filename=$examname."questions";
@@ -20,24 +21,25 @@ while($row = mysqli_fetch_array($result))
 	$answerarray = $row['answers'];
 }
 
-$val = $answerarray[9];
+$answerjsondata = json_decode($answerarray,true);
+//$val = $answerarray[9];
 //echo $val;
 //echo $jsonData["questions"][1]["answer"];
-for($i=0;$i<30;$i++)
+for($i=1;$i<=30;$i++)
 {
-	$val = $answerarray[$i];
-	if($jsonData["questions"][$i+1]["answer"] == $val)
+	$val = $answerjsondata["answers"][$i]["answer"];
+	if($jsonData["questions"][$i]["answer"] == $val)
 	{
-		$total = $total + $jsonData["questions"][$i+1]["marks"];
+		$total = $total + $jsonData["questions"][$i]["marks"];
 	}
 	else
 	 {
-	 	$total = $total - ($jsonData["questions"][$i+1]["marks"] / 3);
+	 	$total = $total - ($jsonData["questions"][$i]["marks"] / 3);
 	}
 	//echo 1;
 }
 
-$updateQuery = "update `".$tableName."` set marks = ".$total.",statusOfExam = 2,timer = '00:00:00' where testName = '".$examname."';";
+$updateQuery = "update `".$tableName."` set marks = '".$total."',statusOfExam = 2,timer = '00:00:00' where testName = '".$examname."';";
 mysqli_query($con,$updateQuery) or die(mysqli_error($con));
 
 echo $total;

@@ -16,7 +16,7 @@ $json ='{"subjectName":"'.$subjectname.'","testStatus":"1"}';
 echo $json;
 
 
-unset($_SESSION['examname']);
+$_SESSION['examname'] = "";
 
 mysqli_close($con);
 ?>

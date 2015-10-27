@@ -64,7 +64,7 @@ function startTimer()
     if(hours==0 && minutes==0 && seconds==0)
     	{
     	window.clearInterval(id);
-    	 alert("end of test");
+    	 
     	 
     	 endTest();
     	 
@@ -124,7 +124,7 @@ function endTest()
          }
     });
 	$.when(request).done(function(){
-		//alert(1);
+		alert("end of test");
           window.opener.location.reload();
          window.close();	
 	});

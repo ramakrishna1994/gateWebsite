@@ -1,4 +1,4 @@
- function reviewAndNext(current){ 
+ function reviewAndNext(current,isNumerical){ 
 
 	  var questionNo="question"+current;
 	 
@@ -7,6 +7,9 @@
 	 
 		 
 		 var value,marked;
+		 
+	if(isNumerical == '0')
+	{
 		 if(document.getElementById("optionADivision").getAttribute("ticked")==1)
 			 {
 			 value="A";
@@ -32,13 +35,29 @@
 			 value="D";
 			 marked="2";
 			 document.getElementById(questionNo).className="markedForReview";	 
-			 }
+		 }
 		 else
-		 {
-			 value=document.getElementById("numericalAnswer").value;
+			 {
+			 value="0";
+			 marked="0";
+			 }
+	}
+	else
+	{
+		 value=document.getElementById("numericalAnswer").value;
+		 
+		 if(value!="")
+			 {
 			 marked="2";
 			 document.getElementById(questionNo).className="markedForReview";	 
 			 }
+		 else
+			 {
+			  marked="0";
+			 }
+		 
+	}
+		
 		 	 
 
 		 $("#questionNo").html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
@@ -126,8 +145,8 @@
         	  }
             	 
     	  
-    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
-    	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+")");
+    	  document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+","+data.isNumerical+")");
+    	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+","+data.isNumerical+")");
     	  
     	});
   

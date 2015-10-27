@@ -3,7 +3,7 @@
 
 function logout()
 {
-	window.open('login.html','_self');
+	window.open('index.html','_self');
 	
 	$.ajax({
         url: 'phpFiles/logout.php',

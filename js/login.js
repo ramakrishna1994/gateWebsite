@@ -150,3 +150,6 @@ document.getElementById("Lanswer").value="";
 	
 }
 
+
+
+

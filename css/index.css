@@ -1,0 +1,77 @@
+
+.headerDivision{
+	
+	width:800px;
+	height:60px;
+	margin:auto;
+	border:1px solid;
+	border-color:black;
+	background-image: url('../images/background.png');
+}
+.logoDivisionLeft{
+	
+	float:left;
+	
+}
+.logoDivisionRight{
+	
+	float:left;
+	
+}
+
+.headerTextDivisionTop{
+	
+	float:left;
+	text-align:center;
+	color:white;
+	width:600px;
+	padding-top:5px;
+	font-size:20px;
+}
+.headerTextDivisionBottom{
+	
+	float:left;
+	text-align:center;
+	color:white;
+	width:600px;
+	padding-top:5px;
+	font-size:20px;
+	color:aqua;
+}
+.headerButtonDivisionLeft
+{
+	margin-top:27px;
+	margin-left:10px;
+	float:left;
+	width:80px;
+	height:20px;
+	font-size:15px;
+	padding-top:5px;
+	background-color:green;
+}
+.headerButtonDivisionRight
+{
+	background-color:green;
+	float:right;
+	width:80px;
+	height:20px;
+	font-size:15px;
+	padding-top:4px;
+	margin-bottom:20px;
+	margin-right:10px;
+}
+
+.headerButtonDivisionLeft:hover,.headerButtonDivisionRight:hover{
+	
+	cursor:pointer;
+	background-color: purple;
+	color:white;
+}
+.logo
+{
+	border-radius:50%;
+	margin-top:100px;
+	height:150px;
+	width:150px;
+	padding:30px;
+}

@@ -1,6 +1,6 @@
 var valueOne,valueTwo,operator;
 var answer;
-security(1);
+
 
 function security(val)
 {

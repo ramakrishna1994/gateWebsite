@@ -1,15 +1,18 @@
-function aboutUs()
-{
 
+
+function displayAboutUs()
+{
 	$('#mainDivision1').html('<img src="images/redloader.gif" style="height: 30px;width: 30px;margin-top:50px;">');
 	$(document).ready(function(){
 	    
-	        $("#mainDivision1").load("aboutus.php", function(responseTxt, statusTxt, xhr){
+	        $("#mainDivision1").load("aboutus.html", function(responseTxt, statusTxt, xhr){
 	            
 	        });
 	    
-	});	
+	});		
+
 }
+
 
 function contactUs()
 {
@@ -29,10 +32,12 @@ function contactUs()
 function sendFeedback()
 {
 	
- $('#contactusmessagedivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px">');
+ $('#contactusmessagedivision').html('<img src="images/redloader.gif" style="height: 30px;width: 30px;">');
  var feedback = document.getElementById("feedback").value; 
  var emailid = document.getElementById("feedbackemailid").value;
  
+ if(feedback != "")
+  {
  $(document).ready(function(){
 	 
 	 $.post("phpFiles/sendFeedback.php",{feedback : feedback , emailid :emailid},function(){
@@ -42,6 +47,13 @@ function sendFeedback()
 	 });
 	 
  });
+ 
+  }
+ else
+	 {
+	 $('#contactusmessagedivision').html('Please Enter your feedback.');
+	   document.getElementById("feedback").value = "";
+	 }
 
 
 }

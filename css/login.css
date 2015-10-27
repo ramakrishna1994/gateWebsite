@@ -7,15 +7,14 @@ body,html{
 	
 }
 
-
 .mainDivision{
 	
 	
 	padding:0;
 	margin:auto;
-	margin-top:50px;
+	margin-top:20px;
     text-align:center;
-	width:400px;
+	width:800px;
 	height:500px;
 	
 }
@@ -23,7 +22,9 @@ body,html{
 
 #loginDivision{
 
+	margin:auto;
 	margin-top:10px;
+	margin-left:220px;
 	padding:5px;
     text-align:center;
 	width:350px;
@@ -39,6 +40,7 @@ body,html{
 #securityMailDivision{
 
 	margin-top:10px;
+	margin-left:220px;
 	padding:5px;
     text-align:center;
 	width:350px;
@@ -53,6 +55,7 @@ body,html{
 #forgotPasswordDivision{
 
 	margin-top:10px;
+	margin-left:220px;
 	padding:5px;
     text-align:center;
 	width:350px;
@@ -328,6 +331,7 @@ img{
 
 	padding:5px;
 	margin-top:10px;
+	margin-left:220px;
     text-align:center;
 	width:350px;
 	height:425px;

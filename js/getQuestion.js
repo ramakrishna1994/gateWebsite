@@ -70,7 +70,7 @@ function setAnswer(val)
 	    		  
 	    		  var answer = data.answered;
 	 	    	 
-	 	    	  if(answer!= '0')
+	 	    	  if(answer!= '')
 	     		  {
 	 	    		 // alert(data.answered);
 	     		    
@@ -101,11 +101,11 @@ function setAnswer(val)
 	      		  document.getElementById("optionDDivision").className='optionDivision';
 	      		  
 	        	  $("#numericalAnswerDivision").show();
-	        	  
+	        	  document.getElementById("numericalAnswer").value="";
 	        	  var answer = data.answered;
 		 	    	 
 		 	    	  
-		 	    	  if(answer!= '0')
+		 	    	  if(answer!= '')
 		     		  {
 		     		    
 		     		    document.getElementById("numericalAnswer").value=answer;

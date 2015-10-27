@@ -38,11 +38,11 @@ if($_SESSION['code'] == $verificationnumber)
 		
 		}
 		
-		$answerstring='{"answers":[{"dummy":"0"},';
+		$answerstring='{"answers":[{"dummy":""},';
 		for($i=1;$i<=30;$i++)
 		{
 				
-			$answerstring.='{"answer":"0"}';
+			$answerstring.='{"answer":""}';
 			
 			
 			

@@ -38,7 +38,7 @@
 		 }
 		 else
 			 {
-			 value="0";
+			 value="";
 			 marked="0";
 			 }
 	}
@@ -99,7 +99,7 @@
       		  document.getElementById("optionCDivision").className='optionDivision';
       		  document.getElementById("optionDDivision").className='optionDivision';
         	  
-        	  if(data.answered!='0')
+        	  if(data.answered!='')
     		  {
     		    
         		  var radioButton="option"+data.answered+"Division";
@@ -131,10 +131,10 @@
       		  document.getElementById("optionDDivision").className='optionDivision';
       		  
         	  $("#numericalAnswerDivision").show();
-        	  
+        	  document.getElementById("numericalAnswer").value="";
         	  var answer = data.answered;
 	 	    	 
-	 	    	  if(answer!= '0')
+	 	    	  if(answer!= '')
 	     		  {
 	     		    
 	     		    document.getElementById("numericalAnswer").value=answer;

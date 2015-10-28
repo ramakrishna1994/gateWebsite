@@ -1,5 +1,6 @@
 function showForgotPasswordDialogueBox()
 {
+	$('#errorOrSuccessDivision').html('');
 	 $("#loginDivision").slideUp(1000,function(){
 		 
 		 $('#forgotPasswordDivision').slideDown(1000,function(){

@@ -5,6 +5,7 @@ require_once 'phpFiles/isSessionSet.php';
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/tests.css">
+<link rel="stylesheet" type="text/css" href="css/buyTestSeries.css">
 <link rel="stylesheet" type="text/css" href="css/aboutUs.css">
 <link rel="stylesheet" type="text/css" href="css/profile.css">
 <link rel="stylesheet" type="text/css" href="css/accounts.css">
@@ -48,7 +49,6 @@ require_once 'phpFiles/isSessionSet.php';
     <!-- ---------this division will be loaded automatically -->
       
     <!-- ---------------------------------------------------- -->
-    
     </div>
   </div>
 

@@ -3,10 +3,10 @@
 .aboutUsDivision{
 	
 	margin:auto;
-	margin-top:60px;
+	margin-top:30px;
 	 width:690px;
-	 background-image: url('../images/background.png');
-	 color:white;
+	 
+	 
 }
 .aboutUsImageDivision
 {
@@ -15,7 +15,7 @@
 	float:left;
 	width:150px;
 	height:160px;
-	background-image: url('../images/background.png');
+	
 }
 
 .aboutUsTextDivisionTop
@@ -29,7 +29,7 @@
 	height:140px;
 	float:left;
 	font-family: cursive;
-	background-image: url('../images/background.png');
+	
 }
 
 .aboutUsTextDivisionBottom
@@ -41,5 +41,5 @@
 	width:670px;
 	height:230px;
 	font-family: cursive;
-	background-image: url('../images/background.png');
+	
 }

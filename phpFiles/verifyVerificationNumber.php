@@ -22,6 +22,7 @@ if($_SESSION['code'] == $verificationnumber)
 		."timer varchar(20),"
 		."marks varchar(10) not null default 0,"
 		."statusOfExam int not null default 0,"
+		."activationStatus int not null default 0,"
 		."answers varchar(1000),"
 		."marked varchar(255),"
 		."primary key(id));";
@@ -58,12 +59,13 @@ if($_SESSION['code'] == $verificationnumber)
 		$insertQuery;
 		for($i = 0;$i<4;$i++)
 		{
-		$insertQuery = "insert into `".$emailid.".tests` (testname,subjectname,timer,marks,statusOfExam,answers,marked) values("
+		$insertQuery = "insert into `".$emailid.".tests` (testname,subjectname,timer,marks,statusOfExam,activationStatus,answers,marked) values("
 				."'".$jsonData["tests"][$i]["subjectid"]."',"
 				."'".$jsonData["tests"][$i]["subjectname"]."',"
 				."'00:29:60',"
 				."'0',"
 				."0,"
+				."'".$jsonData["tests"][$i]["activationStatus"]."',"
 				."'".$answerstring."',"
 				."'".$markedstring."'"
 				.");";

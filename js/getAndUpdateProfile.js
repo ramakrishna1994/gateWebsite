@@ -7,10 +7,10 @@ function getProfile(id,error)
 	
 	$('#mainDivision1').html('<img src="images/redloader.gif" style="height: 30px;width: 30px;margin-top:50px;">');
 	
- var innerhtml = '<div id="profileBox">';
+ var innerhtml = '<div id="profileBox"><div id="errorOrSuccessDivision" class="dummy"> </div>';
 	$.getJSON("phpFiles/getProfile.php",{},function(data){
 		 
-		 innerhtml += '<div id="errorOrSuccessDivision" class="dummy"> </div>'
+		 innerhtml += ''
 			   
 			     +'<div class="profilefirstBox">FIRST NAME</div>'
 	            + '<div class="profilesecondBox"><input type="text" id="firstname" value="'+data.firstname+'"></div>' 
@@ -62,7 +62,7 @@ function getProfile(id,error)
 			 
 	          else{
 	        	  
-	  	        	document.getElementById("errorOrSuccessDivision").className = 'successStatus';
+	  	        	document.getElementById("errorOrSuccessDivision").className = 'profileSuccessStatus';
 	  	        	
 	  	        	$('#errorOrSuccessDivision').html("PROFILE UPDATED SUCCESSFULLY");
 	  	        	

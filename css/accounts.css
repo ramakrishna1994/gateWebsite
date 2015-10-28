@@ -23,7 +23,7 @@
 	height:40px;
 	float:left;
 	
-	font-family: fantasy;
+	font-family: serif;
 	
 }
 
@@ -37,7 +37,7 @@
 	width:300px;
 	min-height:40px;
 	float:left;
-	font-family: monospace;
+	font-family: serif;
 	font-size:15px;	
 	 display: inline-block;
     word-wrap: break-word;
@@ -53,7 +53,7 @@
 	min-height:40px;
 	float:left;
 	font-size:15px;
-	font-family: fantasy;
+	font-family: serif;
 	 display: inline-block;
    word-wrap: break-word;	
 }

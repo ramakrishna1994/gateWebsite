@@ -19,22 +19,22 @@
 	height:40px;
 	float:left;
 	
-	font-family: fantasy;
+	font-family: cursive;
 	
 }
 
 
-.successStatus{
+.profileSuccessStatus{
 	
 	
-	color: green;
+	color: white;
 	padding:5px;
     text-align: center;
 	width:350px;
 	min-height:40px;
 	float:left;
-	font-family: monospace;
-	font-size:15px;	
+	font-family: serif;
+	font-size:17px;	
 	 display: inline-block;
     word-wrap: break-word;
 }
@@ -50,7 +50,7 @@
 	padding:5px;
 	float:left;
 	font-size:15px;
-	font-family: fantasy;
+	font-family: serif;
 	 display: inline-block;
    word-wrap: break-word;	
 }
@@ -120,7 +120,7 @@ input[type="button"]
 	width:180px;
 	height:40px;
 	background-color:green;
-	font-family: fantasy;
+	font-family: serif;
 	padding-left:5px;
 }
 
@@ -129,7 +129,7 @@ input[type="file"]
 	width:180px;
 	height:40px;
 	color:white;
-	font-family: fantasy;
+	font-family: serif;
 	padding-left:5px;
 }
 input[type="text"]
@@ -140,7 +140,7 @@ input[type="text"]
    padding-left:5px;
    color:black;
    font-size:15px;
-   font-family: fantasy;
+   font-family: serif;
    
    }
  input[type="password"]
@@ -151,7 +151,7 @@ input[type="text"]
   padding-left:5px;
    color:black;
    font-size:15px;
-   font-family: fantasy;
+   font-family: serif;
    
  }
  input[type="text"]:focus,input[type="password"]:focus {

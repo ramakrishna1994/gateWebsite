@@ -1,30 +1,35 @@
 {
-"tests":[
-
-{
-"subjectid":"cd01",
-"subjectname":"COMPILER DESIGN CHAPTER 01 TEST 01",
-"activationStatus":"1"
-},
-{
-"subjectid":"toc01",
-"subjectname":"THEORY OF COMPUTATION CHAPTER 01 TEST 01",
-"activationStatus":"1"
-},
-{
-"subjectid":"cn01",
-"subjectname":"COMPUTER NETWORKS CHAPTER 01 TEST 01",
-"activationStatus":"0"
-},
-{
-"subjectid":"ds01",
-"subjectname":"DATA STRUCTURES CHAPTER 01 TEST 01",
-"activationStatus":"0"
-
-}
-
-
-]
-
-
+	"tests":
+	[
+		{
+			"subjectid":"cd01",
+			"subjectname":"COMPILER DESIGN CHAPTER 01 TEST 01",
+			"activationStatus":"1",
+			"noOfQuestions":10
+		},
+		{
+			"subjectid":"toc01",
+			"subjectname":"THEORY OF COMPUTATION CHAPTER 01 TEST 01",
+			"activationStatus":"1",
+			"noOfQuestions":10
+		},
+		{
+			"subjectid":"cn01",
+			"subjectname":"COMPUTER NETWORKS CHAPTER 01 TEST 01",
+			"activationStatus":"0",
+			"noOfQuestions":10
+		},
+		{
+			"subjectid":"ds01",
+			"subjectname":"DATA STRUCTURES CHAPTER 01 TEST 01",
+			"activationStatus":"0",
+			"noOfQuestions":10
+		},
+		{
+			"subjectid":"dbms01",
+			"subjectname":"DATA BASE MANAGEMENT SYSTEM CHAPTER 01 TEST 01",
+			"activationStatus":"1",
+			"noOfQuestions":5
+		}
+	]
 }

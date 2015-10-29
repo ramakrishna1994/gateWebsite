@@ -1,315 +1,148 @@
 {
-"questions":[
-
-{
-"questionNo":"0",
-"question":"dummy",
-"optionA":"dummy",
-"optionB":"dummy",
-"optionC":"dummy",
-"optionD":"dummy"
-},
-{
-"questionNo":"01",
-"question":"what is 2 * 3 value?",
-"optionA":"6",
-"optionB":"7",
-"optionC":"8",
-"optionD":"9",
-"answer":"A",
-"marks":"1"
-},
-{
-"questionNo":"02",
-"question":"what is 7 * 3 value?",
-"optionA":"21",
-"optionB":"22",
-"optionC":"23",
-"optionD":"24",
-"answer":"B",
-"marks":"2"
-},
-{
-"questionNo":"03",
-"question":"q3",
-"optionA":"A3",
-"optionB":"B3",
-"optionC":"C3",
-"optionD":"D3",
-"answer":"C",
-"marks":"1"
-},
-{
-"questionNo":"04",
-"question":"q4",
-"optionA":"A4",
-"optionB":"B4",
-"optionC":"C4",
-"optionD":"D4",
-"answer":"D",
-"marks":"2"
-},
-{
-"questionNo":"05",
-"question":"q5",
-"optionA":"A5",
-"optionB":"B5",
-"optionC":"C5",
-"optionD":"D5",
-"answer":"A",
-"marks":"1"
-},
-{
-"questionNo":"06",
-"question":"q6",
-"optionA":"A6",
-"optionB":"B6",
-"optionC":"C6",
-"optionD":"D6",
-"answer":"B",
-"marks":"2"
-},
-{
-"questionNo":"07",
-"question":"q7",
-"optionA":"A7",
-"optionB":"B7",
-"optionC":"C7",
-"optionD":"D7",
-"answer":"C",
-"marks":"1"
-},
-{
-"questionNo":"08",
-"question":"q8",
-"optionA":"A8",
-"optionB":"B8",
-"optionC":"C8",
-"optionD":"D8",
-"answer":"C",
-"marks":"1"
-},
-{
-"questionNo":"09",
-"question":"q9",
-"optionA":"A9",
-"optionB":"B9",
-"optionC":"C9",
-"optionD":"D9",
-"answer":"D",
-"marks":"2"
-},
-{
-"questionNo":"10",
-"question":"q10",
-"optionA":"A10",
-"optionB":"B10",
-"optionC":"C10",
-"optionD":"D10",
-"answer":"A",
-"marks":"1"
-},
-{
-"questionNo":"11",
-"question":"q11",
-"optionA":"A11",
-"optionB":"B11",
-"optionC":"C11",
-"optionD":"D11",
-"answer":"B",
-"marks":"2"
-},
-{
-"questionNo":"12",
-"question":"q12",
-"optionA":"A12",
-"optionB":"B12",
-"optionC":"C12",
-"optionD":"D12",
-"answer":"C",
-"marks":"1"
-},
-{
-"questionNo":"13",
-"question":"q13",
-"optionA":"A13",
-"optionB":"B13",
-"optionC":"C13",
-"optionD":"D13",
-"answer":"D",
-"marks":"2"
-},
-{
-"questionNo":"14",
-"question":"q14",
-"optionA":"A14",
-"optionB":"B14",
-"optionC":"C14",
-"optionD":"D14",
-"answer":"A",
-"marks":"1"
-},
-{
-"questionNo":"15",
-"question":"q15",
-"optionA":"A15",
-"optionB":"B15",
-"optionC":"C15",
-"optionD":"D15",
-"answer":"B",
-"marks":"2"
-},
-{
-"questionNo":"16",
-"question":"q16",
-"optionA":"A16",
-"optionB":"B16",
-"optionC":"C16",
-"optionD":"D16",
-"answer":"C",
-"marks":"1"
-},
-{
-"questionNo":"17",
-"question":"q17",
-"optionA":"A17",
-"optionB":"B17",
-"optionC":"C17",
-"optionD":"D17",
-"answer":"D",
-"marks":"2"
-},
-{
-"questionNo":"18",
-"question":"q18",
-"optionA":"A18",
-"optionB":"B18",
-"optionC":"C18",
-"optionD":"D18",
-"answer":"A",
-"marks":"1"},
-{
-"questionNo":"19",
-"question":"q19",
-"optionA":"A19",
-"optionB":"B19",
-"optionC":"C19",
-"optionD":"D19",
-"answer":"B",
-"marks":"2"
-},
-{
-"questionNo":"20",
-"question":"q20",
-"optionA":"A20",
-"optionB":"B20",
-"optionC":"C20",
-"optionD":"D20",
-"answer":"C",
-"marks":"1"
-},
-{
-"questionNo":"21",
-"question":"q21",
-"optionA":"A21",
-"optionB":"B21",
-"optionC":"C21",
-"optionD":"D21",
-"answer":"D",
-"marks":"2"
-},
-{
-"questionNo":"22",
-"question":"q22",
-"optionA":"A22",
-"optionB":"B22",
-"optionC":"C22",
-"optionD":"D22",
-"answer":"A",
-"marks":"1"
-},
-{
-"questionNo":"23",
-"question":"q23",
-"optionA":"A23",
-"optionB":"B23",
-"optionC":"C23",
-"optionD":"D23",
-"answer":"B",
-"marks":"2"
-},
-{
-"questionNo":"24",
-"question":"q24",
-"optionA":"A24",
-"optionB":"B24",
-"optionC":"C24",
-"optionD":"D24",
-"answer":"C",
-"marks":"1"
-},
-{
-"questionNo":"25",
-"question":"q25",
-"optionA":"A25",
-"optionB":"B25",
-"optionC":"C25",
-"optionD":"D25",
-"answer":"D",
-"marks":"2"
-},
-{
-"questionNo":"26",
-"question":"q26",
-"optionA":"A26",
-"optionB":"B26",
-"optionC":"C26",
-"optionD":"D26",
-"answer":"A",
-"marks":"1"
-},
-{
-"questionNo":"27",
-"question":"q27",
-"optionA":"A27",
-"optionB":"B27",
-"optionC":"C27",
-"optionD":"D27",
-"answer":"B",
-"marks":"2"
-},
-{
-"questionNo":"28",
-"question":"q28",
-"optionA":"A28",
-"optionB":"B28",
-"optionC":"C28",
-"optionD":"D28",
-"answer":"C",
-"marks":"1"
-},
-{
-"questionNo":"29",
-"question":"q29",
-"optionA":"A29",
-"optionB":"B29",
-"optionC":"C29",
-"optionD":"D29",
-"answer":"D",
-"marks":"2"
-},
-{
-"questionNo":"30",
-"question":"q30",
-"optionA":"A30",
-"optionB":"B30",
-"optionC":"C30",
-"optionD":"D30",
-"answer":"A",
-"marks":1
-}
-
-]
-
-
+	"questions":
+	[
+		{
+			"questionNo":"0",
+			"question":"dummy",
+			"optionA":"dummy",
+			"optionB":"dummy",
+			"optionC":"dummy",
+			"optionD":"dummy",
+			"answer":"A",
+			"marks":"1",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"01",
+			"question":"what is 2 * 3 value?",
+			"optionA":"6",
+			"optionB":"7",
+			"optionC":"8",
+			"optionD":"9",
+			"answer":"A",
+			"marks":"1",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"02",
+			"question":"what is 7 * 3 value?",
+			"optionA":"21",
+			"optionB":"22",
+			"optionC":"23",
+			"optionD":"24",
+			"answer":"B",
+			"marks":"2",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"03",
+			"question":"q3",
+			"optionA":"A3",
+			"optionB":"B3",
+			"optionC":"C3",
+			"optionD":"D3",
+			"answer":"C",
+			"marks":"1",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"04",
+			"question":"q4",
+			"optionA":"A4",
+			"optionB":"B4",
+			"optionC":"C4",
+			"optionD":"D4",
+			"answer":"D",
+			"marks":"2",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"05",
+			"question":"q5",
+			"optionA":"A5",
+			"optionB":"B5",
+			"optionC":"C5",
+			"optionD":"D5",
+			"answer":"A",
+			"marks":"1",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"06",
+			"question":"q6",
+			"optionA":"A6",
+			"optionB":"B6",
+			"optionC":"C6",
+			"optionD":"D6",
+			"answer":"B",
+			"marks":"2",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"07",
+			"question":"q7",
+			"optionA":"A7",
+			"optionB":"B7",
+			"optionC":"C7",
+			"optionD":"D7",
+			"answer":"C",
+			"marks":"1",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"08",
+			"question":"q8",
+			"optionA":"A8",
+			"optionB":"B8",
+			"optionC":"C8",
+			"optionD":"D8",
+			"answer":"C",
+			"marks":"1",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"09",
+			"question":"q9",
+			"optionA":"A9",
+			"optionB":"B9",
+			"optionC":"C9",
+			"optionD":"D9",
+			"answer":"D",
+			"marks":"2",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		},
+		{
+			"questionNo":"10",
+			"question":"q10",
+			"optionA":"A10",
+			"optionB":"B10",
+			"optionC":"C10",
+			"optionD":"D10",
+			"answer":"A",
+			"marks":"1",
+			"isNumerical":"0",
+			"isImage":"0",
+			"imagePath":"abc"
+		}
+	]
 }

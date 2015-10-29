@@ -44,9 +44,15 @@ function setAnswer(val)
 		
 			  $("#questionNo").html("QUESTION NO : "+data.questionNo);
 	          $("#question").html(data.question);
+	          if(data.error == '1')
+	        	  {
+	        	   window.location.reload();
+	        	   return;
+	        	  }
 	          if(data.isNumerical == '0')
 	          {
 	        	  $("#numericalAnswerDivision").hide();
+	        	  $("#imageDivision").hide();
 	        	  $("#optionADivision").show();
 	        	  $("#optionBDivision").show();
 	        	  $("#optionCDivision").show();
@@ -81,6 +87,18 @@ function setAnswer(val)
 	       		    document.getElementById(radioButton).setAttribute("ticked", "1");
 	     		    
 	     		  }
+	 	    	  
+	 	    	  if(data.isImage == '1')
+	 	    		  {
+	 	    		   $('#imageDivision').show();
+	 	    		   $('#imageDivision').html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
+	 	    		  $('#imageDivision').html('<img src="'+data.imagePath+'">');
+	 	    		   
+	 	    		  }
+	 	    	  else
+	 	    		  {
+	 	    		 $('#imageDivision').hide();
+	 	    		  }
 	        	  
 	          }
 	          else
@@ -89,7 +107,7 @@ function setAnswer(val)
 	        	  $("#optionBDivision").hide();
 	        	  $("#optionCDivision").hide();
 	        	  $("#optionDDivision").hide();
-	        	  
+	        	  $('#imageDivision').hide();
 	        	  document.getElementById("optionADivision").setAttribute("ticked", "0");
 	    		  document.getElementById("optionBDivision").setAttribute("ticked", "0");
 	    		  document.getElementById("optionCDivision").setAttribute("ticked", "0");
@@ -112,10 +130,23 @@ function setAnswer(val)
 		       		    
 		     		    
 		     		  }
+
+		 	    	  if(data.isImage == '1')
+		 	    		  {
+		 	    		    $('#imageDivision').show();
+		 	    		    $('#imageDivision').html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
+		 	    		    $('#imageDivision').html('<img src="'+data.imagePath+'" >');
+		 	    		   
+		 	    		  }
+		 	    	  else
+		 	    		  {
+		 	    		   $('#imageDivision').hide();
+		 	    		  }
+		        	  
 		 	    	  
 	          }
-		      document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+")");
-	    	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+")");
+		      document.getElementById("saveAndNextDivision").setAttribute("onclick","saveAndNext("+data.current+",'"+data.isNumerical+"')");
+	    	  document.getElementById("reviewAndNextDivision").setAttribute("onclick","reviewAndNext("+data.current+",'"+data.isNumerical+"')");
 
 	    	 
     	  

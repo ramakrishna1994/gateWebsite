@@ -25,6 +25,7 @@ if($_SESSION['code'] == $verificationnumber)
 		."activationStatus int not null default 0,"
 		."answers varchar(1000),"
 		."marked varchar(255),"
+		."noOfQuestions int,"
 		."primary key(id));";
 		
 		mysqli_query($con,$createQuery) or die(mysqli_error($con));
@@ -32,34 +33,39 @@ if($_SESSION['code'] == $verificationnumber)
 		$str = file_get_contents('../questions/tests.json');
 		$jsonData = json_decode($str, true);
 		
-		$markedstring="";
-		for ($i=1;$i<=30;$i++)
-		{
-		$markedstring.='0';
 		
-		}
 		
-		$answerstring='{"answers":[{"dummy":""},';
-		for($i=1;$i<=30;$i++)
-		{
-				
-			$answerstring.='{"answer":""}';
-			
-			
-			
-			if($i!=30)
-			{
-				$answerstring.=',';
-			}
-		}
-		
-		$answerstring.=']}';
 		//echo $answerstring;
 		// echo $jsonData["tests"][1]["subjectname"]."1";
 		$insertQuery;
-		for($i = 0;$i<4;$i++)
+		for($i = 0;$i<=4;$i++)
 		{
-		$insertQuery = "insert into `".$emailid.".tests` (testname,subjectname,timer,marks,statusOfExam,activationStatus,answers,marked) values("
+			
+			
+			
+			
+			$markedstring="";
+			for ($j=1;$j<=$jsonData["tests"][$i]["noOfQuestions"];$j++)
+			{
+				$markedstring.='0';
+			}
+			
+			$answerstring='{"answers":[{"dummy":""},';
+			for($j=1;$j<=$jsonData["tests"][$i]["noOfQuestions"];$j++)
+			{
+			
+				$answerstring.='{"answer":""}';
+				if($j!=$jsonData["tests"][$i]["noOfQuestions"])
+				{
+					$answerstring.=',';
+				}
+			}
+			$answerstring.=']}';
+			
+			
+			
+			
+		$insertQuery = "insert into `".$emailid.".tests` (testname,subjectname,timer,marks,statusOfExam,activationStatus,answers,marked,noOfQuestions) values("
 				."'".$jsonData["tests"][$i]["subjectid"]."',"
 				."'".$jsonData["tests"][$i]["subjectname"]."',"
 				."'00:29:60',"
@@ -67,7 +73,8 @@ if($_SESSION['code'] == $verificationnumber)
 				."0,"
 				."'".$jsonData["tests"][$i]["activationStatus"]."',"
 				."'".$answerstring."',"
-				."'".$markedstring."'"
+				."'".$markedstring."',"
+				.$jsonData["tests"][$i]["noOfQuestions"]
 				.");";
 		
 				mysqli_query($con,$insertQuery) or die(mysqli_error($con));

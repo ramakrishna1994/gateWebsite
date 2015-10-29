@@ -1,5 +1,6 @@
 <?php 
 require_once 'phpFiles/isSessionSet.php';
+require_once 'phpFiles/isSubscribed.php';
 ?>
 
 <!DOCTYPE html>

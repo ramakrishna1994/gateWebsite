@@ -14,10 +14,12 @@ $selectquery="select * from `".$tableName."` where testName = '".$examname."';";
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 $answerarray;
 $markedarray;
+$activationStatus;
 while($row = mysqli_fetch_array($result))
 {
 	$answerarray=$row['answers'];
 	$markedarray=$row['marked'];
+	$activationStatus = $row['activationStatus'];
 }
 
 $answerjsondata = json_decode($answerarray,true);
@@ -32,16 +34,16 @@ $markedarray[$questionNo-1] = $marked;
 
 $questionNo=$questionNo+1;
 
-if($questionNo==31)
+if($questionNo==$_SESSION['noOfQuestions']+1)
 	$questionNo=1;
 
 
 $str = file_get_contents('../questions/'.$filename.'.json');
 $jsonData = json_decode($str, true);
 
-
-
-
+$json="";
+if($activationStatus == 1)
+{
 	$json  ='{';
 	$json .= '"questionNo":'.'"'.$jsonData["questions"][$questionNo]["questionNo"].'",';
 	$json .= '"question":'.'"'.$jsonData["questions"][$questionNo]["question"].'",';
@@ -50,6 +52,8 @@ $jsonData = json_decode($str, true);
 	$json .= '"optionC":'.'"'.$jsonData["questions"][$questionNo]["optionC"].'",';
 	$json .= '"optionD":'.'"'.$jsonData["questions"][$questionNo]["optionD"].'",';
 	$json .= '"isNumerical":'.'"'.$jsonData["questions"][$questionNo]["isNumerical"].'",';
+	$json .= '"isImage":'.'"'.$jsonData["questions"][$questionNo]["isImage"].'",';
+	$json .= '"imagePath":'.'"'.$jsonData["questions"][$questionNo]["imagePath"].'",';
 	$json .= '"answered":'.'"'.$answerjsondata["answers"][$questionNo]["answer"].'",';
 	$json .= '"current":'.'"'.$questionNo.'"';
 	$json .='}';
@@ -64,7 +68,12 @@ $jsonData = json_decode($str, true);
 		mysqli_query($con,$updatequery);
 	}
 
-
+}
+else
+{
+	$json='{"error":"1"}';
+}
+	
 echo $json;
 
 mysqli_close($con);

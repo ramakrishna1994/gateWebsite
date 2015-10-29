@@ -22,10 +22,8 @@ while($row = mysqli_fetch_array($result))
 }
 
 $answerjsondata = json_decode($answerarray,true);
-//$val = $answerarray[9];
-//echo $val;
-//echo $jsonData["questions"][1]["answer"];
-for($i=1;$i<=30;$i++)
+
+for($i=1;$i<=$_SESSION['noOfQuestions'];$i++)
 {
 	$val = $answerjsondata["answers"][$i]["answer"];
 	if($jsonData["questions"][$i]["answer"] == $val)

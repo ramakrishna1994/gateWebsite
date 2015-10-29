@@ -7,25 +7,8 @@ $examname = $_SESSION['examname'];
 $filename=$examname."questions";
 
 
-$selectquery="select * from `".$tableName."` where testName = 'cd01';";
-$result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
-$answerarray;
-$markedarray;
-while($row = mysqli_fetch_array($result))
-{
-	$answerarray=$row['answers'];
-	$markedarray=$row['marked'];
-}
-echo $answerarray;
+$str = file_get_contents('../questions/dummy.json');
+$jsonData = json_decode($str, true);
 
-$jsondata = json_decode($answerarray,true);
-
-$jsondata["answers"][1]["answer"] = "TENNIS";
-$newjson = json_encode($jsondata,true);
-
-$selectquery="update `".$tableName."` set answers = '".$newjson."' where testName = 'cd01';";
-$result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
-
-
-
+echo $jsonData["questions"][1]["questionNo"];
 ?>

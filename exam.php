@@ -13,12 +13,17 @@ require_once 'phpFiles/isSubscribed.php';
  <script src = "js/getQuestion.js"></script>
  <script src = "js/saveAndNext.js"></script>
  <script src = "js/reviewAndNext.js"></script>
+ <script src = "js/exam.js"></script>
  
  </head>
 <body>
 <div class="mainDivision">
 
 <div class="headerDivision">
+
+  	<div class="subjectHeaderDivision">
+  	 <?php echo $_SESSION['fullNameOfSubject'];?>
+  	</div>
 	<div class="timerDivision">
 		
 		<div id="secondsDivision"></div>
@@ -78,6 +83,16 @@ require_once 'phpFiles/isSubscribed.php';
 
 </div>
 
+
+<div class="instructionsDivision">
+	<div class="inDivision"><div style="background-color:white;width:150px;height:25px;margin:auto;"><p>Not Answered</p></div></div>
+  	<div class="inDivision"><div style="background-color:green;width:150px;height:25px;margin:auto;color:white"><p>Saved</p></div></div>
+  	<div class="inDivision"><div style="background-color:purple;width:150px;height:25px;margin:auto;color:white"><p>Marked For Review</p></div></div>
+ 
+</div>
+
+
+
 <div class="submitDivision">
 
  
@@ -90,6 +105,16 @@ require_once 'phpFiles/isSubscribed.php';
  		</div>
 
 </div>
+
+
+
+<div class="endTestDivision">
+	
+	<div class="endTestButton" onClick="manualEndTestByUser()">END TEST</div>
+</div>
+
+
+
 </div>
  </body>
  

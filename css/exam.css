@@ -33,6 +33,18 @@ body,html{
 	
 	margin-right: 22px;
 }
+
+.subjectHeaderDivision
+{
+	margin-top:5px;
+	padding-top:5px;
+	margin-left:100px;
+	width:500px;
+	height:30px;
+	float:left;
+	background-image:url("../images/background.png");
+	color:aqua;
+}
 	
 #hoursDivision,#minutesDivision,#secondsDivision,#columnDivision{
 	
@@ -58,6 +70,57 @@ body,html{
 	
 }
 
+.endTestDivision
+{
+	margin-left:22px;
+	float:left;
+	width:225px;
+	background-image:url("../images/background.png");
+	margin-top:6px;
+	border:1px solid;
+		border-color:black;
+	padding-bottom:10px;
+	height:27px;
+}
+
+.endTestButton
+{
+	
+	width:100px;
+	height:22px;
+	text-align:justify;
+	margin:auto;
+	margin-top:7px;
+	background-color: red;
+	color:white;
+	padding-top:3px;
+	padding-left:20px;
+	font-family: monospace;
+	font-size: 17px;
+}
+
+.endTestButton:hover
+{
+	background-color: purple;
+	cursor:pointer;
+}
+
+.instructionsDivision
+{
+	margin-top:10px;
+	float:right;
+	width:225px;
+	margin-right:32px;
+	background-image:url("../images/background.png");
+	border-color:black;
+	border:1px solid;
+	padding-bottom:10px;
+}
+.inDivision
+{
+	width:220px;
+	float:left
+}
 .submitDivision{
 	text-align: center;
 	width:720px;
@@ -248,12 +311,12 @@ color:white;
 	border:1px solid;
 	border-color:black;
 	margin-top:10px;
-	margin-left:10px;
+	margin-right:33px;
     text-align: center;
 	max-width:245px;
-	min-height:275px;
-	max-height:400px;
-	float:left;
+	min-height:250px;
+	max-height:330px;
+	float:right;
 	overflow: auto;
 	background-image:url("../images/background.png");
 }

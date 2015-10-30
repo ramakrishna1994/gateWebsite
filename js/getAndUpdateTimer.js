@@ -124,8 +124,8 @@ function endTest()
          }
     });
 	$.when(request).done(function(){
-		alert("end of test");
-          window.opener.location.reload();
+		alert("You have Successfully completed your test.\nYou can check your results in 'MY RESULTS' tab");
+         
          window.close();	
 	});
 	

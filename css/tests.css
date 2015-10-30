@@ -37,7 +37,7 @@ background-image: url('../images/background.png');
 	padding:0;
     text-align: center;
 	width:200px;
-	height:500px;
+	height:550px;
 	float:left;
 	background-color: #A9A9A9;
 }
@@ -141,17 +141,27 @@ background-color: #A9A9A9;
 	height:505px;
 	float:left;
 	overflow: auto;
-	 
+	
 	
 }
 
+.resultsDivision
+{
+	padding:0;
+	width:730px;
+	height:100px;
+	float:left;
+	overflow: auto;
+	background-color: gray;
+	margin-left:10px;
+}
 
 .snoDivision1{
 
 	border-color:black;
 	border-left:1px solid;
 	border-right:1px solid;
-	padding:0;
+	padding-top:0px;
 	margin-left:5px;
 	margin-top:5px;
     text-align: center;
@@ -214,11 +224,11 @@ background-color: #A9A9A9;
 
 	border-color:black;
 	border-right:1px solid;
-	padding:0px;
+	padding-top:2px;
 	margin-top:10px;
     text-align: center;
 	width:400px;
-	height:40px;
+	height:37px;
 	float:left;
 	background-color: #DCDCDC;
 	color:black;

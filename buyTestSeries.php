@@ -9,7 +9,7 @@ require_once 'phpFiles/isSessionSet.php';
       Unfortunately we don't have online payment system as of now.If you want to buy the test series , you need to pay Rs.<b>200</b>/-
       .You can transfer this money to the given account details either by internet banking or by challan as per your comfort.<br>
       
-      <table  border="1px solid" >
+      <table  border="1px solid">
       <tr><td>Bank Name</td><td>STATE BANK OF INDIA</td></tr>
       <tr><td>Account Name</td><td>SARADHI RAMAKRISHNA</td></tr>
       <tr><td>Account Number</td><td>00000032876669568</td></tr>

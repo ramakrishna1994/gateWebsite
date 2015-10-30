@@ -53,11 +53,11 @@ function checkWindow()
        
        $.when(request).done(function(){
     	   
-    	   //alert(1);
+    	   
     	   window.opener.location.reload();
-    	   getTests();
+    	   
        });
-        //alert('closed');
+      
         
     }
 }
@@ -151,3 +151,70 @@ function buyTestSeries()
 	    
 	});		
 }
+
+
+
+
+function getTestResults()
+{
+	$('#mainDivision1').html('<img src="images/redloader.gif" style="height: 30px;width: 30px;margin-top:50px;">');
+	
+	$(document).ready(function(){
+		
+		var j;
+		  $.getJSON( "phpFiles/getTestResults.php", {}, function( data ) {
+			  
+			//alert(data[1][0]);
+			//alert(data.length);
+		if(data.length != 0)
+		{
+			
+			var i,innerhtml='<div class="testsheaderDivision">'
+                +'<div class="snoDivision1">S.NO</div>'
+                +'<div class="testNameDivision1">TEST NAME</div>'
+                +'<div class="testStatusDivision1">TEST STATUS</div>'
+                +'</div>'
+                +'<div class="testsDivision" id="testsDivision">"';
+			for(i=0;i<data.length;i++)
+				{
+				//alert(1);
+				j=i+1;
+				
+				
+				  
+				  
+	                      
+					  innerhtml +='<div class="snoDivision">'+j+'</div>'
+		                 +'<div class="testNameDivision">'+data[i][2]+'</div>'
+		    	         +'<div class="testStatusDivision"><div class="testComplete" onclick="openResultsWindow(\''+data[i][0]+'\','+j+')" id="'+data[i][0]+'">TEST RESULTS</div></div>'
+		    	         +'<div class="resultsDivision" id="result'+j+'"></div>';
+		    
+					  
+				
+			}
+			
+			innerhtml +='</div>';
+		}
+		else
+		{
+			 innerhtml='<div style="height: 30px;width: 300px;margin:auto;margin-top:50px;">You have not completed any tests</div>';
+		}
+			
+			$('#mainDivision1').html('');
+			$('#mainDivision1').html(innerhtml);
+		});
+		  
+		  
+		
+	});
+	
+
+ 	
+}
+
+
+
+
+
+
+

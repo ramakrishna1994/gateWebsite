@@ -3,36 +3,64 @@
 
 require_once 'isSessionSet.php';
 require_once 'connection.php';
+require_once '/home/u955060507/public_html/gate/phpmailer/phpmailer/PHPMailerAutoload.php';
+
+
 
 $emailid=mysqli_real_escape_string($con,$_POST['emailid']);
 $feedback=mysqli_real_escape_string($con,$_POST['feedback']);
 
 $to = "ramakrishnasaradhi@gmail.com";
-$subject = "GATE WEBSITE FEEDBACK";
 
-$message = "
+
+$mail = new PHPMailer;
+
+//Enable SMTP debugging. 
+//$mail->SMTPDebug = 3;                               
+//Set PHPMailer to use SMTP.
+$mail->isSMTP();            
+//Set SMTP host name                          
+$mail->Host = "mx1.serversfree.com";
+//Set this to true if SMTP host requires authentication to send email
+$mail->SMTPAuth = true;                          
+//Provide username and password     
+$mail->Username = "admin@gate2016.bugs3.com";                 
+$mail->Password = "saradhi@2";                           
+//If SMTP requires TLS encryption then set it
+                        
+//Set TCP port to connect to 
+$mail->Port = 2525;                                   
+
+$mail->From = "admin@gate2016.bugs3.com";
+$mail->FromName = "Admin";
+
+$mail->addAddress($to);
+
+$mail->isHTML(true);
+
+$mail->Subject = "GATE WEBSITE FEEDBACK";
+$mail->Body = "
 <html>
 <head>
 </head>
 <body>
-<p>Feedback</p>
-<table style='border:1px solid;border-color:black;width:500px;display:inline-block;'>
-<tr>
-".$feedback."
-</tr>
+
+<table style='border:1px solid;border-color:black;'>
+<tr>".$emailid."</tr>
+<tr>".$feedback."</tr>
 </table>
 </body>
 </html>
 ";
 
-// Always set content-type when sending HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-// More headers
-$headers .= 'From: <'.$emailid.'>' . "\r\n";
 
 
-mail($to,$subject,$message,$headers);
-
+if(!$mail->send()) 
+{
+    echo "Mailer Error: " . $mail->ErrorInfo;
+} 
+else 
+{
+    echo "Message has been sent successfully";
+}
 ?>

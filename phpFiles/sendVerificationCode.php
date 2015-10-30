@@ -1,7 +1,11 @@
 <?php
-//echo phpinfo();
+
 
 require_once 'connection.php';
+require_once '/home/u955060507/public_html/gate/phpmailer/phpmailer/PHPMailerAutoload.php';
+
+
+
 session_start();
 $emailid=mysqli_real_escape_string($con,$_POST['registrationemailid']);
 
@@ -11,13 +15,40 @@ $random = mt_rand(100000,999999);
 $_SESSION['code'] = $random;
 
 
-echo $_SESSION['code'];
+//echo $_SESSION['code'];
 
 
 $to = $emailid;
-$subject = "Gate Verification Code";
 
-$message = "
+
+
+$mail = new PHPMailer;
+
+//Enable SMTP debugging. 
+//$mail->SMTPDebug = 3;                               
+//Set PHPMailer to use SMTP.
+$mail->isSMTP();            
+//Set SMTP host name                          
+$mail->Host = "mx1.serversfree.com";
+//Set this to true if SMTP host requires authentication to send email
+$mail->SMTPAuth = true;                          
+//Provide username and password     
+$mail->Username = "admin@gate2016.bugs3.com";                 
+$mail->Password = "saradhi@2";                           
+//If SMTP requires TLS encryption then set it
+                        
+//Set TCP port to connect to 
+$mail->Port = 2525;                                   
+
+$mail->From = "admin@gate2016.bugs3.com";
+$mail->FromName = "Admin";
+
+$mail->addAddress($to);
+
+$mail->isHTML(true);
+
+$mail->Subject = "GATE VERIFICATION CODE";
+$mail->Body = "
 <html>
 <head>
 </head>
@@ -33,14 +64,15 @@ $message = "
 </html>
 ";
 
-// Always set content-type when sending HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-// More headers
-$headers .= 'From: <Gate@thankyou.com>' . "\r\n";
 
 
-mail($to,$subject,$message,$headers);
+if(!$mail->send()) 
+{
+    //echo "Mailer Error: " . $mail->ErrorInfo;
+} 
+else 
+{
+ //   echo "Message has been sent successfully";
+}
 
 ?>

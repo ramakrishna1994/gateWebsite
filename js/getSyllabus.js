@@ -26,7 +26,7 @@ function showChapters(mainId,len){
 	    expandDiv = "expandDivision"+i;		 
 	    document.getElementById(expandDiv).setAttribute("onclick","showChapters("+i+","+len+")");
 	    $('#'+expandDiv).html('');
-		$('#'+expandDiv).html('<img src="images/plus.png" style="width:30px;height:30px;">');
+		$('#'+expandDiv).html('<img src="images/plus.png" style="width:30px;height:30px;border-radius:50%">');
 		}
 
 	mainDiv = "subjectNameDivision"+mainId;
@@ -36,7 +36,7 @@ function showChapters(mainId,len){
 	document.getElementById(mainDiv).setAttribute("onclick","hideChapters("+mainId+","+len+")");
 	document.getElementById(expandDiv).setAttribute("onclick","hideChapters("+mainId+","+len+")");
 	$('#'+expandDiv).html('');
-	$('#'+expandDiv).html('<img src="images/minus.png" style="width:30px;height:30px;">');
+	$('#'+expandDiv).html('<img src="images/minus.png" style="width:30px;height:30px;border-radius:50%">');
 	
 }
 
@@ -51,7 +51,7 @@ function hideChapters(mainId,len){
 	expandDiv = "expandDivision"+mainId;		 
     document.getElementById(expandDiv).setAttribute("onclick","showChapters("+mainId+","+len+")");
     $('#'+expandDiv).html('');
-	$('#'+expandDiv).html('<img src="images/plus.png" style="width:30px;height:30px;">');
+	$('#'+expandDiv).html('<img src="images/plus.png" style="width:30px;height:30px;border-radius:50%">');
 }
 
 
@@ -71,7 +71,7 @@ function showSyllabus(mainId,childId,len){
 		document.getElementById(mainDiv).setAttribute("onclick","showSyllabus("+mainId+","+i+","+len+")");
 		document.getElementById(expandDiv).setAttribute("onclick","showSyllabus("+mainId+","+i+","+len+")");
 		$('#'+expandDiv).html('');
-		$('#'+expandDiv).html('<img src="images/plus.png" style="width:30px;height:30px;">');
+		$('#'+expandDiv).html('<img src="images/plus.png" style="width:30px;height:30px;border-radius:50%">');
 	}
 	
 	mainDiv = "subjectNameChapterDivision"+mainId+childId;
@@ -81,7 +81,7 @@ function showSyllabus(mainId,childId,len){
 	document.getElementById(mainDiv).setAttribute("onclick","hideSyllabus("+mainId+","+childId+","+len+")");
 	document.getElementById(expandDiv).setAttribute("onclick","hideSyllabus("+mainId+","+childId+","+len+")");
 	$('#'+expandDiv).html('');
-	$('#'+expandDiv).html('<img src="images/minus.png" style="width:30px;height:30px;">');
+	$('#'+expandDiv).html('<img src="images/minus.png" style="width:30px;height:30px;border-radius:50%">');
 }
 
 
@@ -95,5 +95,5 @@ function hideSyllabus(mainId,childId,len){
 	document.getElementById(mainDiv).setAttribute("onclick","showSyllabus("+mainId+","+childId+","+len+")");
 	document.getElementById(expandDiv).setAttribute("onclick","showSyllabus("+mainId+","+childId+","+len+")");
 	$('#'+expandDiv).html('');
-	$('#'+expandDiv).html('<img src="images/plus.png" style="width:30px;height:30px;">');
+	$('#'+expandDiv).html('<img src="images/plus.png" style="width:30px;height:30px;border-radius:50%">');
 }

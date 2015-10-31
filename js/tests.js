@@ -179,7 +179,7 @@ function getTestResults()
 	                      
 					  innerhtml +='<div class="snoDivision">'+j+'</div>'
 		                 +'<div class="testNameDivision">'+data[i][2]+'</div>'
-		    	         +'<div class="testStatusDivision"><div class="testComplete" onclick="showResultsWindow(\''+data[i][0]+'\','+j+')" id="'+data[i][0]+'">TEST RESULTS</div></div>'
+		    	         +'<div class="testStatusDivision"><img src="images/plus.png" style="border-radius:50%;height:20px;width:20px;float:left;margin-left:20px;margin-top:10px;cursor:pointer" onclick="showExpand(\''+data[i][0]+'\','+j+','+data.length+')" id="expandTab'+j+'" ticked="0" ><div class="testComplete" onclick="showExpand(\''+data[i][0]+'\','+j+','+data.length+')" id="'+data[i][0]+'">TEST RESULTS</div></div>'
 		    	         +'<div class="resultsDivision" id="result'+j+'"></div>';
 		    
 					  
@@ -215,17 +215,21 @@ function clickTab(id)
 
  var tab = "tab"+id;
  var showtab = "showtab"+id;
+
  var i;
  for(i=1;i<=8;i++)
 	 {
 	  var tab1 = "tab"+i;
 	  var showtab1="showtab"+i;
+	 
 	  document.getElementById(tab1).className = 'tabNotSelected';
-	  document.getElementById(showtab1).style.backgroundColor = '';
+	  document.getElementById(showtab1).style.backgroundImage = "url('')";
+	  
 	 }
  
  document.getElementById(tab).className = 'tabSelected';
- document.getElementById(showtab).style.backgroundColor = '#A9A9A9';
+ document.getElementById(showtab).style.backgroundImage ="url('images/background.png')";
+
  
  	switch(id)
  	{
@@ -258,19 +262,45 @@ function clickTab(id)
  	}
 }
 
-
-function showResultsWindow(subject,id)
+function showExpand(subject,id,length)
+{
+  
+	var expand = 'expandTab'+id;
+	if(document.getElementById(expand).getAttribute("ticked")==1)
+		{
+		
+		var result = 'result'+id;
+		$('#'+result).slideUp(500,function(){
+			
+			    document.getElementById(expand).src = 'images/plus.png'
+				document.getElementById(expand).setAttribute("ticked", "0");
+		});
+		
+		}
+	else
+		{
+		
+		 showResultsWindow(subject, id, length)
+		}
+}
+function showResultsWindow(subject,id,length)
 {
 	
 	var result= "result"+id;
+	var expand = "expandTab"+id;
 	var i,innerhtml;
-    for(i=1;i<=10;i++)
+    for(i=1;i<=length;i++)
     	{
     		var result1 = "result"+i;
     		$('#'+result1).slideUp(500);
+    		 var expand1 = "expandTab"+i;
+    		document.getElementById(expand1).src = 'images/plus.png';
+    		document.getElementById(expand1).setAttribute("ticked", "0");
     	}
     $('#'+result).slideDown(500);
     $('#'+result).html('<img src="images/redloader.gif" style="height: 30px;width: 30px;margin-top:40px;">');
+    document.getElementById(expand).src = 'images/minus.png';
+    document.getElementById(expand).setAttribute("ticked", "1");
     
     $(document).ready(function(){
     	

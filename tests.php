@@ -48,14 +48,14 @@ require_once 'phpFiles/isSessionSet.php';
   <div class="sideBarDivision1">
    
    
-    <div style="margin-top:130px;background-color:#A9A9A9;width:20px;height:20px;" id="showtab1"  ></div>
-    <div style="margin-top:35px;background-color:;width:20px;height:20px;" id="showtab2"  ></div>
-    <div style="margin-top:30px;background-color:;width:20px;height:20px;" id="showtab3"  ></div>
-    <div style="margin-top:33px;background-color:;width:20px;height:20px;" id="showtab4"  ></div>
-    <div style="margin-top:30px;background-color:;width:20px;height:20px;" id="showtab5"  ></div>
-    <div style="margin-top:33px;background-color:;width:20px;height:20px;" id="showtab6"  ></div>
-    <div style="margin-top:32px;background-color:;width:20px;height:20px;" id="showtab7"  ></div>
-    <div style="margin-top:32px;background-color:;width:20px;height:20px;" id="showtab8"  ></div>
+    <div style="margin-top:130px;background-image:url('images/background.png');width:20px;height:20px;" id="showtab1"  ></div>
+    <div style="margin-top:35px;background-image:;width:20px;height:20px;" id="showtab2"  ></div>
+    <div style="margin-top:30px;background-image:;width:20px;height:20px;" id="showtab3"  ></div>
+    <div style="margin-top:33px;background-image:;width:20px;height:20px;" id="showtab4"  ></div>
+    <div style="margin-top:30px;background-image:;width:20px;height:20px;" id="showtab5"  ></div>
+    <div style="margin-top:33px;background-image:;width:20px;height:20px;" id="showtab6"  ></div>
+    <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab7"  ></div>
+    <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab8"  ></div>
   </div>
   
   <div class="mainDivision1" id="mainDivision1" >

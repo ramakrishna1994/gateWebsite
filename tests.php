@@ -35,14 +35,27 @@ require_once 'phpFiles/isSessionSet.php';
   
   <div class="sideBarDivision">
     <div class="profilePictureDivision" id="profilePicture" ><img src="profilePictures/<?php echo $_SESSION['gateimage'] ?>" style="height:90px;width:90px"></div>
-    <div class="sideBarDivision1" onclick="getTests()">MY TESTS</div>
-    <div class="sideBarDivision1" onclick="getTestResults()">TEST RESULTS</div>
-    <div class="sideBarDivision1" onclick="getSyllabus()">TESTS SYLLABUS</div>
-    <div class="sideBarDivision1" onclick="getProfile(0)">UPDATE PROFILE</div>
-    <div class="sideBarDivision1" onclick="getAccountSettings(0)">ACCOUNT SETTINGS</div>
-    <div class="sideBarDivision1" onclick="buyTestSeries()">BUY TEST SERIES</div>
-    <div class="sideBarDivision1" onclick="displayAboutUs()">ABOUT US</div>
-    <div class="sideBarDivision1" onclick="contactUs()">CONTACT US</div>
+    <div class="tabSelected" onclick="clickTab(1)" id="tab1"  >MY TESTS</div>
+    <div class="tabNotSelected" onclick="clickTab(2)" id="tab2" >TEST RESULTS</div>
+    <div class="tabNotSelected" onclick="clickTab(3)" id="tab3" >TESTS SYLLABUS</div>
+    <div class="tabNotSelected" onclick="clickTab(4)" id="tab4" >UPDATE PROFILE</div>
+    <div class="tabNotSelected" onclick="clickTab(5)" id="tab5" >ACCOUNT SETTINGS</div>
+    <div class="tabNotSelected" onclick="clickTab(6)" id="tab6" >BUY TEST SERIES</div>
+    <div class="tabNotSelected" onclick="clickTab(7)" id="tab7" >ABOUT US</div>
+    <div class="tabNotSelected" onclick="clickTab(8)" id="tab8" >CONTACT US</div>
+  </div>
+  
+  <div class="sideBarDivision1">
+   
+   
+    <div style="margin-top:130px;background-color:#A9A9A9;width:20px;height:20px;" id="showtab1"  ></div>
+    <div style="margin-top:35px;background-color:;width:20px;height:20px;" id="showtab2"  ></div>
+    <div style="margin-top:30px;background-color:;width:20px;height:20px;" id="showtab3"  ></div>
+    <div style="margin-top:33px;background-color:;width:20px;height:20px;" id="showtab4"  ></div>
+    <div style="margin-top:30px;background-color:;width:20px;height:20px;" id="showtab5"  ></div>
+    <div style="margin-top:33px;background-color:;width:20px;height:20px;" id="showtab6"  ></div>
+    <div style="margin-top:32px;background-color:;width:20px;height:20px;" id="showtab7"  ></div>
+    <div style="margin-top:32px;background-color:;width:20px;height:20px;" id="showtab8"  ></div>
   </div>
   
   <div class="mainDivision1" id="mainDivision1" >

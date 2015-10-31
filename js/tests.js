@@ -108,20 +108,13 @@ $(document).ready(function(){
 	    
 
 				  }
-			  else
-				  {
-                      
-				  innerhtml +='<div class="snoDivision">'+j+'</div>'
-	                 +'<div class="testNameDivision">'+data[i][2]+'</div>'
-	    	         +'<div class="testStatusDivision"><div class="testComplete" onclick="openResultsWindow(\''+data[i][0]+'\')" id="'+data[i][0]+'">TEST RESULTS</div></div>';
-	    
-				  }
+			 
 			}
 			else
 				{
 				  innerhtml +='<div class="snoDivision">'+j+'</div>'
 	                 +'<div class="testNameDivision">'+data[i][2]+'</div>'
-	    	         +'<div class="testStatusDivision"><div class="testNotStarted" onclick="buyTestSeries()">BUY TEST SERIES</div></div>';
+	    	         +'<div class="testStatusDivision"><div class="testNotStarted" onclick="clickTab(6)">BUY TEST SERIES</div></div>';
 				}
 		}
 			
@@ -186,7 +179,7 @@ function getTestResults()
 	                      
 					  innerhtml +='<div class="snoDivision">'+j+'</div>'
 		                 +'<div class="testNameDivision">'+data[i][2]+'</div>'
-		    	         +'<div class="testStatusDivision"><div class="testComplete" onclick="openResultsWindow(\''+data[i][0]+'\','+j+')" id="'+data[i][0]+'">TEST RESULTS</div></div>'
+		    	         +'<div class="testStatusDivision"><div class="testComplete" onclick="showResultsWindow(\''+data[i][0]+'\','+j+')" id="'+data[i][0]+'">TEST RESULTS</div></div>'
 		    	         +'<div class="resultsDivision" id="result'+j+'"></div>';
 		    
 					  
@@ -210,6 +203,96 @@ function getTestResults()
 	
 
  	
+}
+
+
+
+
+
+
+function clickTab(id)
+{
+
+ var tab = "tab"+id;
+ var showtab = "showtab"+id;
+ var i;
+ for(i=1;i<=8;i++)
+	 {
+	  var tab1 = "tab"+i;
+	  var showtab1="showtab"+i;
+	  document.getElementById(tab1).className = 'tabNotSelected';
+	  document.getElementById(showtab1).style.backgroundColor = '';
+	 }
+ 
+ document.getElementById(tab).className = 'tabSelected';
+ document.getElementById(showtab).style.backgroundColor = '#A9A9A9';
+ 
+ 	switch(id)
+ 	{
+ 		case 1:
+ 			getTests();
+ 			break;
+ 		case 2:
+ 			getTestResults();
+ 			break;
+ 		case 3:
+ 			getSyllabus();
+ 			break;
+ 		case 4:
+ 			getProfile(0);
+ 			break;
+ 		case 5:
+ 			getAccountSettings(0);
+ 			break;
+ 		case 6:
+ 			buyTestSeries();
+ 			break;
+ 		case 7:
+ 			displayAboutUs();
+ 			break;
+ 		case 8:
+ 			contactUs();
+ 			break;
+ 			
+ 		
+ 	}
+}
+
+
+function showResultsWindow(subject,id)
+{
+	
+	var result= "result"+id;
+	var i,innerhtml;
+    for(i=1;i<=10;i++)
+    	{
+    		var result1 = "result"+i;
+    		$('#'+result1).slideUp(500);
+    	}
+    $('#'+result).slideDown(500);
+    $('#'+result).html('<img src="images/redloader.gif" style="height: 30px;width: 30px;margin-top:40px;">');
+    
+    $(document).ready(function(){
+    	
+    	$.post("phpFiles/getTestScores.php",{subject :subject},function(data){
+    		
+    		if(data.error == '1')
+    			{
+    			  window.location.reload();
+    			}
+    		else
+    			{
+    			 innerhtml ='<div style="width:300px;height:20px;margin:auto;margin-top:20px;">'
+    				       +'Your score for this test is</div>'
+    				       +'<div style="margin:auto;margin-top:5px;font-family:cursive">'+data.score+'</div>';
+    			}
+    		
+    		 $('#'+result).html(innerhtml);
+    		
+    	},"json");
+    });
+    
+ 
 }
 
 

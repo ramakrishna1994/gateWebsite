@@ -233,11 +233,11 @@
 
 #popupYourAnswerDivision
 {
-	padding-top:3px;
+	
 	margin:auto;
 	text-align:center;
 	width:400px;
-	height:20px;
+	height:23px;
 	display: inline-block;
    word-wrap: break-word;
 	border:1px solid;
@@ -246,6 +246,7 @@
 	margin:3px;
 	background-image: url('../images/background.png');
 	 color:white;
+	 font-family:cursive;
 }
 
 #popupViewSolutionDivision
@@ -273,11 +274,11 @@
 
 #popupCorrectAnswerDivision
 {
-	padding-top:3px;
+	
 	margin:auto;
 	text-align:center;
 	width:403px;
-	height:20px;
+	height:23px;
 	display: inline-block;
    word-wrap: break-word;
 	border:1px solid;
@@ -286,6 +287,7 @@
 	background-image: url('../images/background.png');
 	margin:3px;
 	 color:white;
+	 font-family:cursive;
 }
 
 

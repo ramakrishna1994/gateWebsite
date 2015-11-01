@@ -36,18 +36,20 @@ function displayPopupQuestions(subject)
 			 
 			 
 			 
-				 var i,j,innerhtml;
+				 var i,j,innerhtml="";
 				 noOfQuestions = data.noOfQuestions;
 				  for(i=1;i<=data.noOfQuestions;i++)
 					  {
 					   
 					  	j=i;
+					  	
 					  	if(i<10)
 						 {
 					  		j="0"+i;
 						 }
 					  	
-					    innerhtml += '<div class="notAnswered" id="question'+i+'" onclick="getPopupQuestion(\''+subject+'\','+i+')">'+j+'</div>'
+					    
+					  	innerhtml += '<div class="notAnswered" id="question'+i+'" onclick="getPopupQuestion(\''+subject+'\','+i+')">'+j+'</div>'
 					  }
 				  getPopupQuestion(subject,1);
 				  $('#popupQuestionsDivision').html(innerhtml);
@@ -74,6 +76,7 @@ function getPopupQuestion(subject,questionNo)
 	$('#popupoptionDDivision').html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
 	$('#popupYourAnswerDivision').html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
 	$('#popupCorrectAnswerDivision').html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
+	$('#popupSolutionDivision').hide();
 	
 	
 	$(document).ready(function(){

@@ -79,7 +79,7 @@ $(document).ready(function(){
                     +'<div class="testNameDivision1">TEST NAME</div>'
                     +'<div class="testStatusDivision1">TEST STATUS</div>'
                     +'</div>'
-                    +'<div class="testsDivision" id="testsDivision">"';
+                    +'<div class="testsDivision" id="testsDivision">';
 	var j;
 	  $.getJSON( "phpFiles/getTests.php", {}, function( data ) {
 		  
@@ -167,7 +167,7 @@ function getTestResults()
                 +'<div class="testNameDivision1">TEST NAME</div>'
                 +'<div class="testStatusDivision1">TEST STATUS</div>'
                 +'</div>'
-                +'<div class="testsDivision" id="testsDivision">"';
+                +'<div class="testsDivision" id="testsDivision">';
 			for(i=0;i<data.length;i++)
 				{
 				//alert(1);

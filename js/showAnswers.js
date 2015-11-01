@@ -48,8 +48,10 @@ function displayPopupQuestions(subject)
 					  		j="0"+i;
 						 }
 					  	
-					    
-					  	innerhtml += '<div class="notAnswered" id="question'+i+'" onclick="getPopupQuestion(\''+subject+'\','+i+')">'+j+'</div>'
+					    if(i==1)
+					    	innerhtml += '<div class="selected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+')">'+j+'</div>'
+					    else
+					    	innerhtml += '<div class="notSelected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+')">'+j+'</div>'
 					  }
 				  getPopupQuestion(subject,1);
 				  $('#popupQuestionsDivision').html(innerhtml);
@@ -61,6 +63,20 @@ function displayPopupQuestions(subject)
   
 }
 
+
+function clickQuestion(subject,questionNo)
+{
+	var question = 'question'+questionNo;
+	var i;
+	for(i=1;i<=noOfQuestions;i++)
+		{
+		   var question1 = 'question'+i;
+		   document.getElementById(question1).className = 'notSelected';
+		}
+	document.getElementById(question).className = 'selected';
+	getPopupQuestion(subject, questionNo);
+
+}
 
 
 function getPopupQuestion(subject,questionNo)
@@ -139,8 +155,8 @@ function getPopupQuestion(subject,questionNo)
 				   nextQuestionNo = 1;
 				 }
 			
-			 document.getElementById("popupPreviousDivision").setAttribute("onclick","getPopupQuestion('"+subject+"',"+previousQuestionNo+")");
-			 document.getElementById("popupNextDivision").setAttribute("onclick","getPopupQuestion('"+subject+"',"+nextQuestionNo+")");
+			 document.getElementById("popupPreviousDivision").setAttribute("onclick","clickQuestion('"+subject+"',"+previousQuestionNo+")");
+			 document.getElementById("popupNextDivision").setAttribute("onclick","clickQuestion('"+subject+"',"+nextQuestionNo+")");
 			 
 			 $('#popupSolutionDivision').hide();
 				  

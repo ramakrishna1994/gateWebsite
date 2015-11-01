@@ -5,13 +5,10 @@
 	margin-top:60px;
 	position:fixed;
 	background-color: #A9A9A9;
-	overflow-y:auto;
 	width:1000px;
 	height:580px;
-	overflow-y:auto;
 	display:none;
 	border:1px solid;
-	
 	border-color:black;
 }
 
@@ -27,15 +24,14 @@
 
 #popupQuestionsDivision
 {
-	width:967px;
-	height:60px;
+	width:965px;
+	min-height:60px;
 	border:1px solid;
 	border-color:black;
 	float:left;
-	overflow-x:scroll;
 	display:inline;
-	overflow-y:hidden;
 	margin:3px;
+	padding-bottom:5px;
     background-image: url('../images/background.png');
     color:white;
 
@@ -68,7 +64,7 @@
 {
 	margin:auto;
 	text-align:center;
-	width:780px;
+	width:805px;
 	height:20px;
 	border:1px solid;
 	border-color:black;
@@ -106,7 +102,7 @@
 #popupMainDivision
 {
 	width:997px;
-	height:478px;
+	min-height:350px;
 	border-top:1px solid;
 	border-color:black;
 	display:inline-block;
@@ -310,7 +306,7 @@
 
 
 
-.notAnswered{
+.notSelected{
 	
 	cursor:pointer;
 	margin-top:5px;
@@ -323,9 +319,36 @@
 	background-color: white;
 	font-family:monospace;
 	font-size:18px;
-	color:black
+	color:black;
 	
 }
+
+.notSelected:hover{
+	
+	cursor:pointer;
+	background-color: purple;
+	color:white;
+	
+}
+
+.selected{
+	
+	cursor:pointer;
+	margin-top:5px;
+	margin-left:5px;
+	padding:2px;
+    text-align: center;
+	width:25px;
+	height:25px;
+	float:left;
+	background-color: purple;
+	font-family:monospace;
+	font-size:18px;
+	color:white;
+	
+}
+
+
 
 .viewSolutions
 {

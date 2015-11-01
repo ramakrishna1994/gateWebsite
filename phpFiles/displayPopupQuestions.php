@@ -15,7 +15,10 @@ $json="";
 
 while($row = mysqli_fetch_array($result)){
 	$json .='{';
-	$json .= '"noOfQuestions":'.$row['noOfQuestions'];
+	if($row['activationStatus']==1)
+			$json .= '"noOfQuestions":'.$row['noOfQuestions'];
+	else 
+			$json .='"error":"1"';
 	$json .='}';
 	 
 }

@@ -51,6 +51,12 @@ function displayPopupQuestions(subject)
 			 
 			 
 				 var i,j,innerhtml="";
+				 
+			if(data.error == '1')
+				{
+					window.open("tests.php","_self");
+					return;
+				}
 				 noOfQuestions = data.noOfQuestions;
 				  for(i=1;i<=data.noOfQuestions;i++)
 					  {
@@ -117,6 +123,11 @@ function getPopupQuestion(subject,questionNo)
 			 $('#popupQuestionNoDivision').html('QUESTION NO : '+data.questionNo);
 			 $('#popupQuestionDivision').html(data.question);
 			 
+			 if(data.error == '1')
+				 {
+				   window.open("tests.php","_self");
+				   return;
+				 }
 			 if(data.isImage == '1')
 				 {
 				  	$('#popupImageDivision').show();

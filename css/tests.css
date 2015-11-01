@@ -116,6 +116,8 @@ body,html{
 	width:300px;
 	height:23px;
 	float:left;
+	color:aqua;
+	font-family: cursive;
 }
 .Division2{
 	
@@ -124,7 +126,7 @@ body,html{
 	width:370px;
 	height:23px;
 	float:left;
-	color:black;
+	color:aqua;
 }
 
 .logOutDivision{
@@ -193,15 +195,15 @@ body,html{
 	width:100px;
 	height:30px;
 	float:left;
-	color:white;
-	background-color: #696969;
+	color:black;
+	background-color: #DCDCDC	;
 	
 	
 }
 
 .testNameDivision1{
 
-	color:white;
+	color:black;
 	border-color:black;
 	border-right:1px solid;
 	padding:0;
@@ -209,7 +211,7 @@ body,html{
 	width:405px;
 	height:30px;
 	float:left;
-	background-color:  #696969;
+	background-color:  #DCDCDC;
 	
 	
 }
@@ -224,8 +226,8 @@ body,html{
 	width:230px;
 	height:30px;
 	float:left;
-	color:white;
-	background-color:  #696969;
+	color:black;
+	background-color:  #DCDCDC;
 }
 
 .snoDivision{
@@ -253,7 +255,7 @@ body,html{
 	margin-top:10px;
     text-align: center;
 	width:400px;
-	height:37px;
+	height:38px;
 	float:left;
 	background-color: #DCDCDC;
 	color:black;
@@ -362,4 +364,3 @@ body,html{
     width:500px;	
     font-family: cursive;
 }
-

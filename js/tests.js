@@ -283,6 +283,8 @@ function showExpand(subject,id,length)
 		 showResultsWindow(subject, id, length)
 		}
 }
+
+
 function showResultsWindow(subject,id,length)
 {
 	
@@ -312,9 +314,9 @@ function showResultsWindow(subject,id,length)
     			}
     		else
     			{
-    			 innerhtml ='<div style="width:300px;height:20px;margin:auto;margin-top:20px;">'
-    				       +'Your score for this test is</div>'
-    				       +'<div style="margin:auto;margin-top:5px;font-family:cursive">'+data.score+'</div>';
+    			 innerhtml ='<div style="width:400px;height:40px;margin:auto;margin-top:20px;font-family:cursive">'
+    				       +'Your score for this test is  &nbsp;&nbsp;"'+data.score+'"</div>'
+    				       +'<div class="viewSolutions"  onClick="showAnswers(\''+subject+'\')">VIEW YOUR ANSWERS AND SOLUTIONS</div>';
     			}
     		
     		 $('#'+result).html(innerhtml);

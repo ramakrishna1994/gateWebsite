@@ -38,6 +38,7 @@
 	display:inline-block;
 	float:left;
 	background-color:white;
+	background-image:url("../images/background.png");
 
 }
 
@@ -68,6 +69,8 @@
 	float:left;
     border:1px solid;
     border-color:black;
+    color:White;
+    
 }
 
 
@@ -80,6 +83,7 @@
 	height:30px;
 	float:left;
 	
+	
 }
 
 .innerExpandDivision{
@@ -90,6 +94,7 @@
 	width:30px;
 	height:28px;
 	float:left;
+	
 	
 }
 

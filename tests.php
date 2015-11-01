@@ -5,18 +5,20 @@ require_once 'phpFiles/isSessionSet.php';
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/tests.css">
+<link rel="stylesheet" type="text/css" href="css/showAnswers.css">
 <link rel="stylesheet" type="text/css" href="css/buyTestSeries.css">
 <link rel="stylesheet" type="text/css" href="css/aboutUs.css">
 <link rel="stylesheet" type="text/css" href="css/profile.css">
 <link rel="stylesheet" type="text/css" href="css/accounts.css">
 <link rel="stylesheet" type="text/css" href="css/syllabus.css">
 <link rel="stylesheet" type="text/css" href="css/contactUs.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery-min.js"></script>
 <script type="text/javascript" src="js/tests.js"></script>
 <script type="text/javascript" src="js/getAndUpdateProfile.js"></script>
 <script type="text/javascript" src="js/getAndUpdateAccountSettings.js"></script>
 <script type="text/javascript" src="js/getSyllabus.js"></script>
 <script type="text/javascript" src="js/contactUs.js"></script>
+<script type="text/javascript" src="js/showAnswers.js"></script>
 
 </head>
 <body>
@@ -45,17 +47,84 @@ require_once 'phpFiles/isSessionSet.php';
     <div class="tabNotSelected" onclick="clickTab(8)" id="tab8" >CONTACT US</div>
   </div>
   
+  
+  
+  
+  <div class="popupDivision" id="popup">
+   
+   	 <div id="popupCloseDivision">
+   	   <div style="height:20px;width:20px;float:right;cursor:pointer" onClick="closePopup()"><img src="images/close.png" style="height:20px;width:20px;border-radius:50%" ></div>
+   	 </div>
+   		
+      
+    	<div id="popupQuestionsDivision">
+    	
+    	</div>
+    	
+       <div id ="popupPreviousDivision">PREVIOUS</div>
+    	<div id="popupQuestionNoDivision">
+    	
+    	</div>
+    	<div id ="popupNextDivision">NEXT</div>
+    <div id="popupMainDivision" >
+    	<div id="popupQuestionDivision">
+    	
+    	</div>
+    	<div id="popupImageDivision">
+    	
+    	</div>
+    	
+    	<div class="optionDivision">A</div>
+    	<div id="popupoptionADivision">
+    	
+    	</div>
+    	
+    	<div class="optionDivision">B</div>
+        <div id="popupoptionBDivision">
+    	
+    	</div>
+    	
+    	<div class="optionDivision">C</div>
+       <div id="popupoptionCDivision">
+    	
+    	</div>
+    	
+    	<div class="optionDivision">D</div>
+       <div id="popupoptionDDivision">
+    	
+       </div>
+       
+       
+       <div id="popupYourAnswerDivision">
+    	
+       </div>
+       <div id="popupViewSolutionDivision" onclick = "viewSolution()">
+         VIEW SOLUTION
+       </div>
+       <div id="popupCorrectAnswerDivision">
+    	
+       </div>
+       
+       <div id="popupSolutionDivision">
+       </div>
+    </div>
+  
+  </div>
+  
+  
+  
+  
   <div class="sideBarDivision1">
    
    
-    <div style="margin-top:130px;background-image:url('images/background.png');width:20px;height:20px;" id="showtab1"  ></div>
-    <div style="margin-top:35px;background-image:;width:20px;height:20px;" id="showtab2"  ></div>
-    <div style="margin-top:30px;background-image:;width:20px;height:20px;" id="showtab3"  ></div>
-    <div style="margin-top:33px;background-image:;width:20px;height:20px;" id="showtab4"  ></div>
-    <div style="margin-top:30px;background-image:;width:20px;height:20px;" id="showtab5"  ></div>
-    <div style="margin-top:33px;background-image:;width:20px;height:20px;" id="showtab6"  ></div>
-    <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab7"  ></div>
-    <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab8"  ></div>
+    <div style="margin-top:130px;background-image:url('images/background.png');width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab1"  ></div>
+    <div style="margin-top:35px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab2"  ></div>
+    <div style="margin-top:25px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab3"  ></div>
+    <div style="margin-top:30px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab4"  ></div>
+    <div style="margin-top:32px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab5"  ></div>
+    <div style="margin-top:30px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab6"  ></div>
+    <div style="margin-top:28px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab7"  ></div>
+    <div style="margin-top:31px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab8"  ></div>
   </div>
   
   <div class="mainDivision1" id="mainDivision1" >

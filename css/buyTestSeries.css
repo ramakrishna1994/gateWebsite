@@ -6,6 +6,7 @@
 	text-align:justify;
 	width:600px;
 	font-family: cursive;
+	color:white;
 }
 
 table
@@ -14,8 +15,10 @@ table
 	font-size:15px;
 	margin:auto;
 	margin-top:10px;
+	color:white;
 }
 td
 {
 	padding:5px;
+	color:white;
 }

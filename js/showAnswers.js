@@ -20,7 +20,21 @@ function closePopup()
 {
 	
 
-	 	$('#popup').slideUp(500);
+	 	$('#popup').slideUp(500,function(){
+	 		
+	 		$('#popupQuestionsDivision').html('');
+	 		$('#popupQuestionNoDivision').html('');
+	 		$('#popupQuestionDivision').html('');
+	 		$('#popupImageDivision').html('');
+	 		$('#popupoptionADivision').html('');
+	 		$('#popupoptionBDivision').html('');
+	 		$('#popupoptionCDivision').html('');
+	 		$('#popupoptionDDivision').html('');
+	 		$('#popupYourAnswerDivision').html('');
+	 		$('#popupCorrectAnswerDivision').html('');
+	 		$('#popupSolutionDivision').html('');
+	 		
+	 	});
 	 	
 	 	
 	
@@ -159,7 +173,9 @@ function getPopupQuestion(subject,questionNo)
 			 document.getElementById("popupNextDivision").setAttribute("onclick","clickQuestion('"+subject+"',"+nextQuestionNo+")");
 			 
 			 $('#popupSolutionDivision').hide();
-				  
+				 
+			 $('#popupViewSolutionDivision').html('VIEW SOLUTION');
+			 document.getElementById("popupViewSolutionDivision").setAttribute("onclick","viewSolution()");
 				 
 			 
 		 },"json")

@@ -224,11 +224,14 @@ function clickTab(id)
 	 
 	  document.getElementById(tab1).className = 'tabNotSelected';
 	  document.getElementById(showtab1).style.backgroundImage = "url('')";
+	  document.getElementById(showtab1).style.border = "0px";
+	  
 	  
 	 }
  
  document.getElementById(tab).className = 'tabSelected';
  document.getElementById(showtab).style.backgroundImage ="url('images/background.png')";
+ document.getElementById(showtab1).style.border = "1 px solid";
 
  
  	switch(id)

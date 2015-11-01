@@ -117,14 +117,14 @@ require_once 'phpFiles/isSessionSet.php';
   <div class="sideBarDivision1">
    
    
-    <div style="margin-top:130px;background-image:url('images/background.png');width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab1"  ></div>
-    <div style="margin-top:35px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab2"  ></div>
-    <div style="margin-top:25px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab3"  ></div>
-    <div style="margin-top:30px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab4"  ></div>
-    <div style="margin-top:32px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab5"  ></div>
-    <div style="margin-top:30px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab6"  ></div>
-    <div style="margin-top:28px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab7"  ></div>
-    <div style="margin-top:31px;background-image:;width:20px;height:20px;border-top:1px solid;border-bottom:1px solid;border-color:black" id="showtab8"  ></div>
+    <div style="margin-top:130px;background-image:url('images/background.png');width:20px;height:20px;" id="showtab1"  ></div>
+    <div style="margin-top:35px;background-image:;width:20px;height:20px;" id="showtab2"  ></div>
+    <div style="margin-top:29px;background-image:;width:20px;height:20px;" id="showtab3"  ></div>
+    <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab4"  ></div>
+    <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab5"  ></div>
+    <div style="margin-top:33px;background-image:;width:20px;height:20px;" id="showtab6"  ></div>
+    <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab7"  ></div>
+    <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab8"  ></div>
   </div>
   
   <div class="mainDivision1" id="mainDivision1" >

@@ -4,7 +4,7 @@ require_once 'connection.php';
 
 $tablename = $_SESSION['gateusername'].".tests";
 
-$selectQuery = "select * from `".$tablename."`;";
+$selectQuery = "select * from `".$tablename."` where statusOfExam <> 2 ;";
 $result = mysqli_query($con,$selectQuery) or die(mysqli_error($con));
 
 $testsArray;

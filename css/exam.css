@@ -311,13 +311,13 @@ color:white;
 	border:1px solid;
 	border-color:black;
 	margin-top:10px;
-	margin-right:33px;
+	margin-right:20px;
     text-align: center;
-	max-width:245px;
+    width:245px;
 	min-height:250px;
 	max-height:330px;
 	float:right;
-	overflow: auto;
+	overflow-y: auto;
 	background-image:url("../images/background.png");
 }
 

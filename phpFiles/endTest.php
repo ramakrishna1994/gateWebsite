@@ -37,10 +37,12 @@ for($i=1;$i<=$_SESSION['noOfQuestions'];$i++)
 	//echo 1;
 }
 
-$updateQuery = "update `".$tableName."` set marks = '".$total."',statusOfExam = 2,timer = '00:00:00' where testName = '".$examname."';";
+$updateQuery = "update `".$tableName."` set marks='".$total."',timer='00:00:00',statusOfExam=2 where testName = '".$examname."';";
 mysqli_query($con,$updateQuery) or die(mysqli_error($con));
 
 echo $total;
+
+$_SESSION['examname'] = "";
 
 mysqli_close($con);
 ?>

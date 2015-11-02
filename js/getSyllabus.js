@@ -17,7 +17,7 @@ function showChapters(mainId,len){
 	var i,mainDiv,childDiv,chapterDiv,expandDiv;
 	
 	
-	for(i=1;i<=2;i++)
+	for(i=1;i<=10;i++)
 		{
 		chapterDiv = "chaptersDivision"+i;
 		$('#'+chapterDiv).slideUp(500);

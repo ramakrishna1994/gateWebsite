@@ -6,7 +6,7 @@
 	position:fixed;
 	background-color: #A9A9A9;
 	width:1000px;
-	height:580px;
+	height:570px;
 	display:none;
 	border:1px solid;
 	border-color:black;
@@ -60,11 +60,26 @@
      color:white;
 }
 
+#popupRightOrWrongDivision
+{
+  
+	margin:auto;
+	text-align:center;
+	width:20px;
+	height:20px;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+    background-image: url('../images/background.png');
+    border-radius:50%;
+  	
+}
 #popupQuestionNoDivision
 {
 	margin:auto;
 	text-align:center;
-	width:805px;
+	width:650px;
 	height:20px;
 	border:1px solid;
 	border-color:black;
@@ -75,7 +90,22 @@
      font-family:cursive;
 }
 
-
+#popupMarksDivision
+{
+	
+	margin:auto;
+	text-align:center;
+	width:120px;
+	height:20px;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+    background-image: url('../images/background.png');
+     color:white;
+     font-family:cursive;
+	
+}
 #popupNextDivision
 {
 	margin:auto;
@@ -104,7 +134,7 @@
 {
 	width:997px;
 	min-height:350px;
-	max-height:475px;
+	max-height:465px;
 	border-top:1px solid;
 	border-color:black;
 	display:inline-block;
@@ -325,7 +355,22 @@
 	
 }
 
-.notSelected:hover{
+.marksDistributionButton
+{
+	cursor:pointer;
+	margin-top:5px;
+	margin-left:5px;
+	padding:2px;
+    text-align: center;
+	width:200px;
+	height:25px;
+	float:left;
+	background-color: white;
+	font-family:monospace;
+	font-size:18px;
+	color:black;
+}
+.notSelected:hover,.marksDistributionButton:hover{
 	
 	cursor:pointer;
 	background-color: purple;

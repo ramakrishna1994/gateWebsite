@@ -69,10 +69,11 @@ function displayPopupQuestions(subject)
 						 }
 					  	
 					    if(i==1)
-					    	innerhtml += '<div class="selected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+')">'+j+'</div>'
+					    	innerhtml += '<div class="selected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+')">'+j+'</div>';
 					    else
-					    	innerhtml += '<div class="notSelected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+')">'+j+'</div>'
+					    	innerhtml += '<div class="notSelected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+')">'+j+'</div>';
 					  }
+				  innerhtml += '<div class="marksDistributionButton" onclick="getMarksDistribution(\''+subject+'\')">MARKS DISTRIBUTION</div>';
 				  getPopupQuestion(subject,1);
 				  $('#popupQuestionsDivision').html(innerhtml);
 				  
@@ -121,6 +122,7 @@ function getPopupQuestion(subject,questionNo)
 		 $.post("phpFiles/getPopupQuestion.php",{subject:subject,questionNo:questionNo},function(data){
 			 
 			 $('#popupQuestionNoDivision').html('QUESTION NO : '+data.questionNo);
+			 $('#popupMarksDivision').html('MARKS : '+data.marks);
 			 $('#popupQuestionDivision').html(data.question);
 			 
 			 if(data.error == '1')
@@ -160,14 +162,24 @@ function getPopupQuestion(subject,questionNo)
 				 		$('#popupoptionDDivision').hide();
 				 }
 			 if(data.yourAnswer == "")
-				 		$('#popupYourAnswerDivision').html('<font color="red">You have not Answered this question</font>');
+				 {
+				 		$('#popupYourAnswerDivision').html('<div style="background-color:red"><font color="white">You have not Answered this question</font></div>');
+				 		$('#popupRightOrWrongDivision').html('<image src="images/wrong.jpg" style="height:20px;width:20px;border-radius:50%">');
+				 }
 			 else if(data.yourAnswer == data.correctAnswer)
-				 		$('#popupYourAnswerDivision').html('<font color="green">You have Answered '+data.yourAnswer+'</font>');
+				 {
+				 		$('#popupYourAnswerDivision').html('<div style="background-color:green"><font color="white">You have Answered '+data.yourAnswer+'</font></div>');
+				 		$('#popupRightOrWrongDivision').html('<image src="images/correct.jpg" style="height:20px;width:20px;border-radius:50%">');
+				 }
 			 else 
-				 		$('#popupYourAnswerDivision').html('<font color="red">You have Answered '+data.yourAnswer+'</font>');
+				 {
+				 		$('#popupYourAnswerDivision').html('<div style="background-color:red"><font color="white">You have Answered '+data.yourAnswer+'</font></div>');
+				 		$('#popupRightOrWrongDivision').html('<image src="images/wrong.jpg" style="height:20px;width:20px;border-radius:50%">');
+				 }
 				 		
 			 
 			 $('#popupCorrectAnswerDivision').html('Correct answer is '+data.correctAnswer);
+			 
 			 
 			 previousQuestionNo = questionNo - 1;
 			 if(previousQuestionNo <=0)
@@ -218,4 +230,33 @@ function hideSolution()
 	document.getElementById("popupViewSolutionDivision").setAttribute("onclick","viewSolution()");
 	
 }
+
+
+
+function getMarksDistribution(subject)
+{
+	
+	$(document).ready(function(){
+		
+		 $.post("phpFiles/getMarksDistribution.php",{subject:subject},function(data){
+			 
+			 
+			 
+			 
+		 },"json");
+		 
+	});
+
+}
+
+
+
+
+
+
+
+
+
+
+
 

@@ -2,13 +2,7 @@
 	"questions":
 	[
 		{
-			"questionNo":"0",
-			"question":"dummy",
-			"optionA":"dummy",
-			"optionB":"dummy",
-			"optionC":"dummy",
-			"optionD":"dummy",
-			"isNumerical":"0"
+			"noOfQuestions":5
 		},
 		{
 			"questionNo":"01",

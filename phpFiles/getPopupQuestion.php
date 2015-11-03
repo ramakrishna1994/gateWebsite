@@ -1,16 +1,14 @@
 <?php 
 
-
-require_once 'isSessionSet.php';
-header('Content-type: application/json');
 require_once 'connection.php';
+require_once 'isSessionSet.php';
 
 $questionNo=mysqli_real_escape_string($con,$_POST["questionNo"]);
 $tableName=$_SESSION['gateusername'].".tests";
-$examname = mysqli_real_escape_string($con,$_POST["subject"]);;
+$examname = mysqli_real_escape_string($con,$_POST["subject"]);
 $filename=$examname."questions";
 
-//echo $filename;
+
 $selectquery="select * from `".$tableName."` where testName = '".$examname."';";
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
@@ -36,12 +34,13 @@ while($row = mysqli_fetch_array($result)){
 		$json .= '"isNumerical":'.'"'.$jsonData["questions"][$questionNo]["isNumerical"].'",';
 		$json .= '"isImage":'.'"'.$jsonData["questions"][$questionNo]["isImage"].'",';
 		$json .= '"imagePath":'.'"'.$jsonData["questions"][$questionNo]["imagePath"].'",';
+		$json .= '"marks":'.'"'.$jsonData["questions"][$questionNo]["marks"].'",';
 
 		$answerjsondata = json_decode($row["answers"],true);
 
 		$json .= '"yourAnswer":'.'"'.$answerjsondata["answers"][$questionNo]["answer"].'",';
 		$json .= '"correctAnswer":'.'"'.$jsonData["questions"][$questionNo]["answer"].'"';
-		
+
 		$json .='}';
 	}
 	else
@@ -54,5 +53,7 @@ while($row = mysqli_fetch_array($result)){
 echo $json;
 
 mysqli_close($con);
+
+
 
 ?>

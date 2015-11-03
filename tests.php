@@ -62,9 +62,11 @@ require_once 'phpFiles/isSessionSet.php';
     	</div>
     	
        <div id ="popupPreviousDivision">PREVIOUS</div>
+       <div id="popupRightOrWrongDivision"></div>
     	<div id="popupQuestionNoDivision">
     	
     	</div>
+    	<div id="popupMarksDivision"></div>
     	<div id ="popupNextDivision">NEXT</div>
     <div id="popupMainDivision" >
     	<div id="popupQuestionDivision">

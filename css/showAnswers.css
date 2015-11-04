@@ -20,8 +20,14 @@
 	float:right;
 	postion:fixed;
 	border-radius:50%;
-	cursor:pointer;
+	background-image: url('../images/close.png');
 	
+}
+
+#popupCloseDivision:hover
+{
+	cursor:pointer;
+	background-image: url('../images/wrong.jpg');
 }
 
 

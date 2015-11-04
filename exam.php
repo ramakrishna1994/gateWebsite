@@ -24,15 +24,15 @@ require_once 'phpFiles/isSubscribed.php';
 		 		<div class="alertDivision" id="manualEndTest">
 		 		If you end the test now , you will not be able to continue it in the future !!! <br><font color="aqua">Do you really want to end the test?</font>
 		 		
-		 		 		<div class="alertButtonDivision" onClick="">YES</div>
+		 		 		<div class="alertButtonDivision" onClick="endTest()">YES</div>
 				 		<div class="alertButtonDivision" onClick="abort()">NO</div>
 		
 		 		</div>
 				
 				<div class="alertDivision" id="automaticEndTest">
-		 		You have Successfully completed your test . You can check your results in<br> <b>'MY RESULTS'</b> tab
+		 		You have Successfully completed your test . You can check your results by clicking on <b>'MY RESULTS'</b> tab
 		 		
-		 		 		<div class="alertButtonDivision1" onClick="window.close()">CLOSE</div>
+		 		 		<div class="alertButtonDivision1" onClick="window.close()">CLOSE WINDOW</div>
 				 		
 		
 		 		</div>		 		
@@ -41,7 +41,9 @@ require_once 'phpFiles/isSubscribed.php';
 
 
 
-<div class="mainDivision" id="ramakrishna"><div class="headerDivision">
+<div class="mainDivision" id="ramakrishna">
+
+<div class="headerDivision">
 
   	<div class="subjectHeaderDivision">
   	 <?php echo $_SESSION['fullNameOfSubject'];?>

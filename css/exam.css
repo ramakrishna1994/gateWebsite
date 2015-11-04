@@ -16,6 +16,84 @@ body,html{
 	background-color: silver;
 }
 
+#mainAlertDivision
+{
+	margin:auto;
+	border:1px solid;
+	margin-left:48px;
+	border-color:black;
+	width:1000px;
+	height:600px;
+	background-color: silver;
+	position:fixed;
+		
+
+}
+
+#loaderAlertDivision
+{
+	margin:auto;
+	margin-top:200px;
+	width:20px;
+	height:20px;
+}
+
+.alertDivision
+{
+	margin:auto;
+	margin-top:200px;
+	border:1px solid;
+	border-color:black;
+	padding:5px;
+	width:300px;
+	height:120px;
+	background-image:url("../images/background.png");
+	color:white;
+	font-family: cursive;
+	text-align:justify;
+	
+}
+
+.alertButtonDivision
+{
+	margin:40px;
+	margin-top:15px;
+	border:1px solid;
+	border-color:black;
+	padding:5px;
+	width:50px;
+	height:20px;
+	background-color:green;
+	color:black;
+	font-family: cursive;
+	float:left;
+	text-align:center;
+}
+
+.alertButtonDivision:hover,.alertButtonDivision1:hover
+{
+	background-color: purple;
+	color:white;
+	cursor:pointer;
+}
+
+
+.alertButtonDivision1
+{
+	margin:40px;
+	margin-top:20px;
+	margin-right:20px;	
+	border:1px solid;
+	border-color:black;
+	padding:5px;
+	width:50px;
+	height:20px;
+	background-color:green;
+	color:black;
+	font-family: cursive;
+	float:right;
+}
+
 .headerDivision{
 	
 	padding:0;

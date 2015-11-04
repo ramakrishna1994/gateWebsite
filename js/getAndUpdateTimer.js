@@ -114,6 +114,11 @@ function updateTimerToDatabase(hours,minutes,seconds)
 
 function endTest()
 {
+	$('#ramakrishna').html('');
+	$('#mainAlertDivision').slideDown();
+	$('#manualAlertDivision').hide();
+	$('#automaticAlertDivision').hide();
+	$('loaderAlertDivision').show();
 	 window.clearInterval(id);
 	var request = $.ajax({
         url: 'phpFiles/endTest.php',
@@ -124,9 +129,12 @@ function endTest()
          }
     });
 	$.when(request).done(function(){
-		alert("You have Successfully completed your test.\nYou can check your results in 'MY RESULTS' tab");
+		
+		
+		$('#loaderAlertDivision').hide();
+		$('#automaticAlertDivision').show();
          
-         window.close();	
+        	
 	});
 	
 }

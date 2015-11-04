@@ -17,9 +17,31 @@ require_once 'phpFiles/isSubscribed.php';
  
  </head>
 <body>
-<div class="mainDivision">
 
-<div class="headerDivision">
+		<div id="mainAlertDivision">
+		
+				<div id="loaderAlertDivision"><img src="images/redloader.gif" style="height: 20px;width: 20px"></div>
+		 		<div class="alertDivision" id="manualEndTest">
+		 		If you end the test now , you will not be able to continue it in the future !!! <br><font color="aqua">Do you really want to end the test?</font>
+		 		
+		 		 		<div class="alertButtonDivision" onClick="">YES</div>
+				 		<div class="alertButtonDivision" onClick="abort()">NO</div>
+		
+		 		</div>
+				
+				<div class="alertDivision" id="automaticEndTest">
+		 		You have Successfully completed your test . You can check your results in<br> <b>'MY RESULTS'</b> tab
+		 		
+		 		 		<div class="alertButtonDivision1" onClick="window.close()">CLOSE</div>
+				 		
+		
+		 		</div>		 		
+		
+		</div>
+
+
+
+<div class="mainDivision" id="ramakrishna"><div class="headerDivision">
 
   	<div class="subjectHeaderDivision">
   	 <?php echo $_SESSION['fullNameOfSubject'];?>

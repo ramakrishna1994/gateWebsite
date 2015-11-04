@@ -334,5 +334,15 @@ function showResultsWindow(subject,id,length)
 
 
 
+function showMaxImage()
+{
+  $('#maxImageDivision').slideDown(1000);	
 
+}
+
+function hideMaxImage()
+{
+	
+	$('#maxImageDivision').slideUp(1000);
+}
 

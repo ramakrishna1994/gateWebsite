@@ -5,20 +5,20 @@ require_once 'phpFiles/isSessionSet.php';
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/tests.css">
-<link rel="stylesheet" type="text/css" href="css/showAnswers.css">
+<link rel="stylesheet" type="text/css" href="css/popup.css">
 <link rel="stylesheet" type="text/css" href="css/buyTestSeries.css">
 <link rel="stylesheet" type="text/css" href="css/aboutUs.css">
 <link rel="stylesheet" type="text/css" href="css/profile.css">
 <link rel="stylesheet" type="text/css" href="css/accounts.css">
 <link rel="stylesheet" type="text/css" href="css/syllabus.css">
 <link rel="stylesheet" type="text/css" href="css/contactUs.css">
-<script src="js/jquery-min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/tests.js"></script>
 <script type="text/javascript" src="js/getAndUpdateProfile.js"></script>
 <script type="text/javascript" src="js/getAndUpdateAccountSettings.js"></script>
 <script type="text/javascript" src="js/getSyllabus.js"></script>
 <script type="text/javascript" src="js/contactUs.js"></script>
-<script type="text/javascript" src="js/showAnswers.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
 
 </head>
 <body>
@@ -36,7 +36,7 @@ require_once 'phpFiles/isSessionSet.php';
   </div>
   
   <div class="sideBarDivision">
-    <div class="profilePictureDivision" id="profilePicture" ><img src="profilePictures/<?php echo $_SESSION['gateimage'] ?>" style="height:90px;width:90px"></div>
+    <div class="profilePictureDivision" id="profilePicture" onclick="showMaxImage()"><img src="profilePictures/<?php echo $_SESSION['gateimage'] ?>" style="height:90px;width:90px"></div>
     <div class="tabSelected" onclick="clickTab(1)" id="tab1"  >MY TESTS</div>
     <div class="tabNotSelected" onclick="clickTab(2)" id="tab2" >TEST RESULTS</div>
     <div class="tabNotSelected" onclick="clickTab(3)" id="tab3" >TESTS SYLLABUS</div>
@@ -48,7 +48,9 @@ require_once 'phpFiles/isSessionSet.php';
   </div>
   
   
-  
+  <div id="maxImageDivision">
+    <div style="float:right;width:20px;height:20px;cursor:pointer"><img src="images/close.png" style="border-radius:50%"></div>
+  </div>
   
   <div class="popupDivision" id="popup" >
    

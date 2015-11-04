@@ -93,7 +93,21 @@ body,html{
 	cursor:pointer;
 }
 
+#maxImageDivision
+{
+	
+	margin-top:60px;	
+	position:fixed;
+	background-color: #A9A9A9;
+	width:268px;
+	height:400px;
+   background-image: url('../images/bigrk.jpg');	 
+	border:1px solid;
+	border-color:black;
+	display:none;
 
+	
+}
 .mainDivision1{
 	
 	

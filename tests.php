@@ -50,10 +50,10 @@ require_once 'phpFiles/isSessionSet.php';
   
   
   
-  <div class="popupDivision" id="popup">
+  <div class="popupDivision" id="popup" >
    
-   	 <div id="popupCloseDivision">
-   	   <div style="height:20px;width:20px;float:right;cursor:pointer" onClick="closePopup()"><img src="images/close.png" style="height:20px;width:20px;border-radius:50%" ></div>
+   	 <div id="popupCloseDivision" onClick="closePopup()">
+   	   <img src="images/close.png" style="height:20px;width:20px;border-radius:50%" >
    	 </div>
    		
       

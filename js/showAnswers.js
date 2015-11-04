@@ -222,8 +222,8 @@ function getPopupQuestion(subject,questionNo)
 				   nextQuestionNo = 1;
 				 }
 			
-			 document.getElementById("popupPreviousDivision").setAttribute("onclick","clickQuestion('"+subject+"',"+previousQuestionNo+")");
-			 document.getElementById("popupNextDivision").setAttribute("onclick","clickQuestion('"+subject+"',"+nextQuestionNo+")");
+			 document.getElementById("popupPreviousDivision").setAttribute("onclick","clickQuestion('"+subject+"',"+previousQuestionNo+",1)");
+			 document.getElementById("popupNextDivision").setAttribute("onclick","clickQuestion('"+subject+"',"+nextQuestionNo+",1)");
 			 
 			 $('#popupSolutionDivision').hide();
 				 

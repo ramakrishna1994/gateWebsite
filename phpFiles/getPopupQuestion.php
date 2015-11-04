@@ -39,7 +39,8 @@ while($row = mysqli_fetch_array($result)){
 		$answerjsondata = json_decode($row["answers"],true);
 
 		$json .= '"yourAnswer":'.'"'.$answerjsondata["answers"][$questionNo]["answer"].'",';
-		$json .= '"correctAnswer":'.'"'.$jsonData["questions"][$questionNo]["answer"].'"';
+		$json .= '"correctAnswer":'.'"'.$jsonData["questions"][$questionNo]["answer"].'",';
+		$json .= '"solution":'.'"'.$jsonData["questions"][$questionNo]["solution"].'"';
 
 		$json .='}';
 	}

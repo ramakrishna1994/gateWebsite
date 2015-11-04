@@ -69,11 +69,11 @@ function displayPopupQuestions(subject)
 						 }
 					  	
 					    if(i==1)
-					    	innerhtml += '<div class="selected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+')">'+j+'</div>';
+					    	innerhtml += '<div class="selected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+','+1+')">'+j+'</div>';
 					    else
-					    	innerhtml += '<div class="notSelected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+')">'+j+'</div>';
+					    	innerhtml += '<div class="notSelected" id="question'+i+'" onclick="clickQuestion(\''+subject+'\','+i+','+1+')">'+j+'</div>';
 					  }
-				  innerhtml += '<div class="marksDistributionButton" onclick="getMarksDistribution(\''+subject+'\')">MARKS DISTRIBUTION</div>';
+				  innerhtml += '<div class="marksDistributionButtonNotSelected" id="marksDistribution" onclick="clickQuestion(\''+subject+'\','+-1+','+2+')">MARKS DISTRIBUTION</div>';
 				  getPopupQuestion(subject,1);
 				  $('#popupQuestionsDivision').html(innerhtml);
 				  
@@ -85,7 +85,7 @@ function displayPopupQuestions(subject)
 }
 
 
-function clickQuestion(subject,questionNo)
+function clickQuestion(subject,questionNo,calledValue)
 {
 	var question = 'question'+questionNo;
 	var i;
@@ -94,14 +94,34 @@ function clickQuestion(subject,questionNo)
 		   var question1 = 'question'+i;
 		   document.getElementById(question1).className = 'notSelected';
 		}
-	document.getElementById(question).className = 'selected';
-	getPopupQuestion(subject, questionNo);
+	document.getElementById("marksDistribution").className = 'marksDistributionButtonNotSelected';
+	
+	if(calledValue == 1)
+	{
+		document.getElementById(question).className = 'selected';
+		getPopupQuestion(subject, questionNo);
+	}
+	else
+	{
+		document.getElementById("marksDistribution").className = 'marksDistributionButtonSelected';	
+		getMarksDistribution(subject);
+		
+	}
 
 }
 
 
 function getPopupQuestion(subject,questionNo)
 {
+	
+	$('#popupPreviousDivision').show();
+	$('#popupQuestionNoDivision').show();
+	$('#popupRightOrWrongDivision').show();
+	$('#popupMarksDivision').show();
+	$('#popupNextDivision').show();
+	$('#popupMainDivision').show();
+	
+	$('#popupMarksDistributionDivision').hide();
 	
 	
 	$('#popupQuestionNoDivision').html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
@@ -141,12 +161,18 @@ function getPopupQuestion(subject,questionNo)
 				    $('#popupImageDivision').hide(); 
 				    $('#popupImageDivision').html('');
 				 }
+			 
+			 
 			 if(data.isNumerical == '0')
 				 {
 				 		$('#popupoptionADivision').show();
 				 		$('#popupoptionBDivision').show();
 				 		$('#popupoptionCDivision').show();
 				 		$('#popupoptionDDivision').show();
+				 		$('#popupOptionDivision1').show();
+				 		$('#popupOptionDivision2').show();
+				 		$('#popupOptionDivision3').show();
+				 		$('#popupOptionDivision4').show();
 				 		
 				 		$('#popupoptionADivision').html(data.optionA);
 				 		$('#popupoptionBDivision').html(data.optionB);
@@ -156,6 +182,10 @@ function getPopupQuestion(subject,questionNo)
 				 }
 			 else
 				 {
+				        $('#popupOptionDivision1').hide();
+				        $('#popupOptionDivision2').hide();
+				        $('#popupOptionDivision3').hide();
+				        $('#popupOptionDivision4').hide();
 				 		$('#popupoptionADivision').hide();
 				 		$('#popupoptionBDivision').hide();
 				 		$('#popupoptionCDivision').hide();
@@ -200,8 +230,9 @@ function getPopupQuestion(subject,questionNo)
 			 $('#popupViewSolutionDivision').html('VIEW SOLUTION');
 			 document.getElementById("popupViewSolutionDivision").setAttribute("onclick","viewSolution()");
 				 
+			 $('#popupSolutionDivision').html(data.solution);
 			 
-		 },"json")
+		 },"json");
 	 });
   
 }
@@ -210,9 +241,7 @@ function getPopupQuestion(subject,questionNo)
 
 function viewSolution()
 {
-	$('#popupSolutionDivision').slideDown(500,function(){
-		
-	});
+	$('#popupSolutionDivision').slideDown(500);
 
 	$('#popupViewSolutionDivision').html('HIDE SOLUTION');
 	document.getElementById("popupViewSolutionDivision").setAttribute("onclick","hideSolution()");
@@ -222,10 +251,7 @@ function viewSolution()
 
 function hideSolution()
 {
-	$('#popupSolutionDivision').slideUp(500,function(){
-		
-		
-	});
+	$('#popupSolutionDivision').slideUp(500);
 	$('#popupViewSolutionDivision').html('VIEW SOLUTION');
 	document.getElementById("popupViewSolutionDivision").setAttribute("onclick","viewSolution()");
 	
@@ -235,15 +261,43 @@ function hideSolution()
 
 function getMarksDistribution(subject)
 {
+	$('#popupPreviousDivision').hide();
+	$('#popupQuestionNoDivision').hide();
+	$('#popupRightOrWrongDivision').hide();
+	$('#popupMarksDivision').hide();
+	$('#popupNextDivision').hide();
+	$('#popupMainDivision').hide();
 	
+	$('#popupMarksDistributionDivision').show();
+	$('#popupMarksDistributionDivision').html('<img src="images/redloader.gif" style="height: 20px;width: 20px">');
+	
+	var i;
+	 var innerhtml = '<table border="1px solid" style="text-align:center;padding:2px;">'
+		  		   + '<tr><td>Question No</td><td>Given Marks</td><td>Status</td><td>Your Marks</td></tr>';
 	$(document).ready(function(){
 		
 		 $.post("phpFiles/getMarksDistribution.php",{subject:subject},function(data){
 			 
-			 
-			 
+				 			
+				 	for(i=1;i<data.length;i++)
+				 		{
+				 		
+				 		 	innerhtml +='<tr><td>'+data[i].questionNo+'</td><td>'+data[i].marks+'</td>';
+				 		 
+				 		 	if(data[i].correct == 1)
+				 		 		 innerhtml +='<td><image src="images/correct.jpg" style="height:20px;width:20px;border-radius:50%"></td>';
+				 		 	else
+				 		 		 innerhtml +='<td><image src="images/wrong.jpg" style="height:20px;width:20px;border-radius:50%"></td>';
+				 		 	
+				 		 	innerhtml += '<td>'+data[i].yourMarks+'</td></tr>';
+				 		}
+				 	innerhtml +='<tr><td colspan="3">Total Marks</td><td>'+data[0].totalMarks+'</td></tr></table>';
+					 
+					 $('#popupMarksDistributionDivision').html(innerhtml);
 			 
 		 },"json");
+		 
+		 
 		 
 	});
 

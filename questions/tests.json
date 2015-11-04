@@ -4,20 +4,20 @@
 		{
 			"subjectid":"cd01",
 			"subjectname":"COMPILER DESIGN CHAPTER 01 TEST 01",
-			"activationStatus":"1",
+			"activationStatus":"0",
 			"noOfQuestions":10
 		},
 		{
 			"subjectid":"toc01",
 			"subjectname":"THEORY OF COMPUTATION CHAPTER 01 TEST 01",
-			"activationStatus":"1",
+			"activationStatus":"0",
 			"noOfQuestions":10
 		},
 		{
 			"subjectid":"cn01",
 			"subjectname":"COMPUTER NETWORKS CHAPTER 01 TEST 01",
-			"activationStatus":"0",
-			"noOfQuestions":10
+			"activationStatus":"1",
+			"noOfQuestions":5
 		},
 		{
 			"subjectid":"ds01",
@@ -34,7 +34,7 @@
 		{
 			"subjectid":"grandtest01",
 			"subjectname":"GATE GRAND TEST 01",
-			"activationStatus":"1",
+			"activationStatus":"0",
 			"noOfQuestions":30
 		}
 	]

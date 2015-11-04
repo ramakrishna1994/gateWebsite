@@ -15,7 +15,8 @@
 			"marks":"1",
 			"isNumerical":"0",
 			"isImage":"1",
-			"imagePath":"questionImages/dbms01/image1.png"
+			"imagePath":"questionImages/dbms01/image1.png",
+			"solution":"as of now,not written"
 		},
 		{
 			"questionNo":"02",
@@ -28,7 +29,8 @@
 			"marks":"2",
 			"isNumerical":"0",
 			"isImage":"0",
-			"imagePath":"questionImages/dbms01/image2.png"
+			"imagePath":"questionImages/dbms01/image2.png",
+			"solution":"as of now,not written"
 		},
 		{
 			"questionNo":"03",
@@ -41,7 +43,8 @@
 			"marks":"1",
 			"isNumerical":"0",
 			"isImage":"1",
-			"imagePath":"questionImages/dbms01/image3.png"
+			"imagePath":"questionImages/dbms01/image3.png",
+			"solution":"as of now,not written"
 		},
 		{
 			"questionNo":"04",
@@ -54,7 +57,8 @@
 			"marks":"2",
 			"isNumerical":"0",
 			"isImage":"1",
-			"imagePath":"questionImages/dbms01/image4.png"
+			"imagePath":"questionImages/dbms01/image4.png",
+			"solution":"as of now,not written"
 		},
 		{
 			"questionNo":"05",
@@ -67,7 +71,8 @@
 			"marks":"1",
 			"isNumerical":"0",
 			"isImage":"1",
-			"imagePath":"questionImages/dbms01/image5.png"
+			"imagePath":"questionImages/dbms01/image5.png",
+			"solution":"as of now,not written"
 		}
 	]
 }

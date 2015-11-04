@@ -68,6 +68,9 @@ require_once 'phpFiles/isSessionSet.php';
     	</div>
     	<div id="popupMarksDivision"></div>
     	<div id ="popupNextDivision">NEXT</div>
+    <div id="popupMarksDistributionDivision">
+    
+    </div>	
     <div id="popupMainDivision" >
     	<div id="popupQuestionDivision">
     	
@@ -76,22 +79,22 @@ require_once 'phpFiles/isSessionSet.php';
     	
     	</div>
     	
-    	<div class="optionDivision">A</div>
+    	<div class="optionDivision" id="popupOptionDivision1">A</div>
     	<div id="popupoptionADivision">
     	
     	</div>
     	
-    	<div class="optionDivision">B</div>
+    	<div class="optionDivision" id="popupOptionDivision2">B</div>
         <div id="popupoptionBDivision">
     	
     	</div>
     	
-    	<div class="optionDivision">C</div>
+    	<div class="optionDivision" id="popupOptionDivision3">C</div>
        <div id="popupoptionCDivision">
     	
     	</div>
     	
-    	<div class="optionDivision">D</div>
+    	<div class="optionDivision" id="popupOptionDivision4">D</div>
        <div id="popupoptionDDivision">
     	
        </div>

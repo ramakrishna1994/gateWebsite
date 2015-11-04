@@ -23,13 +23,15 @@ $jsonData = json_decode($str, true);
 
 $i =1;
 $answerjsondata ="";
+$json = "";
 while($row = mysqli_fetch_array($result)){
 
-	$answerjsondata = json_decode($row["answers"],true);	
+	$answerjsondata = json_decode($row["answers"],true);
+	$json .= '[{"totalMarks":'.number_format((float)$row["marks"], 2, '.', '').'},';
 			
 }
 
-$json='{"distribution":[';
+
 
 for($i=1;$i<=$jsonData["questions"][0]["noOfQuestions"];$i++)
 {
@@ -41,11 +43,21 @@ for($i=1;$i<=$jsonData["questions"][0]["noOfQuestions"];$i++)
 		$json .= '"marks":'.$jsonData["questions"][$i]["marks"].',';
 		
 		if($answerjsondata["answers"][$i]["answer"] == $jsonData["questions"][$i]["answer"])
-				$json .= '"yourMarks":'.$jsonData["questions"][$i]["marks"];
+		{
+				$json .= '"yourMarks":'.$jsonData["questions"][$i]["marks"].',';
+				$json .= '"correct":'.'1';
+				
+		}
 		else if($jsonData["questions"][$i]["isNumerical"] == '1')
-				$json .= '"yourMarks":'.$jsonData["questions"][$i]["marks"];
-		else	
-				$json .= '"yourMarks":'.-$jsonData["questions"][$i]["marks"]/3;
+		{
+				$json .= '"yourMarks":'.'0,';
+				$json .= '"correct":'.'0';
+		}
+		else 
+		{	
+				$json .= '"yourMarks":'.-number_format((float)($jsonData["questions"][$i]["marks"] / 3), 2, '.', '').',';
+				$json .= '"correct":'.'0';
+		}
 		
 		$json.='}';
 		
@@ -54,9 +66,7 @@ for($i=1;$i<=$jsonData["questions"][0]["noOfQuestions"];$i++)
 	
 }
 
-
-$json .=']}';
-
+$json .= ']';
 
 
 echo $json;

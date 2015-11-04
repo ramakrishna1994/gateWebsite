@@ -30,14 +30,18 @@ for($i=1;$i<=$_SESSION['noOfQuestions'];$i++)
 	{
 		$total = $total + $jsonData["questions"][$i]["marks"];
 	}
-	else
+	else if($answerjsondata["answers"][$i]["answer"] != '0')
 	 {
-	 	$total = $total - ($jsonData["questions"][$i]["marks"] / 3);
+	 	$total = $total - number_format((float)($jsonData["questions"][$i]["marks"] / 3), 2, '.', '');
+	}
+	else
+	{
+		
 	}
 	//echo 1;
 }
 
-$updateQuery = "update `".$tableName."` set marks='".$total."',timer='00:00:00',statusOfExam=2 where testName = '".$examname."';";
+$updateQuery = "update `".$tableName."` set marks='".number_format((float)$total, 2, '.', '')."',timer='00:00:00',statusOfExam=2 where testName = '".$examname."';";
 mysqli_query($con,$updateQuery) or die(mysqli_error($con));
 
 echo $total;

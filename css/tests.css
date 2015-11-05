@@ -110,6 +110,22 @@ body,html{
    
 	
 }
+
+#maxImageCloseDivision
+{
+	float:right;
+	width:20px;
+	height:20px;
+	background-image: url("../images/close.png");
+	border-radius:50%;
+
+}
+
+#maxImageCloseDivision:hover
+{
+	cursor:pointer;
+	background-image: url("../images/wrong.jpg")
+}
 .mainDivision1{
 	
 	

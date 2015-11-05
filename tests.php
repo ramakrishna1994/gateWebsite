@@ -131,7 +131,7 @@ require_once 'phpFiles/isSessionSet.php';
     <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab8"  ></div>
   </div>
 	  <div id="maxImageDivision">
-    <div style="float:right;width:20px;height:20px;cursor:pointer" onclick="hideMaxImage()"><img src="images/close.png" style="border-radius:50%"></div>
+    <div id="maxImageCloseDivision" onclick="hideMaxImage()"></div>
   </div>
     
   <div class="mainDivision1" id="mainDivision1" >

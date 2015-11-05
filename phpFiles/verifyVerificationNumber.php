@@ -18,7 +18,7 @@ if($_SESSION['code'] == $verificationnumber)
 		$createQuery="create table `".$emailid.".tests`("
 		."id int not null auto_increment,"
 		."testName varchar(100),"
-		."subjectname varchar(100),"
+		."subjectName varchar(100),"
 		."timer varchar(20),"
 		."marks varchar(10) not null default 0,"
 		."statusOfExam int not null default 0,"
@@ -65,7 +65,7 @@ if($_SESSION['code'] == $verificationnumber)
 			
 			
 			
-		$insertQuery = "insert into `".$emailid.".tests` (testname,subjectname,timer,marks,statusOfExam,activationStatus,answers,marked,noOfQuestions) values("
+		$insertQuery = "insert into `".$emailid.".tests` (testname,subjectName,timer,marks,statusOfExam,activationStatus,answers,marked,noOfQuestions) values("
 				."'".$jsonData["tests"][$i]["subjectid"]."',"
 				."'".$jsonData["tests"][$i]["subjectname"]."',"
 				."'00:29:60',"

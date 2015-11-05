@@ -12,7 +12,7 @@ $total = 0;
 $str = file_get_contents('../questions/'.$filename.'.json');
 $jsonData = json_decode($str, true);
 
-$selectQuery = "select * from `".$tableName."` where testName = '".$examname."' ;";
+$selectQuery = "select answers from `".$tableName."` where testName = '".$examname."' ;";
 $result = mysqli_query($con,$selectQuery) or die(mysqli_error($con));
 $answerarray;
 
@@ -47,6 +47,7 @@ mysqli_query($con,$updateQuery) or die(mysqli_error($con));
 echo $total;
 
 $_SESSION['examname'] = "";
+$_SESSION['fullNameOfSubject']="";
 
 mysqli_close($con);
 ?>

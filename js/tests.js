@@ -190,7 +190,7 @@ function getTestResults()
 		}
 		else
 		{
-			 innerhtml='<div style="height: 30px;width: 300px;margin:auto;margin-top:50px;">You have not completed any tests</div>';
+			 innerhtml='<div style="height: 30px;width: 300px;margin:auto;margin-top:50px;color:white;font-family:cursive">You have not completed any tests</div>';
 		}
 			
 			$('#mainDivision1').html('');

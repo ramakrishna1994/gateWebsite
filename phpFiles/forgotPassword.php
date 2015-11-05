@@ -26,61 +26,56 @@ else
 }
 
 
-function sendMail($password,$emailid)
-{
+	function sendMail($password,$emailid)
+	{
 	
-$mail = new PHPMailer;
+		$mail = new PHPMailer;
 
-//Enable SMTP debugging. 
-//$mail->SMTPDebug = 3;                               
-//Set PHPMailer to use SMTP.
-$mail->isSMTP();            
-//Set SMTP host name                          
-$mail->Host = "mx1.serversfree.com";
-//Set this to true if SMTP host requires authentication to send email
-$mail->SMTPAuth = true;                          
-//Provide username and password     
-$mail->Username = "admin@gate2016.bugs3.com";                 
-$mail->Password = "saradhi@2";                           
-//If SMTP requires TLS encryption then set it
+		//Enable SMTP debugging. 
+		//$mail->SMTPDebug = 3;                               
+		//Set PHPMailer to use SMTP.
+		$mail->isSMTP();            
+		//Set SMTP host name                          
+		$mail->Host = "mx1.serversfree.com";
+		//Set this to true if SMTP host requires authentication to send email
+		$mail->SMTPAuth = true;                          
+		//Provide username and password     
+		$mail->Username = "admin@gate2016.bugs3.com";                 
+		$mail->Password = "saradhi@2";                           
+		//If SMTP requires TLS encryption then set it
                         
-//Set TCP port to connect to 
-$mail->Port = 2525;                                   
+		//Set TCP port to connect to 
+		$mail->Port = 2525;                                   
 
-$mail->From = "admin@gate2016.bugs3.com";
-$mail->FromName = "Admin";
+		$mail->From = "admin@gate2016.bugs3.com";
+		$mail->FromName = "Admin";
 
-$mail->addAddress($emailid);
+		$mail->addAddress($emailid);
 
-$mail->isHTML(true);
+		$mail->isHTML(true);
 
-$mail->Subject = "GATE ACCOUNT PASSWORD";
-$mail->Body = "
-<html>
-<head>
-</head>
-<body>
-<p>Below is your password.Please Change it after you log in</p>
-<table style='border:1px solid;border-color:black;'>
-<tr>
-<th>PASSWORD IS </th>
-<th>".$password."</th>
-</tr>
-</table>
-</body>
-</html>
-";
+		$mail->Subject = "GATE ACCOUNT PASSWORD";
+		$mail->Body = "<html><body>
+					   <p>Below is your password.Please Change it after you log in</p>
+						<table style='border:1px solid;border-color:black;'>
+						<tr>
+						<th>PASSWORD IS </th>
+						<th>".$password."</th>
+						</tr>
+						</table>
+						</body>
+						</html>";
 
 
 
-if(!$mail->send()) 
-{
-  //  echo "Mailer Error: " . $mail->ErrorInfo;
-} 
-else 
-{
-    //echo "Message has been sent successfully";
-}
+		if(!$mail->send()) 
+		{
+			  //  echo "Mailer Error: " . $mail->ErrorInfo;
+		}	 
+		else 
+		{
+    		//echo "Message has been sent successfully";
+		}
 
-}
+	}
 ?>

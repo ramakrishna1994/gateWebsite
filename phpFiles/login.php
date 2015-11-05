@@ -10,7 +10,7 @@ $table="users";
 
 
 
-$selectQuery="select * from users where emailid='".$emailid."' and password='".$password."' ;";
+$selectQuery="select firstname,lastname,imagename from users where emailid='".$emailid."' and password='".$password."' ;";
 
 $result=mysqli_query($con,$selectQuery) or die(mysqli_error($con));
 

@@ -9,7 +9,7 @@ $examname = $_SESSION['examname'];
 $filename=$examname."questions"; 
 
 //echo $filename;
-$selectquery="select * from `".$tableName."` where testName = '".$examname."';";
+$selectquery="select answers,activationStatus from `".$tableName."` where testName = '".$examname."';";
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 

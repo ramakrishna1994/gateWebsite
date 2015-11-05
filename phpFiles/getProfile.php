@@ -3,7 +3,7 @@ require_once 'isSessionSet.php';
 require_once 'connection.php';
 
 $emailid = $_SESSION['gateusername'];
-$selectQuery = "select * from users where emailid = '".$emailid."';";
+$selectQuery = "select firstname,lastname,imagename from users where emailid = '".$emailid."';";
 $result = mysqli_query($con,$selectQuery);
 
 

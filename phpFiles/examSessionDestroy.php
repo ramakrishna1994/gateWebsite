@@ -17,6 +17,7 @@ echo $json;
 
 
 $_SESSION['examname'] = "";
+$_SESSION['fullNameOfSubject']="";
 
 mysqli_close($con);
 ?>

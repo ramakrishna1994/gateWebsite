@@ -7,7 +7,7 @@ $tableName=$_SESSION['gateusername'].".tests";
 $subjectname=mysqli_real_escape_string($con,$_POST['subject']);;
 
 
-$selectquery="select * from `".$tableName."` where testname = '".$subjectname."' ;";
+$selectquery="select noOfQuestions,activationStatus from `".$tableName."` where testname = '".$subjectname."' ;";
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 

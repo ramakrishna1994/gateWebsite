@@ -11,7 +11,7 @@ $examname = mysqli_real_escape_string($con,$_POST["subject"]);;
 $filename=$examname."questions";
 
 //echo $filename;
-$selectquery="select * from `".$tableName."` where testName = '".$examname."';";
+$selectquery="select answers,marks from `".$tableName."` where testName = '".$examname."';";
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 

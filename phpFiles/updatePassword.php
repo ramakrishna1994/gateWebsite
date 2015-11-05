@@ -7,7 +7,7 @@ $currentpassword=mysqli_real_escape_string($con,$_POST['currentpassword']);
 $newpassword=mysqli_real_escape_string($con,$_POST['newpassword']);
 $table="users";
 
-$selectQuery = "select * from users where emailid = '".$_SESSION['gateusername']."';";
+$selectQuery = "select password from users where emailid = '".$_SESSION['gateusername']."';";
 $result = mysqli_query($con,$selectQuery) or die(mysqli_error($con));
 
 while($row = mysqli_fetch_array($result))

@@ -21,7 +21,7 @@ $createQuery="create table if not exists ".$table."("
 
 mysqli_query($con,$createQuery) or die(mysqli_error($con));
 
-$checkQuery = "select * from users where emailid = '".$emailid."'";
+$checkQuery = "select emailid from users where emailid = '".$emailid."'";
 $result = mysqli_query($con,$checkQuery) or die(mysqli_error($con));
 //echo "no of rows:".mysqli_num_rows($result);
 

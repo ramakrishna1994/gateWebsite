@@ -8,7 +8,7 @@ $tableName=$_SESSION['gateusername'].".tests";
 $subjectname=$_SESSION['examname'];
 
 
-$selectquery="select * from `".$tableName."` where testname = '".$subjectname."' ;";
+$selectquery="select marked from `".$tableName."` where testname = '".$subjectname."' ;";
 
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 

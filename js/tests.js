@@ -334,15 +334,23 @@ function showResultsWindow(subject,id,length)
 
 
 
-function showMaxImage()
+function showMaxImage(path)
 {
-  $('#maxImageDivision').slideDown(1000);	
+
+	document.getElementById("maxImageDivision").style.backgroundImage = "url('')";
+  $('#maxImageDivision').slideDown(500,function(){
+	  
+	  
+	  document.getElementById("maxImageDivision").style.backgroundImage = "url('"+path+"?"+new Date().getTime()+"')";
+	  
+  });
+  
 
 }
 
 function hideMaxImage()
 {
 	
-	$('#maxImageDivision').slideUp(1000);
+	$('#maxImageDivision').slideUp(500);
 }
 

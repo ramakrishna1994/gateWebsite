@@ -36,7 +36,7 @@ require_once 'phpFiles/isSessionSet.php';
   </div>
   
   <div class="sideBarDivision">
-    <div class="profilePictureDivision" id="profilePicture" onclick="showMaxImage()"><img src="profilePictures/<?php echo $_SESSION['gateimage'] ?>" style="height:90px;width:90px"></div>
+    <div class="profilePictureDivision" id="profilePicture" onclick="showMaxImage('../gate/profilePictures/<?php echo $_SESSION['gateimage'] ?>')"><img src="profilePictures/<?php echo $_SESSION['gateimage'] ?>" style="height:90px;width:90px"></div>
     <div class="tabSelected" onclick="clickTab(1)" id="tab1"  >MY TESTS</div>
     <div class="tabNotSelected" onclick="clickTab(2)" id="tab2" >TEST RESULTS</div>
     <div class="tabNotSelected" onclick="clickTab(3)" id="tab3" >TESTS SYLLABUS</div>
@@ -48,10 +48,7 @@ require_once 'phpFiles/isSessionSet.php';
   </div>
   
   
-  <div id="maxImageDivision">
-    <div style="float:right;width:20px;height:20px;cursor:pointer"><img src="images/close.png" style="border-radius:50%"></div>
-  </div>
-  
+
   <div class="popupDivision" id="popup" >
    
    	 <div id="popupCloseDivision" onClick="closePopup()">
@@ -133,7 +130,10 @@ require_once 'phpFiles/isSessionSet.php';
     <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab7"  ></div>
     <div style="margin-top:32px;background-image:;width:20px;height:20px;" id="showtab8"  ></div>
   </div>
-  
+	  <div id="maxImageDivision">
+    <div style="float:right;width:20px;height:20px;cursor:pointer" onclick="hideMaxImage()"><img src="images/close.png" style="border-radius:50%"></div>
+  </div>
+    
   <div class="mainDivision1" id="mainDivision1" >
     
     <!-- ---------this division will be loaded automatically -->

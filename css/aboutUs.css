@@ -19,6 +19,7 @@
 	height:150px;
 	background-image: url('../images/rk.jpg');
 	cursor:pointer;
+	background-repeat: no-repeat;
 	
 }
 

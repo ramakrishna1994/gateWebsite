@@ -5,7 +5,7 @@ $db_user="gate";
 $db_password="gate";
 $db_name="gate";
 
-$code = "";
+
 
 $con=mysqli_connect($db_host,$db_user,$db_password);
 

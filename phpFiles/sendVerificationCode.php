@@ -2,7 +2,7 @@
 
 
 require_once 'connection.php';
-//require_once '/home/u955060507/public_html/gate/phpmailer/phpmailer/PHPMailerAutoload.php';
+require_once '/home/ramakrishna1994/public_html/gate2016/phpmailer/PHPMailerAutoload.php';
 
 
 
@@ -15,7 +15,7 @@ $random = mt_rand(100000,999999);
 $_SESSION['code'] = $random;
 
 
-echo $_SESSION['code'];
+//echo $_SESSION['code'];
 
 
 $to = $emailid;
@@ -25,22 +25,22 @@ $to = $emailid;
 $mail = new PHPMailer;
 
 //Enable SMTP debugging. 
-//$mail->SMTPDebug = 3;                               
+$mail->SMTPDebug = 3;                               
 //Set PHPMailer to use SMTP.
 $mail->isSMTP();            
 //Set SMTP host name                          
-$mail->Host = "mx1.serversfree.com";
+$mail->Host = "mail.goodcreed.in";
 //Set this to true if SMTP host requires authentication to send email
 $mail->SMTPAuth = true;                          
 //Provide username and password     
-$mail->Username = "admin@gate2016.bugs3.com";                 
-$mail->Password = "saradhi@2";                           
+$mail->Username = "admin@goodcreed.in";                 
+$mail->Password = "Saradhi@123";                           
 //If SMTP requires TLS encryption then set it
                         
 //Set TCP port to connect to 
-$mail->Port = 2525;                                   
+$mail->Port = 25;                                   
 
-$mail->From = "admin@gate2016.bugs3.com";
+$mail->From = "admin@goodcreed.in";
 $mail->FromName = "Admin";
 
 $mail->addAddress($to);

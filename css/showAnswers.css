@@ -1,0 +1,449 @@
+
+.popupDivision
+{
+	margin:auto;
+	margin-top:60px;
+	position:fixed;
+	background-color: #A9A9A9;
+	width:1000px;
+	height:570px;
+	display:none;
+	border:1px solid;
+	border-color:black;
+}
+
+
+#popupCloseDivision
+{
+	width:20px;
+	height:20px;
+	float:right;
+	postion:fixed;
+	border-radius:50%;
+	cursor:pointer;
+	
+}
+
+
+#popupQuestionsDivision
+{
+	width:965px;
+	min-height:60px;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	display:inline;
+	margin:3px;
+	padding-bottom:5px;
+    background-image: url('../images/background.png');
+    color:white;
+
+}
+
+
+#popupPreviousDivision
+{
+	margin:auto;
+	text-align:center;
+	width:110px;
+	height:20px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+    background-color:green;
+     color:black;
+}
+#popupPreviousDivision:hover
+{
+	cursor:pointer;
+    background-color:purple;
+     color:white;
+}
+
+#popupRightOrWrongDivision
+{
+  
+	margin:auto;
+	text-align:center;
+	width:20px;
+	height:20px;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+    background-image: url('../images/background.png');
+    border-radius:50%;
+  	
+}
+#popupQuestionNoDivision
+{
+	margin:auto;
+	text-align:center;
+	width:650px;
+	height:20px;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+    background-image: url('../images/background.png');
+     color:white;
+     font-family:cursive;
+}
+
+#popupMarksDivision
+{
+	
+	margin:auto;
+	text-align:center;
+	width:120px;
+	height:20px;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+    background-image: url('../images/background.png');
+     color:white;
+     font-family:cursive;
+	
+}
+#popupNextDivision
+{
+	margin:auto;
+	text-align:center;
+	width:60px;
+	height:20px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+    background-color:green;
+     color:black;
+}
+
+#popupNextDivision:hover
+{
+	cursor:pointer;
+    background-color:purple;
+     color:white;
+}
+
+
+#popupMainDivision
+{
+	width:997px;
+	min-height:350px;
+	max-height:465px;
+	border-top:1px solid;
+	border-color:black;
+	display:inline-block;
+	overflow-y:scroll;
+	float:left;
+	
+}
+
+#popupMarksDistributionDivision
+{
+	width:993px;
+	height:485px;
+	border-top:1px solid;
+	border-color:black;
+	display:inline-block;
+	float:left;
+	margin:3px;
+	overflow-y:scroll;
+	background-image: url('../images/background.png');
+	
+}
+
+
+
+#popupQuestionDivision
+{
+	margin:auto;
+	text-align:justify;
+	min-width:960px;
+	min-height:50px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	padding:5px;
+	margin:3px;
+    background-image: url('../images/background.png');
+     color:white;
+}
+
+
+#popupImageDivision
+{
+	margin:auto;
+	text-align:justify;
+	width:970px;
+	min-height:50px;
+	display: inline-block;
+   word-wrap: break-word;
+	float:left;
+	margin:3px;
+	padding:auto;
+	text-align:center;
+	
+}
+
+#popupoptionADivision
+{
+	text-align:justify;
+	width:926px;
+	min-height:50px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+   float:left;
+   padding:5px;
+   margin:3px;
+    background-image: url('../images/background.png');
+     color:white;
+}
+#popupoptionBDivision
+{
+	margin:auto;
+	text-align:justify;
+	width:926px;
+	min-height:50px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	padding:5px;
+	margin:3px;
+	background-image: url('../images/background.png');
+	 color:white;
+}
+#popupoptionCDivision
+{
+	margin:auto;
+	text-align:justify;
+	width:926px;
+	min-height:50px;
+	display: inline-block;
+    word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	padding:5px;
+	margin:3px;
+	background-image: url('../images/background.png');
+	 color:white;
+}
+#popupoptionDDivision
+{
+	margin:auto;
+	text-align:justify;
+	width:926px;
+	min-height:50px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	padding:5px;
+	margin:3px;
+	background-image: url('../images/background.png');
+	 color:white;
+}
+
+
+.optionDivision
+{
+	
+	margin:auto;
+	text-align:justify;
+	width:15px;
+	height:20px;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+	padding:5px;
+	background-image: url('../images/background.png');
+	 color:white;
+}
+
+#popupYourAnswerDivision
+{
+	
+	margin:auto;
+	text-align:center;
+	width:400px;
+	height:23px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+	background-image: url('../images/background.png');
+	 color:white;
+	 font-family:cursive;
+}
+
+#popupViewSolutionDivision
+{
+	padding-top:3px;
+	margin:auto;
+	text-align:center;
+	width:150px;
+	height:20px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	background-color:green;
+	margin:3px;
+	 color:black;
+}
+#popupViewSolutionDivision:hover
+{
+	cursor:pointer;
+	background-color:purple;
+	color:white;
+}
+
+#popupCorrectAnswerDivision
+{
+	
+	margin:auto;
+	text-align:center;
+	width:403px;
+	height:23px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	background-image: url('../images/background.png');
+	margin:3px;
+	 color:white;
+	 font-family:cursive;
+}
+
+
+#popupSolutionDivision
+{
+	margin:auto;
+	text-align:justify;
+	width:963px;
+	min-height:20px;
+	display: inline-block;
+   word-wrap: break-word;
+	border:1px solid;
+	border-color:black;
+	float:left;
+	margin:3px;
+	background-image: url('../images/background.png');
+	 color:white;
+	 padding:3px;
+	 font-family:cursive;
+	 
+}
+
+
+
+.notSelected{
+	
+	cursor:pointer;
+	margin-top:5px;
+	margin-left:5px;
+	padding:2px;
+    text-align: center;
+	width:25px;
+	height:25px;
+	float:left;
+	background-color: white;
+	font-family:monospace;
+	font-size:18px;
+	color:black;
+	
+}
+
+.marksDistributionButtonNotSelected
+{
+	cursor:pointer;
+	margin-top:5px;
+	margin-left:5px;
+	padding:2px;
+    text-align: center;
+	width:200px;
+	height:25px;
+	float:left;
+	background-color: white;
+	font-family:monospace;
+	font-size:18px;
+	color:black;
+}
+.marksDistributionButtonSelected
+{
+	cursor:pointer;
+	margin-top:5px;
+	margin-left:5px;
+	padding:2px;
+    text-align: center;
+	width:200px;
+	height:25px;
+	float:left;
+	background-color: purple;
+	font-family:monospace;
+	font-size:18px;
+	color:white;
+}
+.notSelected:hover,.marksDistributionButtonNotSelected:hover{
+	
+	cursor:pointer;
+	background-color: purple;
+	color:white;
+	
+}
+
+.selected{
+	
+	cursor:pointer;
+	margin-top:5px;
+	margin-left:5px;
+	padding:2px;
+    text-align: center;
+	width:25px;
+	height:25px;
+	float:left;
+	background-color: purple;
+	font-family:monospace;
+	font-size:18px;
+	color:white;
+	
+}
+
+
+
+.viewSolutions
+{
+	
+	background-color:green;
+	color:black;
+	width:350px;
+	margin:auto;
+	cursor:pointer;
+}
+
+.viewSolutions:hover
+{
+	background-color: purple;
+	color:white;
+	
+}

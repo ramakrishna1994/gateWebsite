@@ -2,8 +2,8 @@
 
 $db_host="localhost";
 $db_user="gate";
-$db_password="gate";
-$db_name="gate";
+$db_password="Saradhi@2";
+$db_name="gate2016";
 
 
 

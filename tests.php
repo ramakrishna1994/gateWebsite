@@ -36,7 +36,7 @@ require_once 'phpFiles/isSessionSet.php';
   </div>
   
   <div class="sideBarDivision">
-    <div class="profilePictureDivision" id="profilePicture" onclick="showMaxImage('../gate/profilePictures/<?php echo $_SESSION['gateimage'] ?>')"><img src="profilePictures/<?php echo $_SESSION['gateimage'] ?>" style="height:90px;width:90px"></div>
+    <div class="profilePictureDivision" id="profilePicture" onclick="showMaxImage('../profilePictures/<?php echo $_SESSION['gateimage'] ?>')"><img src="profilePictures/<?php echo $_SESSION['gateimage'] ?>" style="height:90px;width:90px"></div>
     <div class="tabSelected" onclick="clickTab(1)" id="tab1"  >MY TESTS</div>
     <div class="tabNotSelected" onclick="clickTab(2)" id="tab2" >TEST RESULTS</div>
     <div class="tabNotSelected" onclick="clickTab(3)" id="tab3" >TESTS SYLLABUS</div>

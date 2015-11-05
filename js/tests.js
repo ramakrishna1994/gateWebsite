@@ -114,7 +114,7 @@ $(document).ready(function(){
 				{
 				  innerhtml +='<div class="snoDivision">'+j+'</div>'
 	                 +'<div class="testNameDivision">'+data[i][2]+'</div>'
-	    	         +'<div class="testStatusDivision"><div class="buyTest" onclick="clickTab(6)">BUY TEST SERIES</div></div>';
+	    	         +'<div class="testStatusDivision"><div class="testNotStarted" onclick="clickTab(6)">BUY TEST SERIES</div></div>';
 				}
 		}
 			
@@ -338,7 +338,7 @@ function showMaxImage(path)
 {
 
 	document.getElementById("maxImageDivision").style.backgroundImage = "url('')";
-  $('#maxImageDivision').slideDown(500,function(){
+        $('#maxImageDivision').slideDown(500,function(){
 	  
 	  
 	  document.getElementById("maxImageDivision").style.backgroundImage = "url('"+path+"?"+new Date().getTime()+"')";

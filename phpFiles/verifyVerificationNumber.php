@@ -68,7 +68,7 @@ if($_SESSION['code'] == $verificationnumber)
 		$insertQuery = "insert into `".$emailid.".tests` (testname,subjectName,timer,marks,statusOfExam,activationStatus,answers,marked,noOfQuestions) values("
 				."'".$jsonData["tests"][$i]["subjectid"]."',"
 				."'".$jsonData["tests"][$i]["subjectname"]."',"
-				."'00:29:60',"
+				."'".$jsonData["tests"][$i]["timer"]."',"
 				."'0',"
 				."0,"
 				."'".$jsonData["tests"][$i]["activationStatus"]."',"

@@ -342,8 +342,22 @@ body,html{
 	
 }
 
+.buyTest
+{
+	background-color: gray;
+	cursor: pointer;
+	border:1px solid;
+	border-color:black;
+	margin-left:40px;
+	margin-top:10px;
+    text-align: center;
+	width:150px;
+	height:20px;
+	color:black;
+}
 
-.testInComplete:hover,.testComplete:hover,.testNotStarted:hover
+
+.testInComplete:hover,.testComplete:hover,.testNotStarted:hover,.buyTest:hover
 {
 	background-color: purple;
 	cursor: pointer;

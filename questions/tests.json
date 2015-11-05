@@ -5,37 +5,43 @@
 			"subjectid":"cd01",
 			"subjectname":"COMPILER DESIGN CHAPTER 01 TEST 01",
 			"activationStatus":"0",
-			"noOfQuestions":10
+			"noOfQuestions":10,
+			"timer":"00:10:00"
 		},
 		{
 			"subjectid":"toc01",
 			"subjectname":"THEORY OF COMPUTATION CHAPTER 01 TEST 01",
 			"activationStatus":"0",
-			"noOfQuestions":10
+			"noOfQuestions":10,
+			"timer":"00:10:00"
 		},
 		{
 			"subjectid":"cn01",
 			"subjectname":"COMPUTER NETWORKS CHAPTER 01 TEST 01",
 			"activationStatus":"1",
-			"noOfQuestions":5
+			"noOfQuestions":5,
+			"timer":"00:10:00"
 		},
 		{
 			"subjectid":"ds01",
 			"subjectname":"DATA STRUCTURES CHAPTER 01 TEST 01",
 			"activationStatus":"0",
-			"noOfQuestions":10
+			"noOfQuestions":10,
+			"timer":"00:10:00"
 		},
 		{
 			"subjectid":"dbms01",
 			"subjectname":"DATA BASE MANAGEMENT SYSTEM CHAPTER 01 TEST 01",
 			"activationStatus":"1",
-			"noOfQuestions":5
+			"noOfQuestions":5,
+			"timer":"00:10:00"
 		},
 		{
 			"subjectid":"grandtest01",
 			"subjectname":"GATE GRAND TEST 01",
 			"activationStatus":"0",
-			"noOfQuestions":30
+			"noOfQuestions":30,
+			"timer":"00:30:00"
 		}
 	]
 }

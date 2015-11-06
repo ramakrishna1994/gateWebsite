@@ -344,7 +344,7 @@ body,html{
 
 .buyTest
 {
-	background-color: gray;
+	 background-image: url('../images/background.png');	
 	cursor: pointer;
 	border:1px solid;
 	border-color:black;
@@ -353,12 +353,13 @@ body,html{
     text-align: center;
 	width:150px;
 	height:20px;
-	color:black;
+	color:white;
 }
 
 
 .testInComplete:hover,.testComplete:hover,.testNotStarted:hover,.buyTest:hover
 {
+	 background-image: url('');	
 	background-color: purple;
 	cursor: pointer;
 	color:white;	
